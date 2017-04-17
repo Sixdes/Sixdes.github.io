@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+    
+    <entry>
+      <title><![CDATA[Python学习之语法补充]]></title>
+      <url>http://yoursite.com/2016/12/14/Python%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%AF%AD%E6%B3%95%E8%A1%A5%E5%85%85/</url>
+      <content type="html"><![CDATA[<h2 id="一点零碎知识"><a href="#一点零碎知识" class="headerlink" title="一点零碎知识"></a><strong>一点零碎知识</strong></h2><h3 id="打开文件"><a href="#打开文件" class="headerlink" title="打开文件"></a><strong>打开文件</strong></h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">try</span>:</div><div class="line">    f = open(<span class="string">'xxxxx'</span>)</div><div class="line"><span class="keyword">except</span>:</div><div class="line">    print(<span class="string">'fail to open'</span>)</div><div class="line">    exit(<span class="number">-1</span>)</div><div class="line"><span class="keyword">try</span>:</div><div class="line">    do something</div><div class="line"><span class="keyword">except</span>:</div><div class="line">    do something</div><div class="line"><span class="keyword">finally</span>:</div><div class="line">    f.close()//防止程序抛出异常最后不能关闭文件</div><div class="line">//另一个</div><div class="line"><span class="keyword">try</span>:</div><div class="line">	f = open(“file”, “r”)</div><div class="line"><span class="keyword">try</span>:</div><div class="line">	line = f.readline()</div><div class="line"><span class="keyword">finally</span>:</div><div class="line">	f.close()</div><div class="line"><span class="keyword">except</span> IOError:</div><div class="line">	print(“bad”)</div></pre></td></tr></table></figure>
+<h3 id="with-as-结构-确保异常可关闭"><a href="#with-as-结构-确保异常可关闭" class="headerlink" title="with ..  as ..结构  确保异常可关闭"></a><strong>with ..  as ..结构</strong>  <strong>确保异常可关闭</strong></h3><p>过程: with语句跳转<code>__enter__</code>函数, 返回值给as后的变量, 运行do sth , 最后跳转至<code>__exit__</code>函数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">controlled_execution</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__enter__</span><span class="params">(self)</span>:</span></div><div class="line">        set things up</div><div class="line">        <span class="keyword">return</span> thing</div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__exit__</span><span class="params">(self, type, value, traceback)</span>:</span></div><div class="line">        tear things down</div><div class="line">      </div><div class="line"><span class="keyword">with</span> open(<span class="string">'x.txt'</span>) <span class="keyword">as</span> f:</div><div class="line">    data = f.data()</div><div class="line">    do sth</div></pre></td></tr></table></figure>
+<p><strong>exit</strong>除了用于tear things down，还可以进行异常的监控和处理，注意后几个参数。要跳过一个异常，只需要返回该函数True即可。下面的样例代码跳过了所有的TypeError，而让其他异常正常抛出。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">__exit__</span><span class="params">(self, type, value, traceback)</span>:</span></div><div class="line">    <span class="keyword">return</span> isinstance(value, TypeError)</div></pre></td></tr></table></figure>
+<h3 id="迭代器-iterator-和生成器-generator"><a href="#迭代器-iterator-和生成器-generator" class="headerlink" title="迭代器 iterator 和生成器 generator"></a><strong>迭代器 iterator 和生成器 generator</strong></h3><p>实现迭代器协议, 有next方法的对象会前进到下一结果, 直到引发StopIteration结束, 在Python中有迭代器对象都可以使用for循环遍历, 好处是每次只从对象中读取一条数据，不会造成内存的过大开销(不是一次性加载到内存中)。</p>
+<p>特点: yield</p>
+<p>不像一般的函数生成值后会退出, 生成函数在生成值后会自动挂起并暂停它们的执行和状态, 它的本地变量将保存状态信息, 这些信息在函数恢复时会再度有效</p>
+<p>可以简单地把列表生成式改成generator，也可以通过函数实现复杂逻辑的generator。工作原理，在<code>for</code>循环的过程中不断计算出下一个元素，并在适当的条件结束<code>for</code>循环。对于函数改成的generator来说，遇到return语句或者执行到函数体最后一行语句，就是结束generator的指令，<code>for</code>循环随之结束。</p>
+<p>包含yield语句的是生成器函数, 其执行流程如下 :</p>
+<p>每次调用<code>next</code>时执行, 遇到<code>yield</code>停止, 下次再调用next时, 从yield停止处继续 .使用时直接调用for循环即可<code>for n in filb(5): print n</code>.</p>
+<h3 id="切片"><a href="#切片" class="headerlink" title="切片"></a><strong>切片</strong></h3><p>a[start, end, step]带步进值的</p>
+<p><strong>正序索引（0，i-1）倒序索引（-1，-i）</strong></p>
+<p><code>step &gt; 0: start —&gt; end</code> ( 不含 end ) 从左往右, 相隔元素 step - 1 (索引值差 step ), 若 start 位于 end 右边, 返回空<br><code>step &lt; 0: start -&gt; end</code> (不含 end ) 从右到左, 相隔元素 step-1 (索引值差step ),若 start 位于 end 左边, 返回空<br>翻转字符串 <code>[::-1]</code> </p>
+<h3 id="Python模块之BeautifulSoup及HTML解析器"><a href="#Python模块之BeautifulSoup及HTML解析器" class="headerlink" title="Python模块之BeautifulSoup及HTML解析器 "></a><strong>Python模块之BeautifulSoup及HTML解析器 </strong></h3><p>soup.title.name   title      soup.title.string  具体名字</p>
+<p>所有HTML均是对象, 四种对象Tag(标签) , NavigableString(string) , BeautifulSoup(类似tag 但无name和atter属性), Comment</p>
+<p><strong>find_all取出来是以列表形式存在,不用for循环无法继续find</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">解析器</th>
+<th style="text-align:center">使用方法</th>
+<th style="text-align:center">优势</th>
+<th style="text-align:center">劣势</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Python标准库</td>
+<td style="text-align:center">BeautifulSoup(markup, “html.parser”)</td>
+<td style="text-align:center">Python的内置标准库执行速度适中文档容错能力强</td>
+<td style="text-align:center">Python 2.7.3 or 3.2.2)前 的版本中文档容错能力差</td>
+</tr>
+<tr>
+<td style="text-align:center">lxml HTML 解析器</td>
+<td style="text-align:center">BeautifulSoup(markup, “lxml”)</td>
+<td style="text-align:center">速度快文档容错能力强</td>
+<td style="text-align:center">需要安装C语言库</td>
+</tr>
+<tr>
+<td style="text-align:center">lxml XML 解析器</td>
+<td style="text-align:center">BeautifulSoup(markup, [“lxml”, “xml”])BeautifulSoup(markup, “xml”)</td>
+<td style="text-align:center">速度快唯一支持XML的解析器</td>
+<td style="text-align:center">需要安装C语言库</td>
+</tr>
+<tr>
+<td style="text-align:center">html5lib</td>
+<td style="text-align:center">BeautifulSoup(markup, “html5lib”)</td>
+<td style="text-align:center">最好的容错性以浏览器的方式解析文档生成HTML5格式的文档</td>
+<td style="text-align:center">速度慢不依赖外部扩展</td>
+</tr>
+</tbody>
+</table>
+<h3 id="回调函数"><a href="#回调函数" class="headerlink" title="回调函数"></a><strong>回调函数</strong></h3><blockquote>
+<p>回调函数就是一个通过<strong>函数指针</strong>调用的函数。如果你把函数的指针(地址)作为参数传递给另一个函数，当这个指针被用为调用它所指向的函数时，我们就说这是回调函数。回调函数不是由该函数的实现方直接调用，而是<strong>在特定的事件或条件发生</strong>时由另外的一方调用的，用于<strong>对该事件或条件进行响应</strong>。</p>
+</blockquote>
+<p>软件模块之间总是存在一定接口, 调用方式上可分3类: </p>
+<ul>
+<li>同步调用(阻塞式调用,等待对方执行完毕才返回, 单向调用)</li>
+<li>异步调用(类似消息或事件的机制——接口的服务在收到某种讯息或发生某种事件时，会主动通知客户方（即调用客户方的接口）</li>
+<li>回调(双向调用模式——回调函数被调用方在接口被调用的时候也会调用对方的接口)</li>
+</ul>
+<p>回调和异步调用的关系非常紧密，通常我们使用回调来实现<strong>异步消息的注册</strong>，通过异步调用来实现<strong>消息的通知</strong>。</p>
+<p>回调常常是异调的基础</p>
+<h3 id="json格式"><a href="#json格式" class="headerlink" title="json格式"></a><strong>json格式</strong></h3><p>dumps() 是将 dict 转化成 str 格式，loads() 是将 str 转化成 dict 格式。</p>
+<p>dump 和 load 也是类似的功能，只是与文件操作结合起来了</p>
+<p>简单说就是dump需要一个类似于文件指针的参数（并不是真的指针，可称之为类文件对象），可以与文件操作结合，也就是说可以将 dict 转成 str 然后存入文件中；而 dumps 直接给的是 str，也就是将字典转成str。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> json</div><div class="line">a =&#123;<span class="string">"name"</span>: <span class="string">"wang"</span>&#125;</div><div class="line">fp = open(<span class="string">'test.txt'</span>,<span class="string">'w'</span>)</div><div class="line">json.dump(a, fp)</div><div class="line">fp.close()</div></pre></td></tr></table></figure>
+<h3 id="assert—断言"><a href="#assert—断言" class="headerlink" title="assert—断言"></a><strong>assert—断言</strong></h3><p>在没完善一个程序之前，我们不知道程序在哪里会出错，与其让它在运行时崩溃，不如在出现错误条件时就崩溃，这时候就需要 assert 断言的帮助. assert 断言语句为 raise-if-not，用来测试表示式，其返回值为假，就会触发异常。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#可为断言添加异常参数,用于解释 assert expression [, arguments]</span></div><div class="line"><span class="keyword">assert</span> len(lists) &gt;=<span class="number">5</span>,<span class="string">'列表元素个数小于5'</span></div><div class="line"><span class="keyword">assert</span> <span class="number">2</span>==<span class="number">1</span>,<span class="string">'2不等于1'</span></div></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+  
+  
+</search>
