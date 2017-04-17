@@ -22,7 +22,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/12/14/Python学习之语法补充123/index.html">
 <meta property="og:site_name" content="Yao's station">
 <meta property="og:description" content="前言一点零碎小知识.">
-<meta property="og:updated_time" content="2017-04-17T07:11:54.000Z">
+<meta property="og:updated_time" content="2017-04-17T07:51:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python学习之语法补充 | Yao's station">
 <meta name="twitter:description" content="前言一点零碎小知识.">
@@ -180,7 +180,7 @@ classes that you can use:
   </header>
 
   <section id="post-content" class="article-content post">
-    <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h2><p><strong>一点零碎小知识</strong>.</p>
+    <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h3><p><strong>一点零碎小知识</strong>.</p>
 <a id="more"></a>
 <h3 id="打开文件"><a href="#打开文件" class="headerlink" title="打开文件"></a><strong>打开文件</strong></h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">try</span>:</div><div class="line">    f = open(<span class="string">'xxxxx'</span>)</div><div class="line"><span class="keyword">except</span>:</div><div class="line">    print(<span class="string">'fail to open'</span>)</div><div class="line">    exit(<span class="number">-1</span>)</div><div class="line"><span class="keyword">try</span>:</div><div class="line">    do something</div><div class="line"><span class="keyword">except</span>:</div><div class="line">    do something</div><div class="line"><span class="keyword">finally</span>:</div><div class="line">    f.close()//防止程序抛出异常最后不能关闭文件</div><div class="line">//另一个</div><div class="line"><span class="keyword">try</span>:</div><div class="line">	f = open(“file”, “r”)</div><div class="line"><span class="keyword">try</span>:</div><div class="line">	line = f.readline()</div><div class="line"><span class="keyword">finally</span>:</div><div class="line">	f.close()</div><div class="line"><span class="keyword">except</span> IOError:</div><div class="line">	print(“bad”)</div></pre></td></tr></table></figure>
 <h3 id="with-as-结构-确保异常可关闭"><a href="#with-as-结构-确保异常可关闭" class="headerlink" title="with ..  as ..结构  确保异常可关闭"></a><strong>with ..  as ..结构</strong>  <strong>确保异常可关闭</strong></h3><p>过程: with语句跳转<code>__enter__</code>函数, 返回值给as后的变量, 运行do sth , 最后跳转至<code>__exit__</code>函数</p>
