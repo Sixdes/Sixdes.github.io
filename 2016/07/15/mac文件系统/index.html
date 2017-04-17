@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      Mac Linux文件系统 | Yao&#39;s station 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="John Doe">
+    
+    
+
+    <meta name="description" content="mac 文件系统隐藏cmd中ls /
+符合unix传统的目录/bin 传统unix命令的存放目录，如ls，rm，mv等。/sbin 传统unix管理类命令存放目录，如fdisk，ifconfig等等。/usr 第三方程序安装目录。/usr/bin, /usr/sbin, /usr/lib，其中/usr/lib目录中存放了共享库（动态链接库）./etc. 标准unix系统配置文件存放目录，如用户密码">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mac Linux文件系统 | Yao's station">
+<meta property="og:url" content="http://yoursite.com/2016/07/15/mac文件系统/index.html">
+<meta property="og:site_name" content="Yao's station">
+<meta property="og:description" content="mac 文件系统隐藏cmd中ls /
+符合unix传统的目录/bin 传统unix命令的存放目录，如ls，rm，mv等。/sbin 传统unix管理类命令存放目录，如fdisk，ifconfig等等。/usr 第三方程序安装目录。/usr/bin, /usr/sbin, /usr/lib，其中/usr/lib目录中存放了共享库（动态链接库）./etc. 标准unix系统配置文件存放目录，如用户密码">
+<meta property="og:updated_time" content="2017-04-17T13:30:29.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mac Linux文件系统 | Yao's station">
+<meta name="twitter:description" content="mac 文件系统隐藏cmd中ls /
+符合unix传统的目录/bin 传统unix命令的存放目录，如ls，rm，mv等。/sbin 传统unix管理类命令存放目录，如fdisk，ifconfig等等。/usr 第三方程序安装目录。/usr/bin, /usr/sbin, /usr/lib，其中/usr/lib目录中存放了共享库（动态链接库）./etc. 标准unix系统配置文件存放目录，如用户密码">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">Yao&#39;s station</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">Mac Linux文件系统</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2016-07-15" class="post-meta__date date">2016-07-15</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+            <font class="categories">
+            &#8226; 分类:
+            <a class="categories-link" href="/categories/杂/">杂</a>
+            </font>
+          
+
+          
+             &#8226; 标签:
+            <font class="tags">
+              <a class="tags-link" href="/tags/os/">os</a>
+            </font>
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <h3 id="mac-文件系统"><a href="#mac-文件系统" class="headerlink" title="mac 文件系统"></a><strong>mac 文件系统</strong></h3><p>隐藏<br>cmd中ls /</p>
+<h4 id="符合unix传统的目录"><a href="#符合unix传统的目录" class="headerlink" title="符合unix传统的目录"></a><strong>符合unix传统的目录</strong></h4><p>/bin 传统unix命令的存放目录，如ls，rm，mv等。<br>/sbin 传统unix管理类命令存放目录，如fdisk，ifconfig等等。<br>/usr 第三方程序安装目录。<br>/usr/bin, /usr/sbin, /usr/lib，其中/usr/lib目录中存放了共享库（动态链接库）.<br>/etc. 标准unix系统配置文件存放目录，如用户密码文件/etc/passwd。此目录实际为指向/private/etc的链接。<br>/dev 设备文件存放目录，如何代表硬盘的/dev/disk0。<br>/tmp 临时文件存放目录，其权限为所有人任意读写。此目录实际为指向/private/tmp的链接。<br>/var 存放经常变化的文件，如日志文件。此目录实际为指向/private/var的链接。</p>
+<h4 id="os-x特有的目录"><a href="#os-x特有的目录" class="headerlink" title="os x特有的目录"></a><strong>os x特有的目录</strong></h4><p>/Applications 应用程序目录，默认所有的GUI应用程序都安装在这里；<br>/Library 系统的数据文件、帮助文件、文档等等；<br>/Network 网络节点存放目录；<br>/System 他只包含一个名为Library的目录，这个子目录中存放了系统的绝大部分组件，如各种framework，以及内核模块，字体文件等等。<br>/Users 存放用户的个人资料和配置。每个用户有自己的单独目录。<br>/Volumes 文件系统挂载点存放目录。<br>/cores 内核转储文件存放目录。当一个进程崩溃时，如果系统允许则会产生转储文件。<br>/private 里面的子目录存放了/tmp, /var, /etc等链接目录的目标目录。</p>
+<p>OS X发生崩溃和不能启动的概率实在是太低了，就算是系统出现问题，由于用户目录和系统目录是彼此独立的，所以也容易找回。<br>所以通常情况下，用户直接把资料存放在自己的用户目录中</p>
+<h3 id="Linux-文件系统"><a href="#Linux-文件系统" class="headerlink" title="Linux 文件系统"></a>Linux 文件系统</h3><p>形式表现上一体——所有数据目录均为根目录下的子目录<br>实质——多个不同的<strong>【逻辑主体】</strong>（为了实现不同的逻辑功能）组合在一起</p>
+<h4 id="文件系统结构标准"><a href="#文件系统结构标准" class="headerlink" title="文件系统结构标准"></a><strong>文件系统结构标准</strong></h4><h5 id="LINUX系统的数据文件分类——双重标准"><a href="#LINUX系统的数据文件分类——双重标准" class="headerlink" title="LINUX系统的数据文件分类——双重标准"></a><strong>LINUX系统的数据文件分类——双重标准</strong></h5><p>共享的与独享的（shareable vs. unshareable）<br>数据与平台不相关，如/usr （共享） 数据是平台相关的，如配置数据/etc。变化的和静态的（variable vs. static）<br>相对非管理员用户而言的，没有更变的权限 （静态）</p>
+<h5 id="Linux根文件系统逻辑组成"><a href="#Linux根文件系统逻辑组成" class="headerlink" title="Linux根文件系统逻辑组成"></a><strong>Linux根文件系统逻辑组成</strong></h5><p>（以具体目录表现逻辑功能）/ ——根目录（专用的静态的“根本所在”）/usr ——（共享的静态的）/var——（动态的共享的）/opt/home</p>
+<h5 id="根目录必选组成目录"><a href="#根目录必选组成目录" class="headerlink" title="根目录必选组成目录"></a><strong>根目录必选组成目录</strong></h5><blockquote>
+<p>/bin 基本工具或命令<br>/sbin 系统管理工具或命令<br>/etc 主机相关（Host-speciﬁc）的配置数据<br>/lib 基本共享库和内核模块<br>/dev 设备文件<br>/boot 引导程序<br>/root 管理员的工作目录<br>/mnt 系统管理员的临时挂接点<br>/tmp 系统级临时文件<br>/media 移动设备挂接点</p>
+</blockquote>
+<h5 id="usr-目录"><a href="#usr-目录" class="headerlink" title="/usr 目录"></a><strong>/usr 目录</strong></h5><p>/usr 目录是系统的一大组成部分，共享的静态的</p>
+<p>静态：普通用户不可更改/usr下数据<br>共享：/usr下数据与主机平台不相关，代码独立于运行主机<br>/usr必选组成目录/usr/bin Most user commands<br>/usr/include Header ﬁles included by C programs<br>/usr/blib Libraries<br>/usr/local Local hierarchy (empty after main installation)<br>/usr/sbin Non-vital system binaries<br>/usr/share Architecture-independent data</p>
+<h5 id="var目录"><a href="#var目录" class="headerlink" title="/var目录"></a><strong>/var目录</strong></h5><p>/var基本上是动态的和共享的（少量是主机相关的，如/var/log）。<br>/var保存大部分是程序运行期的动态生成数据</p>
+
+  </section>
+
+  
+  
+
+<section class="post-comments">
+
+    <div class="ds-thread" data-thread-key="2016/07/15/mac文件系统/"></div>
+
+    <script type="text/javascript">
+      var duoshuoQuery = {short_name:"Sixdes"};
+      (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+        || document.getElementsByTagName('body')[0]).appendChild(ds);
+      })();
+    </script> 
+
+</section>
+
+
+  
+<section class="post-comments">
+    <div class="ds-thread" data-thread-key="2016/07/15/mac文件系统/"></div>
+        <div id="uyan_frame"></div>
+			<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2130959"></script>
+</section>
+
+
+
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>

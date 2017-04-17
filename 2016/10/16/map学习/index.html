@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      c++ map篇 | Yao&#39;s station 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="John Doe">
+    
+    
+
+    <meta name="description" content="概述
+c++11加入unordered_map, 类似map, 存储key-value值, 
+Map 键值对应容器, map中的元素是按照二叉搜索树存储，进行中序遍历会得到有序遍历。
+
+基础定义map&amp;lt;string,   int&amp;gt;   my_Map;
+插入数据1234my_Map[&apos;a&apos;] = 1;my_Map.insert(map&amp;lt;string,int&amp;gt;::value_t">
+<meta property="og:type" content="article">
+<meta property="og:title" content="c++ map篇 | Yao's station">
+<meta property="og:url" content="http://yoursite.com/2016/10/16/map学习/index.html">
+<meta property="og:site_name" content="Yao's station">
+<meta property="og:description" content="概述
+c++11加入unordered_map, 类似map, 存储key-value值, 
+Map 键值对应容器, map中的元素是按照二叉搜索树存储，进行中序遍历会得到有序遍历。
+
+基础定义map&amp;lt;string,   int&amp;gt;   my_Map;
+插入数据1234my_Map[&apos;a&apos;] = 1;my_Map.insert(map&amp;lt;string,int&amp;gt;::value_t">
+<meta property="og:updated_time" content="2017-04-17T13:03:49.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="c++ map篇 | Yao's station">
+<meta name="twitter:description" content="概述
+c++11加入unordered_map, 类似map, 存储key-value值, 
+Map 键值对应容器, map中的元素是按照二叉搜索树存储，进行中序遍历会得到有序遍历。
+
+基础定义map&amp;lt;string,   int&amp;gt;   my_Map;
+插入数据1234my_Map[&apos;a&apos;] = 1;my_Map.insert(map&amp;lt;string,int&amp;gt;::value_t">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">Yao&#39;s station</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">c++ map篇</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2016-10-16" class="post-meta__date date">2016-10-16</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+            <font class="categories">
+            &#8226; 分类:
+            <a class="categories-link" href="/categories/c/">c++</a>
+            </font>
+          
+
+          
+             &#8226; 标签:
+            <font class="tags">
+              <a class="tags-link" href="/tags/STL/">STL</a>, <a class="tags-link" href="/tags/c/">c++</a>, <a class="tags-link" href="/tags/map/">map</a>
+            </font>
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a><strong>概述</strong></h3><blockquote>
+<p>c++11加入unordered_map, 类似map, 存储key-value值, </p>
+<p>Map 键值对应容器, map中的元素是按照二叉搜索树存储，进行中序遍历会得到有序遍历。</p>
+</blockquote>
+<h3 id="基础"><a href="#基础" class="headerlink" title="基础"></a><strong>基础</strong></h3><h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a><strong>定义</strong></h4><p><code>map&lt;string,   int&gt;   my_Map;</code></p>
+<h4 id="插入数据"><a href="#插入数据" class="headerlink" title="插入数据"></a><strong>插入数据</strong></h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">my_Map[<span class="string">'a'</span>] = <span class="number">1</span>;</div><div class="line">my_Map.insert(<span class="built_in">map</span>&lt;<span class="built_in">string</span>,<span class="keyword">int</span>&gt;::value_type(<span class="string">"b"</span>, <span class="number">2</span>));</div><div class="line">my_Map.insert(pair&lt;<span class="built_in">string</span>,<span class="keyword">int</span>&gt;(<span class="string">"c"</span>, <span class="number">3</span>))</div><div class="line">my_Map.insert(make_pair&lt;<span class="built_in">string</span>,<span class="keyword">int</span>&gt;(<span class="string">"d"</span>,<span class="number">4</span>));</div></pre></td></tr></table></figure>
+<h4 id="查询和修改数据"><a href="#查询和修改数据" class="headerlink" title="查询和修改数据"></a><strong>查询和修改数据</strong></h4><p>(键本身是不能被修改的，除非删除)</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> i = my_Map[<span class="string">"a"</span>];</div><div class="line">my_Map[<span class="string">"a"</span>] = i;</div><div class="line">MY_MAP::iterator my_Itr;</div><div class="line">my_Itr.find(<span class="string">"b"</span>);</div><div class="line"><span class="keyword">int</span> j = my_Itr-&gt;second;</div><div class="line">my_Itr-&gt;second = j;</div></pre></td></tr></table></figure>
+<h4 id="删除数据"><a href="#删除数据" class="headerlink" title="删除数据"></a><strong>删除数据</strong></h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">my_Map.erase(my_Itr);<span class="comment">//在迭代期间是不能被删除的，道理和foreach时不能删除元素一样。 </span></div><div class="line">my_Map.erase(<span class="string">"c"</span>)</div></pre></td></tr></table></figure>
+<h4 id="迭代数据"><a href="#迭代数据" class="headerlink" title="迭代数据"></a><strong>迭代数据</strong></h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>(my_Itr=my_Map.begin();my_Itr!=my_Map.end();++myItr)&#123;&#125;</div></pre></td></tr></table></figure>
+<h4 id="other"><a href="#other" class="headerlink" title="other"></a><strong>other</strong></h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">my_Map.size()        返回元素数目 </div><div class="line">my_Map.empty()       判断是否为空 </div><div class="line">my_Map.clear()       清空所有元素</div></pre></td></tr></table></figure>
+<h3 id="进阶"><a href="#进阶" class="headerlink" title="进阶"></a><strong>进阶</strong></h3><h4 id="关于hash-map介绍"><a href="#关于hash-map介绍" class="headerlink" title="关于hash_map介绍"></a><strong>关于hash_map介绍</strong></h4><p>map提供key-value的存储和查找功能, 并且实现的效率比较高; 100万条记录，最多也只要20次的string.compare的比较，就能找到你要找的记录;200万条记录事，也只要用21次的比较。</p>
+<p>对于速度的追求使得hash_map诞生. hash_map基于hash table（哈希表)—<strong>哈希表最大的优点，就是把数据的存储和查找消耗的时间大大降低，几乎可以看成是常数时间；编码也比较容易.而代价仅仅是消耗比较多的内存。</strong>“直接定址”与“解决冲突”是哈希表的两大特点。 </p>
+<p>插入: key—&gt;hash值—&gt;桶号—&gt;桶内存key和value</p>
+<p>取值(查找): key—&gt;hash值—&gt;桶号—&gt;比较桶内key值是否等</p>
+<p><code>if(myhash_map.find(key)) != myhash_map.end()</code> 表示查找key成功</p>
+<h4 id="hash函数-和-比较函数"><a href="#hash函数-和-比较函数" class="headerlink" title="hash函数 和 比较函数"></a><strong>hash函数</strong> 和 <strong>比较函数</strong></h4><p>很多类型如int等是有默认的hash函数的, 但像string这种没有, 需要自定义.</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*---例如---*/</span></div><div class="line"><span class="keyword">struct</span> str_hash&#123;</div><div class="line">  <span class="keyword">size_t</span> <span class="keyword">operator</span>()(<span class="keyword">const</span> <span class="built_in">string</span>&amp; str)<span class="keyword">const</span></div><div class="line">  &#123;</div><div class="line">    <span class="keyword">unsigned</span> <span class="keyword">long</span> __h = <span class="number">0</span>; </div><div class="line">    <span class="keyword">for</span> (<span class="keyword">size_t</span> i = <span class="number">0</span> ; i &lt; str.size() ; i ++) </div><div class="line">      __h = <span class="number">5</span>*__h + str[i]; </div><div class="line">    <span class="keyword">return</span> <span class="keyword">size_t</span>(__h); </div><div class="line">  &#125;</div><div class="line">&#125;;</div><div class="line"><span class="comment">//如果你希望利用系统定义的字符串hash函数</span></div><div class="line"><span class="keyword">struct</span> str_hash&#123;</div><div class="line">  <span class="keyword">size_t</span> <span class="keyword">operator</span>()(<span class="keyword">const</span> <span class="built_in">string</span>&amp;str)<span class="keyword">const</span></div><div class="line">  &#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">return</span> __stl_hash_string(str.c_str());</div><div class="line">  &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<ul>
+<li>可迭代对象：对象里面包含<strong>iter()</strong>方法的实现，对象的iter函数经调用之后会返回一个迭代器，里面包含具体数据获取的实现。</li>
+<li>迭代器：包含有next方法的实现，在正确范围内返回期待的数据以及超出范围后能够抛出StopIteration的错误停止迭代。</li>
+</ul>
+<h4 id="此次"><a href="#此次" class="headerlink" title="此次"></a><strong>此次</strong></h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">list</span></div><div class="line"><span class="built_in">string</span></div><div class="line">t = iter(<span class="built_in">string</span>);</div><div class="line">For tt in t</div></pre></td></tr></table></figure>
+
+  </section>
+
+  
+  
+
+<section class="post-comments">
+
+    <div class="ds-thread" data-thread-key="2016/10/16/map学习/"></div>
+
+    <script type="text/javascript">
+      var duoshuoQuery = {short_name:"Sixdes"};
+      (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+        || document.getElementsByTagName('body')[0]).appendChild(ds);
+      })();
+    </script> 
+
+</section>
+
+
+  
+<section class="post-comments">
+    <div class="ds-thread" data-thread-key="2016/10/16/map学习/"></div>
+        <div id="uyan_frame"></div>
+			<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2130959"></script>
+</section>
+
+
+
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>

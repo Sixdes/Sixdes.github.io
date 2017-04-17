@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      范数 | Yao&#39;s station 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="John Doe">
+    
+    
+
+    <meta name="description" content="机器学习?(ノへ￣、)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="范数 | Yao's station">
+<meta property="og:url" content="http://yoursite.com/2017/03/01/机器学习第一周之范数/index.html">
+<meta property="og:site_name" content="Yao's station">
+<meta property="og:description" content="机器学习?(ノへ￣、)">
+<meta property="og:updated_time" content="2017-04-17T13:05:03.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="范数 | Yao's station">
+<meta name="twitter:description" content="机器学习?(ノへ￣、)">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">Yao&#39;s station</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">范数</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2017-03-01" class="post-meta__date date">2017-03-01</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+            <font class="categories">
+            &#8226; 分类:
+            <a class="categories-link" href="/categories/norm/">norm</a>
+            </font>
+          
+
+          
+             &#8226; 标签:
+            <font class="tags">
+              <a class="tags-link" href="/tags/Machine-learning/">Machine learning</a>
+            </font>
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <p>机器学习?(ノへ￣、)</p>
+<a id="more"></a>
+<h4 id="向量范数"><a href="#向量范数" class="headerlink" title="向量范数"></a><strong>向量范数</strong></h4><p>min∑(f(x)-y)^2+正则表达(范数解决过拟合问题)</p>
+<ol>
+<li><p>L0 特征选择, 非0元素稀疏, 缺点是难优化</p>
+</li>
+<li><p>L1  可以直接使得元素值为0从而容易稀疏</p>
+</li>
+<li><p>L2  岭回归  最小化L2范数,可以使得x的元素值都很小, 但都不是0</p>
+<p>最小二乘L2范数优化, 凸优化方法</p>
+<blockquote>
+<p>优点: </p>
+<p> 1) 改善”过拟合”overfitting—新样本表现很差(长发问题)</p>
+<p>2) 利于优化  机器学习中有时候损失函数是非凸的, 例如: 神经网络, 梯度下降之类的方法遇见</p>
+</blockquote>
+</li>
+</ol>
+<h4 id="矩阵范数"><a href="#矩阵范数" class="headerlink" title="矩阵范数"></a><strong>矩阵范数</strong></h4><ol>
+<li><p>1-范数  列范数最大 变成向量</p>
+</li>
+<li><p>2-范数  谱范数 难优化 求特征值</p>
+</li>
+<li><p>F-范数: (∑i=1,m∑j1,n aij^2)^1/2</p>
+<p>最小化矩阵的f范数,会使得矩阵的每个元素都很小,近0</p>
+<p>||A-B||F    A,B矩阵尽可能相同 应用字典学习</p>
+</li>
+<li><p>核范数—-矩阵奇异值的和  </p>
+<p>最小化可以导致矩阵低秩  </p>
+<p>矩阵的秩—-矩阵线性不相关的行数  去除冗余</p>
+<p>不好求所以 近似 是核范数   </p>
+<p>应用 推荐系统,低秩  奇异值分解   /鲁棒PCA 重构为低秩+噪声, 不在原始图像上降维</p>
+</li>
+<li><p>2,1范数 按列求2范数(平方开根)再求1范数, 整列(列向量)稀疏(全0)</p>
+<p>Lasso 找出关键词  Group Lasso使一组为0,找出关键句子   Hierarchical Lasso找出关键段</p>
+<p>应用:文本分类</p>
+</li>
+<li><p>1,2范数 按列1(每一列可能有好多0)再2(不稀疏保证了每一列不为0,进而保证了每一列中的每一行不可全为0,平方和开根不为0), 使得行内元素互斥, 行内有0元素但不可能全0</p>
+</li>
+</ol>
+
+  </section>
+
+  
+  
+
+<section class="post-comments">
+
+    <div class="ds-thread" data-thread-key="2017/03/01/机器学习第一周之范数/"></div>
+
+    <script type="text/javascript">
+      var duoshuoQuery = {short_name:"Sixdes"};
+      (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+        || document.getElementsByTagName('body')[0]).appendChild(ds);
+      })();
+    </script> 
+
+</section>
+
+
+  
+<section class="post-comments">
+    <div class="ds-thread" data-thread-key="2017/03/01/机器学习第一周之范数/"></div>
+        <div id="uyan_frame"></div>
+			<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2130959"></script>
+</section>
+
+
+
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>

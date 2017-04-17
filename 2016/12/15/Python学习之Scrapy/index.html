@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      Python Scrapy | Yao&#39;s station 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="John Doe">
+    
+    
+
+    <meta name="description" content="前言简单介绍,之后加上知乎爬虫.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python Scrapy | Yao's station">
+<meta property="og:url" content="http://yoursite.com/2016/12/15/Python学习之Scrapy/index.html">
+<meta property="og:site_name" content="Yao's station">
+<meta property="og:description" content="前言简单介绍,之后加上知乎爬虫.">
+<meta property="og:updated_time" content="2017-04-17T13:03:14.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python Scrapy | Yao's station">
+<meta name="twitter:description" content="前言简单介绍,之后加上知乎爬虫.">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">Yao&#39;s station</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">Python Scrapy</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2016-12-15" class="post-meta__date date">2016-12-15</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+            <font class="categories">
+            &#8226; 分类:
+            <a class="categories-link" href="/categories/python/">python</a>
+            </font>
+          
+
+          
+             &#8226; 标签:
+            <font class="tags">
+              <a class="tags-link" href="/tags/python/">python</a>, <a class="tags-link" href="/tags/scrapy/">scrapy</a>
+            </font>
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h3><p><strong>简单介绍,之后加上知乎爬虫</strong>.</p>
+<a id="more"></a>
+<h4 id="概括"><a href="#概括" class="headerlink" title="概括"></a><strong>概括</strong></h4><p>框架优势——提供下载模块, 异步加载, 重点在于提取数据</p>
+<p>response和request对象的区别</p>
+<p>request是请求，即客服端发来的请求、<br>response是响应，是服务器做出的响应 </p>
+<h5 id="过程"><a href="#过程" class="headerlink" title="过程"></a><strong>过程</strong></h5><ol>
+<li>创建一个Scrapy项目</li>
+<li>定义提取的Item</li>
+<li>编写爬取网站的 <a href="http://scrapy-chs.readthedocs.io/zh_CN/0.24/topics/spiders.html#topics-spiders" target="_blank" rel="external">spider</a> 并提取 <a href="http://scrapy-chs.readthedocs.io/zh_CN/0.24/topics/items.html#topics-items" target="_blank" rel="external">Item</a></li>
+<li>编写 <a href="http://scrapy-chs.readthedocs.io/zh_CN/0.24/topics/item-pipeline.html#topics-item-pipeline" target="_blank" rel="external">Item Pipeline</a> 来存储提取到的Item(即数据)</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 创建Scrapy项目, 注意更换pycharm中的Python源</span></div><div class="line">scrapy startproject tutorial</div><div class="line">scrapy.cfg: 项目的配置文件</div><div class="line">tutorial/: 该项目的python模块。之后您将在此加入代码。可更改</div><div class="line">tutorial/items.py: 项目中的item文件.</div><div class="line">tutorial/pipelines.py: 项目中的pipelines文件.</div><div class="line">tutorial/settings.py: 项目的设置文件.</div><div class="line">tutorial/spiders/: 放置spider代码的目录.</div></pre></td></tr></table></figure>
+<h4 id="item部分"><a href="#item部分" class="headerlink" title="item部分"></a><strong>item部分</strong></h4><ol>
+<li>item.py  Item容器就是将在网页中获取的数据结构化保存的数据结构，类似于Python中字典</li>
+<li><strong>名字(title)，url(link)，以及网站的描述(desc)</strong></li>
+<li><strong>Field</strong>一个包含了item所有声明的字段的字典，而不仅仅是获取到的字段。该字典的key是字段(field)的名字，值是 <a href="http://scrapy-chs.readthedocs.io/zh_CN/0.24/topics/items.html#topics-items-declaring" target="_blank" rel="external">Item声明</a> 中使用到的 <a href="http://scrapy-chs.readthedocs.io/zh_CN/0.24/topics/items.html#scrapy.item.Field" target="_blank" rel="external"><code>Field</code></a> 对象。<a href="http://scrapy-chs.readthedocs.io/zh_CN/0.24/topics/items.html#scrapy.item.Field" target="_blank" rel="external"><code>Field</code></a> 对象指明了每个字段的元数据(metadata)。</li>
+<li>爬取的主要目标就是从非结构性的数据源提取结构性数据</li>
+</ol>
+<h4 id="Spider部分"><a href="#Spider部分" class="headerlink" title="Spider部分"></a><strong>Spider部分</strong></h4><ol>
+<li>Spider类继承自scrapy.Spider  主要负责爬取和解析数据和url, 具体实现函数大致为 start_requests 以及回调函数(负责接收response处理url, )</li>
+<li>meta字典, Scrapy中传递额外数据的方法</li>
+<li>unicode中的‘\xa0’字符在转换成gbk(汉字内码扩展规范)编码时会出现问题，gbk无法转换’\xa0’字符。<strong>\xa0是不间断空白符, <code>&amp;nbsp</code></strong>代表空白字符</li>
+</ol>
+<h4 id="Pipline部分"><a href="#Pipline部分" class="headerlink" title="Pipline部分"></a><strong>Pipline部分</strong></h4><p>当Item在Spider中被收集之后，它将会被传递到Item Pipeline，一些组件会按照一定的顺序执行对Item的处理。</p>
+<p><strong>每个item pipeline组件(有时称之为“Item Pipeline”)是实现了简单方法的Python类</strong>。他们接收到Item并通过它执行一些行为，同时也决定此Item是否继续通过pipeline，或是被丢弃而不再进行处理。</p>
+<p>以下是item pipeline的一些典型应用：</p>
+<ul>
+<li>清理HTML数据</li>
+<li>验证爬取的数据(检查item包含某些字段)</li>
+<li>查重(并丢弃)</li>
+<li>将爬取结果保存到数据库中</li>
+</ul>
+<ol>
+<li><p><code>process_item(item, spider)</code>每个item pipeline组件都需要调用该方法，这个方法必须返回一个 <a href="http://scrapy-chs.readthedocs.io/zh_CN/0.24/topics/items.html#scrapy.item.Item" target="_blank" rel="external"><code>Item</code></a> (或任何继承类)对象， 或是抛出 <a href="http://scrapy-chs.readthedocs.io/zh_CN/0.24/topics/exceptions.html#scrapy.exceptions.DropItem" target="_blank" rel="external"><code>DropItem</code></a> 异常，被丢弃的item将不会被之后的pipeline组件所处理。</p>
+</li>
+<li><p><code>open_spider(spider)</code></p>
+<p>当spider被开启时，这个方法被调用。</p>
+</li>
+<li><p><code>close_spider(*spider*)</code></p>
+<p>当spider被关闭时，这个方法被调用.</p>
+<h4 id="将item写入JSON文件"><a href="#将item写入JSON文件" class="headerlink" title="将item写入JSON文件"></a><strong>将item写入JSON文件</strong></h4><p>pipeline将所有(从所有spider中)爬取到的item，存储到一个独立地 <code>items.jl</code> 文件，每行包含一个序列化为JSON格式的item:</p>
+<p>​</p>
+</li>
+</ol>
+
+  </section>
+
+  
+  
+
+<section class="post-comments">
+
+    <div class="ds-thread" data-thread-key="2016/12/15/Python学习之Scrapy/"></div>
+
+    <script type="text/javascript">
+      var duoshuoQuery = {short_name:"Sixdes"};
+      (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+        || document.getElementsByTagName('body')[0]).appendChild(ds);
+      })();
+    </script> 
+
+</section>
+
+
+  
+<section class="post-comments">
+    <div class="ds-thread" data-thread-key="2016/12/15/Python学习之Scrapy/"></div>
+        <div id="uyan_frame"></div>
+			<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2130959"></script>
+</section>
+
+
+
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>

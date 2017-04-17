@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      c++ vector篇 | Yao&#39;s station 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="John Doe">
+    
+    
+
+    <meta name="description" content="特点对比array , vetor 消耗更多内存交换管理以及有效增长存储能力
+efficient      访问元素(array), 从 end 添加删除元素
+worse    非end添加删除元素, 
+less consistent iterators 相对于lists 和 forward_lists
+The container uses an allocator object to dynam">
+<meta property="og:type" content="article">
+<meta property="og:title" content="c++ vector篇 | Yao's station">
+<meta property="og:url" content="http://yoursite.com/2016/10/01/c++学习之vector篇/index.html">
+<meta property="og:site_name" content="Yao's station">
+<meta property="og:description" content="特点对比array , vetor 消耗更多内存交换管理以及有效增长存储能力
+efficient      访问元素(array), 从 end 添加删除元素
+worse    非end添加删除元素, 
+less consistent iterators 相对于lists 和 forward_lists
+The container uses an allocator object to dynam">
+<meta property="og:updated_time" content="2017-04-17T13:03:44.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="c++ vector篇 | Yao's station">
+<meta name="twitter:description" content="特点对比array , vetor 消耗更多内存交换管理以及有效增长存储能力
+efficient      访问元素(array), 从 end 添加删除元素
+worse    非end添加删除元素, 
+less consistent iterators 相对于lists 和 forward_lists
+The container uses an allocator object to dynam">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">Yao&#39;s station</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">c++ vector篇</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2016-10-01" class="post-meta__date date">2016-10-01</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+            <font class="categories">
+            &#8226; 分类:
+            <a class="categories-link" href="/categories/c/">c++</a>
+            </font>
+          
+
+          
+             &#8226; 标签:
+            <font class="tags">
+              <a class="tags-link" href="/tags/STL/">STL</a>, <a class="tags-link" href="/tags/c/">c++</a>, <a class="tags-link" href="/tags/vector/">vector</a>
+            </font>
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <h4 id="特点"><a href="#特点" class="headerlink" title="特点"></a><strong>特点</strong></h4><p>对比array , vetor 消耗更多内存交换管理以及有效增长存储能力</p>
+<p>efficient      访问元素(array), 从 end 添加删除元素</p>
+<p>worse    非end添加删除元素, </p>
+<p>less consistent iterators 相对于lists 和 forward_lists</p>
+<p>The container uses an allocator object to dynamically handle its storage needs.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">c++ vector里的allocator</div><div class="line">内存池分配器, 管理了一段内存, 允许在他管理的内存上分配内存, 便于清楚了解在哪分配\使用\释放内存</div><div class="line">有时候, 对内存分配会有特别的要求，比如同一个类型分在一起，或者有特别的优化算法。</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>``` 随时自动调整自身的大小以便容下所要放入的元素</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">#### **声明及初始化**</div><div class="line"></div><div class="line">```c++</div><div class="line">vector &lt;int&gt;a;</div><div class="line">vector &lt;int&gt;a(10);</div><div class="line">vector &lt;int&gt;a(b);</div><div class="line">vector &lt;int&gt;a(b.begin(),b.begin()+3)</div><div class="line">int n=[1,2,3,4,5];</div><div class="line">vector &lt;int&gt;a(n, n+5);</div><div class="line">vector &lt;int&gt;a(&amp;n[1], &amp;n[4])   //n1-n4范围</div></pre></td></tr></table></figure>
+<h4 id="输入及访问"><a href="#输入及访问" class="headerlink" title="输入及访问"></a><strong>输入及访问</strong></h4><h4 id="迭代器-iterator"><a href="#迭代器-iterator" class="headerlink" title="迭代器 iterator"></a><strong>迭代器 iterator</strong></h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;:: iterator t;</div><div class="line"><span class="keyword">for</span>(<span class="keyword">int</span> t= vec.begin(); t != vec.end(); t++)&#123;</div><div class="line">  <span class="built_in">cout</span>&lt;&lt; *t &lt;&lt;<span class="built_in">endl</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="删除vector的内存空洞"><a href="#删除vector的内存空洞" class="headerlink" title="删除vector的内存空洞"></a><strong>删除vector的内存空洞</strong></h4><ul>
+<li><p>erase()函数，只能删除内容，不能改变容量大小；</p>
+<p>erase成员函数，它删除了itVect迭代器指向的元素，并且返回要被删除的itVect之后的迭代器，迭代器相当于一个智能指针。</p>
+</li>
+<li><p>clear()函数，只能清空内容，不能改变容量大小</p>
+<p>vector容器删除不自动释放内存，那么它存在内存泄露？？？不是的，vector在析构函数的时候，对内存进行了释放。</p>
+</li>
+<li><p>如果要想在删除内容的同时释放内存，那么你可以选择<strong>deque</strong>容器。</p>
+</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">vector</span>(v).swap(v);将v的内存空洞清除</div><div class="line"><span class="built_in">vector</span>().swap(v);清空vec</div></pre></td></tr></table></figure>
+<p>vector的元素不仅仅可以是int,double,string,还可以是<strong>结构体</strong>，但是要注意：结构体要定义为全局的，否则会出错。</p>
+
+  </section>
+
+  
+  
+
+<section class="post-comments">
+
+    <div class="ds-thread" data-thread-key="2016/10/01/c++学习之vector篇/"></div>
+
+    <script type="text/javascript">
+      var duoshuoQuery = {short_name:"Sixdes"};
+      (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+        || document.getElementsByTagName('body')[0]).appendChild(ds);
+      })();
+    </script> 
+
+</section>
+
+
+  
+<section class="post-comments">
+    <div class="ds-thread" data-thread-key="2016/10/01/c++学习之vector篇/"></div>
+        <div id="uyan_frame"></div>
+			<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2130959"></script>
+</section>
+
+
+
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>

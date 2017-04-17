@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      LeetCode1541 | Yao&#39;s station 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="John Doe">
+    
+    
+
+    <meta name="description" content="好久不碰了,小白求放过…😂">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LeetCode1541 | Yao's station">
+<meta property="og:url" content="http://yoursite.com/2017/03/15/LeetCode算法刷题过程/index.html">
+<meta property="og:site_name" content="Yao's station">
+<meta property="og:description" content="好久不碰了,小白求放过…😂">
+<meta property="og:updated_time" content="2017-04-17T12:43:27.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="LeetCode1541 | Yao's station">
+<meta name="twitter:description" content="好久不碰了,小白求放过…😂">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">Yao&#39;s station</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">LeetCode1541</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2017-03-15" class="post-meta__date date">2017-03-15</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+            <font class="categories">
+            &#8226; 分类:
+            <a class="categories-link" href="/categories/LeetCode/">LeetCode</a>
+            </font>
+          
+
+          
+             &#8226; 标签:
+            <font class="tags">
+              <a class="tags-link" href="/tags/LeetCode/">LeetCode</a>, <a class="tags-link" href="/tags/arrays/">arrays</a>, <a class="tags-link" href="/tags/hash/">hash</a>
+            </font>
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <p>好久不碰了,小白求放过…😂</p>
+<a id="more"></a>
+<h1 id="LeetCode算法刷题过程"><a href="#LeetCode算法刷题过程" class="headerlink" title="LeetCode算法刷题过程"></a><strong>LeetCode算法刷题过程</strong></h1><h3 id="Tag-Arrays-和Hash-1-15"><a href="#Tag-Arrays-和Hash-1-15" class="headerlink" title="Tag: Arrays 和Hash (1,15)"></a><strong>Tag: <code>Arrays</code> 和<code>Hash</code> (1,15)</strong></h3><h4 id="1-twoSum-返回目标值索引"><a href="#1-twoSum-返回目标值索引" class="headerlink" title="1. twoSum 返回目标值索引"></a><strong>1. twoSum 返回目标值索引</strong></h4><blockquote>
+<p>本题学习过程帮助我了解vector, unordered_map和map</p>
+</blockquote>
+<p>我的思路: 先对vector<int>num进行sort排序, 进而头尾相加, 小于target则头指针加一; 大于则只尾指针减一; 等于跳出循环</int></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; twoSum(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums, <span class="keyword">int</span> target) &#123;</div><div class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;vec(nums);</div><div class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; result ;</div><div class="line">    sort(nums.begin(), nums.end());</div><div class="line">    <span class="keyword">int</span> a,b,c=<span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>,j=nums.size()<span class="number">-1</span>; i&lt;=j; i++,j--)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">int</span> temp = nums.at(i) + nums.at(j);</div><div class="line">        <span class="keyword">if</span>(temp &lt; target) &#123;j++;&#125;</div><div class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(temp &gt; target)&#123;i--;&#125;</div><div class="line">        <span class="keyword">else</span> &#123;a=nums.at(i); b=nums.at(j);<span class="keyword">break</span>;&#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>;k&lt;vec.size();k++)&#123;</div><div class="line">        <span class="keyword">if</span>(c==<span class="number">2</span>) <span class="keyword">break</span>;</div><div class="line">        <span class="keyword">if</span>(vec.at(k) == a) &#123;result.push_back(k);c++;</div><div class="line">            <span class="keyword">continue</span>;&#125;</div><div class="line">        <span class="keyword">if</span>(vec.at(k) == b) &#123;result.push_back(k);c++;</div><div class="line">            <span class="keyword">continue</span>;&#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> result;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><em>网上解答</em></p>
+<p>Solution/*将n方复杂度的转换为linear, 主要是使用map追踪正确需要的数, 把需要的值存进map</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; twoSum(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;nums, <span class="keyword">int</span> target)&#123;</div><div class="line">  <span class="built_in">unordered_map</span>&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; hash;</div><div class="line">  <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; result;</div><div class="line">  <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;nums.size(); i++)&#123;</div><div class="line">    <span class="keyword">int</span> numToFind = target - nums[i];</div><div class="line">    <span class="keyword">if</span>(hash.find(numsToFind) != hash.end())&#123;</div><div class="line">      result.push_back(hash[numsToFind]);</div><div class="line">      result.push_back(i);</div><div class="line">      <span class="keyword">return</span> result;</div><div class="line">    &#125;</div><div class="line">    hash[nums[i]] = i;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>####<strong>3.  15. 3Sum</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">报错</div><div class="line">Runtime Error Message: reference binding to null pointer of type &apos;struct value_type&apos;</div><div class="line">原因: 没有验证输入是否为空数组(向量)</div><div class="line">解决:方法里加入if判断</div></pre></td></tr></table></figure>
+<p>我的思路:  参照第一题, 先外层遍历i, target=0-nums[i], 在按照第一题的方法去做</p>
+<p><strong>问题</strong>: 内层时需要考虑不中间返回, 以及去重问题, 耽误了我的时间复杂度, 😭😭😭</p>
+<p>开始      <strong>但是,超时了</strong>妈个叽</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">class</span> Solution &#123;</div><div class="line"><span class="keyword">public</span>:</div><div class="line">    <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; threeSum(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums) &#123;</div><div class="line">        <span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt; hash; <span class="comment">//便于追踪正确值, 两个的情况</span></div><div class="line">        <span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt; skip; <span class="comment">//存放已测试的num[i],用于跳过</span></div><div class="line">        <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; result;</div><div class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; tmp;</div><div class="line">        <span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt; repeat;</div><div class="line">        <span class="keyword">if</span> (nums.size() &lt; <span class="number">3</span>)&#123;</div><div class="line">        <span class="keyword">return</span> result;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.size()<span class="number">-2</span>; i++) &#123;</div><div class="line">            <span class="keyword">if</span> (skip.find(nums[i]) != skip.end()) <span class="keyword">continue</span>;</div><div class="line">            <span class="keyword">int</span> target = <span class="number">0</span> - nums[i];</div><div class="line">            hash.clear();</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = i + <span class="number">1</span>; j &lt; nums.size(); j++) &#123;</div><div class="line">                <span class="keyword">int</span> numToFind = target - nums[j];</div><div class="line">                <span class="keyword">if</span> (skip.find(nums[j]) != skip.end() || skip.find(numToFind) != skip.end()) <span class="keyword">continue</span>;</div><div class="line">                <span class="keyword">if</span>(hash.find(nums[j]) != hash.end())&#123;</div><div class="line">                    <span class="keyword">if</span>(numToFind != nums[j]) <span class="keyword">continue</span>;</div><div class="line">                    <span class="keyword">if</span>(repeat.find(numToFind) != repeat.end()) <span class="keyword">continue</span>;</div><div class="line">                    repeat.insert(numToFind);</div><div class="line">                &#125;</div><div class="line">                <span class="keyword">if</span> (hash.find(numToFind) != hash.end()) &#123;</div><div class="line">                        tmp.push_back(numToFind);</div><div class="line">                        tmp.push_back(nums[j]);</div><div class="line">                        tmp.push_back(nums[i]);</div><div class="line">                        result.push_back(tmp);</div><div class="line">                        tmp.clear();</div><div class="line">                    &#125;</div><div class="line">                    hash.insert(nums[j]);</div><div class="line">            &#125;</div><div class="line">            skip.insert(nums[i]);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> result;</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//改成能accepted, 然而复杂度不忍直视😂</span></div><div class="line">    <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; threeSum(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums) &#123;</div><div class="line">        <span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt; hash; <span class="comment">//便于追踪正确值, 两个的情况</span></div><div class="line">        <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; result;</div><div class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; tmp; </div><div class="line">        <span class="keyword">if</span> (nums.size() &lt; <span class="number">3</span>) &#123;</div><div class="line">            <span class="keyword">return</span> result;</div><div class="line">        &#125;</div><div class="line">        sort(nums.begin(), nums.end());</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.size() - <span class="number">2</span>; i++) &#123;</div><div class="line">            <span class="keyword">if</span> ((i &gt; <span class="number">0</span> &amp;&amp; nums[i] != nums[i - <span class="number">1</span>]) || i == <span class="number">0</span>) &#123;</div><div class="line">                <span class="keyword">int</span> target = <span class="number">0</span> - nums[i];</div><div class="line">                hash.clear();</div><div class="line">                <span class="keyword">int</span> j = i + <span class="number">1</span>;</div><div class="line">                <span class="keyword">while</span>(j &lt; nums.size()) &#123;</div><div class="line">                   <span class="keyword">int</span> numToFind = target - nums[j];</div><div class="line">                    <span class="keyword">if</span>(hash.find(numToFind) != hash.end())&#123;</div><div class="line">                        tmp.push_back(numToFind);</div><div class="line">                        tmp.push_back(nums[j]);</div><div class="line">                        tmp.push_back(nums[i]);</div><div class="line">                        result.push_back(tmp);</div><div class="line">                        tmp.clear();</div><div class="line">                        <span class="keyword">while</span>(j &lt; nums.size()<span class="number">-1</span> &amp;&amp; nums[j] == nums[j+<span class="number">1</span>]) j++;</div><div class="line">                        j++;</div><div class="line">                    &#125;</div><div class="line">                    <span class="keyword">else</span> hash.insert(nums[j++]);</div><div class="line">               &#125;</div><div class="line">    <span class="comment">//            for(it = hash.begin(); it!=hash.end(); it++)&#123;cout&lt;&lt;*it&lt;&lt;"  ";&#125;</span></div><div class="line">            &#125;</div><div class="line">    <span class="comment">//        cout&lt;&lt;endl;</span></div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> result;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<p>参照网上的答案更改过后:</p>
+<p><strong>问题明白两点</strong>    </p>
+<ul>
+<li>排序,先对给定数组进行排序 </li>
+<li>有时, while循环比for循环更好用  优势在于更好的控制每一次 i+1</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; threeSum2(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;nums) &#123;</div><div class="line">    sort(nums.begin(), nums.end());</div><div class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; tmp;</div><div class="line">    <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; res;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.size(); i++)&#123;</div><div class="line">        <span class="keyword">if</span>(i == <span class="number">0</span> || (i &gt; <span class="number">0</span> &amp;&amp; nums[i] != nums[i<span class="number">-1</span>]))&#123;</div><div class="line">            <span class="keyword">int</span> lo = i + <span class="number">1</span>, hi= nums.size() - <span class="number">1</span>, sum = <span class="number">0</span> - nums[i];</div><div class="line">            <span class="keyword">while</span> (lo &lt; hi)&#123;</div><div class="line">              <span class="comment">//第一次允许, 以后通过排序直接跳过可能的重复</span></div><div class="line">                <span class="keyword">if</span> (nums[lo] + nums[hi] ==  sum)&#123;</div><div class="line">                    tmp.push_back(nums[i]);</div><div class="line">                    tmp.push_back(nums[lo]);</div><div class="line">                    tmp.push_back(nums[hi]);</div><div class="line">                    res.push_back(tmp);</div><div class="line">                    tmp.clear();</div><div class="line">                    <span class="keyword">while</span> (lo &lt; hi &amp;&amp; nums[lo] == nums[lo + <span class="number">1</span>]) 					lo++;</div><div class="line">                    <span class="keyword">while</span> (lo &lt; hi &amp;&amp; nums[hi] == nums[hi - <span class="number">1</span>]) 					hi--;</div><div class="line">                    lo++; hi--;</div><div class="line">                &#125;</div><div class="line">                <span class="keyword">else</span> <span class="keyword">if</span>(nums[lo] + nums[hi] &lt; sum) lo++;</div><div class="line">                <span class="keyword">else</span> hi--;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> res;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>char<em> p = “test”; 这个声明，声明了一个指针，而这个指针指向的是<em>*全局的const内存区</em></em>，const内存区当然不会让你想改就改的。</p>
+<h4 id="541-Reverse-String-II"><a href="#541-Reverse-String-II" class="headerlink" title="541.Reverse String II"></a><strong>541.Reverse String II</strong></h4><p>问题描述：一串小写字符，分<k, k<s<2k,="" s="">2k几种情况，每2k个字符第k个逆转到开头,k范围[1, 10000]</k,></p>
+<p><strong>小问题</strong>(是我理解的问题还是)</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">class</span> Solution&#123;</div><div class="line"><span class="keyword">public</span>:</div><div class="line">  <span class="function"><span class="built_in">string</span> <span class="title">reverseStr</span><span class="params">(String str, <span class="keyword">int</span> k)</span></span>&#123;</div><div class="line">  <span class="keyword">for</span>(<span class="keyword">int</span> left=<span class="number">0</span>; left&lt;str.size; left+= <span class="number">2</span>*k)</div><div class="line">    &#123;</div><div class="line">      <span class="keyword">for</span>(<span class="keyword">int</span> i=left,j=min(left+k<span class="number">-1</span>, <span class="keyword">int</span>(s.size()<span class="number">-1</span>)); i&lt;j; i++,j--)</div><div class="line">        &#123;</div><div class="line">          swap(s[i], s[j]);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+  </section>
+
+  
+  
+
+<section class="post-comments">
+
+    <div class="ds-thread" data-thread-key="2017/03/15/LeetCode算法刷题过程/"></div>
+
+    <script type="text/javascript">
+      var duoshuoQuery = {short_name:"Sixdes"};
+      (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+        || document.getElementsByTagName('body')[0]).appendChild(ds);
+      })();
+    </script> 
+
+</section>
+
+
+  
+<section class="post-comments">
+    <div class="ds-thread" data-thread-key="2017/03/15/LeetCode算法刷题过程/"></div>
+        <div id="uyan_frame"></div>
+			<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2130959"></script>
+</section>
+
+
+
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>
