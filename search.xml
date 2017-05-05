@@ -249,7 +249,7 @@
 </ul>
 </li>
 </ul>
-<p><img src="/Users/yaoyirong/blog/source/images/CG/照相机标架.png" alt="照相机标架"></p>
+<p><img src="/images/CG/照相机标架.png" alt="照相机标架"></p>
 </li>
 <li><p><strong>裁剪坐标系</strong> 对象—&gt; camera 坐标系, openGL检查是否位于视见体内, 之外的在光栅化之前就要从场景里裁掉. 为了更有效进行裁剪, openGL 先执行<strong>投影变换</strong>, 这个变换把所有可能是可见的对象变换到一个立方体中, 立方体中心是裁剪坐标系原点</p>
 </li>
@@ -266,8 +266,8 @@
 <p>懒得打字, 直接上图</p>
 </li>
 </ul>
-<p><img src="/Users/yaoyirong/blog/source/images/CG/窗口坐标系1.jpeg" alt="窗口坐标系1"></p>
-<p><img src="/Users/yaoyirong/blog/source/images/CG/窗口坐标系2.JPG" alt="窗口坐标系2"></p>
+<p><img src="/images/CG/窗口坐标系1.jpeg" alt="窗口坐标系1"></p>
+<p><img src="/images/CG/窗口坐标系2.JPG" alt="窗口坐标系2"></p>
 ]]></content>
     </entry>
     
