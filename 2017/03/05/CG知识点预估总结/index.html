@@ -45,7 +45,9 @@ c11 shadingphong模型包含(内容)
 
 phong及G">
 <meta property="og:image" content="http://yoursite.com/images/CG/Bresenham.png">
-<meta property="og:updated_time" content="2017-05-05T12:40:37.000Z">
+<meta property="og:image" content="http://yoursite.com/images/CG/几何绘制流水线.png">
+<meta property="og:image" content="http://yoursite.com/Users/yaoyirong/blog/source/images/CG/照相机标架.png">
+<meta property="og:updated_time" content="2017-05-05T13:34:37.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CG | Yao's station">
 <meta name="twitter:description" content="[TOC]
@@ -283,7 +285,7 @@ classes that you can use:
 </li>
 </ul>
 <h5 id="Bresenham’s-很重要-画图考"><a href="#Bresenham’s-很重要-画图考" class="headerlink" title="Bresenham’s (很重要, 画图考)"></a><strong>Bresenham’s (</strong>很重要, 画图考<strong>)</strong></h5><ul>
-<li><p>基本思想: 假定线段的起点(x1,y1)和终点(x2，y2)的坐标值都是整数, 假定通过计算已经得到了一个位于(i+1/2,j+1/2)位置的像素，该线段所在直线的方程为<br>y=mx+h, 下一个点的候选像素是 (Xi+1, Yi,r +1) 和 (Xi+1 , Yi,r) 引入判定变量 变为一种增量算法  d=△x(a-b), 直接判断B-A就行  Yi+1-Yi,r-0.5<img src="/images/CG/Bresenham.png" alt="1"></p>
+<li><p>基本思想: 假定线段的起点(x1,y1)和终点(x2，y2)的坐标值都是整数, 假定通过计算已经得到了一个位于(i+1/2,j+1/2)位置的像素，该线段所在直线的方程为<br>y=mx+h, 下一个点的候选像素是 (Xi+1, Yi,r +1) 和 (Xi+1 , Yi,r) 引入判定变量 变为一种增量算法  d=△x(a-b), 直接判断B-A就行  Yi+1-Yi,r-0.5<img src="/images/CG/Bresenham.png" alt="Bresenham"></p>
 </li>
 <li><p><strong>改进(很重要😂, 会画图)</strong></p>
 <ul>
@@ -376,8 +378,61 @@ classes that you can use:
 </ul>
 <p><strong>时间控制的反走样</strong>  从一个pixel 添加光线追踪线  <strong>移动的物体, 采用随机采样, blue noise</strong></p>
 <h3 id="c3-Models-and-Architectures"><a href="#c3-Models-and-Architectures" class="headerlink" title="c3 Models and Architectures"></a><strong>c3 Models and Architectures</strong></h3><h4 id="openGL-流水线以及各个模块功能"><a href="#openGL-流水线以及各个模块功能" class="headerlink" title="openGL 流水线以及各个模块功能"></a><strong>openGL 流水线以及各个模块功能</strong></h4><ul>
-<li><p>pipline 整个架构  </p>
-<p>​</p>
+<li><p>pipline 整个架构  —— 四个模块(顶点处理, 裁剪和图元装配, 光栅化, 片元处理)</p>
+<p><img src="/images/CG/几何绘制流水线.png" alt="几何绘制流水线"></p>
+<ul>
+<li>顶点处理: 坐标系之间的变换  以及 顶点颜色的计算  <ul>
+<li>对象坐标系/ 建模坐标系</li>
+<li>照相机坐标系</li>
+<li>屏幕坐标系</li>
+</ul>
+</li>
+<li>裁剪和图元装配<ul>
+<li>在裁剪和光栅化之前, 必须进行图元装配—— 将顶点组装成像线段和多边形这样的基本图元(线段, 多边形, 曲线和曲面)</li>
+<li>模拟照相机的视角有限, 不在此视见体里的对象被裁出, 此阶段输出的是<strong>一些投影可被成像的图元</strong>                                                                                                                                                                                                                               </li>
+</ul>
+</li>
+<li>光栅化<ul>
+<li>如果一个对象未被剪除, 则 frame buffer 中的相应 pixel 必须要分配颜色; <strong>光栅化模块为每个图元输出一组片元</strong>, 片元可看作”潜在像素”, 携带颜色和深度信息. 顶点属性由光栅化模块在对象上插值</li>
+</ul>
+</li>
+<li>片元处理<ul>
+<li>利用光栅化模块生成的片元来更新帧缓存中的 pixel . 处理片元以确定帧缓冲器中相应 pixel 的颜色; 颜色可以通过纹理映射或顶点颜色的插值决定, 片元可被离视点更近的遮挡, 隐藏面消除</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="openGL流水线中的坐标系"><a href="#openGL流水线中的坐标系" class="headerlink" title="openGL流水线中的坐标系"></a>openGL流水线中的坐标系</h4><p>绘制流水线的先后顺序:</p>
+<ol>
+<li>对象坐标系或建模坐标系</li>
+<li>世界坐标系</li>
+<li>照相机坐标系或眼坐标系</li>
+<li>裁剪坐标系</li>
+<li>规范化的设备坐标系</li>
+<li>窗口坐标系</li>
+</ol>
+<p>解释:  (每次标架变换都对应一个仿射变换, 均可用4*4矩阵表示)</p>
+<ul>
+<li><p><strong>对象坐标系</strong> 对象几何中心为原点</p>
+</li>
+<li><p><strong>世界坐标系</strong> 对每一个对象实施一系列变换(改变大小方向位置),放置一个公共场景</p>
+</li>
+<li><p><strong>照相机坐标系</strong> 照相机透镜中心</p>
+<ul>
+<li>照相机坐标系下的三个基向量<ul>
+<li>照相机的观察正向—— y 轴正向</li>
+<li>照相机正对的方向 —— z轴负向</li>
+</ul>
+</li>
+</ul>
+<p><img src="/Users/yaoyirong/blog/source/images/CG/照相机标架.png" alt="照相机标架"></p>
+</li>
+<li><p><strong>裁剪坐标系</strong> 对象—&gt; camera 坐标系, openGL检查是否位于视见体内, 之外的在光栅化之前就要从场景里裁掉. 为了更有效进行裁剪, openGL 先执行<strong>投影变换</strong>, 这个变换把所有可能是可见的对象变换到一个立方体中, 立方体中心是裁剪坐标系原点</p>
+</li>
+<li><p><strong>规范化的设备坐标系</strong> 投影变换之后, 顶点的表示仍是齐次坐标. 顶点的齐次坐标表示再<strong>经过透视除法, 即用 w 分量去除其他分量,</strong> 就得到了规范化的设备坐标系下的三维展示.</p>
+</li>
+<li><p><strong>窗口坐标系</strong>  根据视口提供的信息, 将规范化的设备坐标系下的表示变换为窗口坐标系下的三维表示</p>
 </li>
 </ul>
 
