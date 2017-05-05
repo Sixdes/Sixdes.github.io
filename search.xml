@@ -268,6 +268,12 @@
 </ul>
 <p><img src="/images/CG/窗口坐标系1.jpeg" alt="窗口坐标系1"></p>
 <p><img src="/images/CG/窗口坐标系2.JPG" alt="窗口坐标系2"></p>
+<h3 id="C15-Buffers"><a href="#C15-Buffers" class="headerlink" title="C15 Buffers"></a>C15 Buffers</h3><h4 id="Double-Buffering"><a href="#Double-Buffering" class="headerlink" title="Double Buffering"></a>Double Buffering</h4><p>2个颜色缓冲器</p>
+<h5 id="front-buffer-前向缓冲器"><a href="#front-buffer-前向缓冲器" class="headerlink" title="front buffer: 前向缓冲器"></a>front buffer: <strong>前向缓冲器</strong></h5><p>只显示不写入</p>
+<h5 id="back-buffer-后向缓冲器"><a href="#back-buffer-后向缓冲器" class="headerlink" title="back buffer: 后向缓冲器"></a>back buffer: 后向缓冲器</h5><p>只写入不显示</p>
+<p>原理: 显示前向缓冲时, 开始填充后向缓冲;</p>
+<p>当后向缓冲器被填充时, 交换两个</p>
+<h5 id="openGL-实现"><a href="#openGL-实现" class="headerlink" title="openGL 实现"></a>openGL <strong>实现</strong></h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//在 main.c 中请求一个双缓冲区</span></div><div class="line">glInitDisplayMode(GL_COLOR | GL_DOUBLE);</div><div class="line"><span class="comment">//在回调函数 display 结束时缓冲区被交换</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">display</span><span class="params">()</span></span>&#123;</div><div class="line">  glClear(GL_COLOR_BUFFER_BIT | ..);</div><div class="line">  <span class="comment">// 画图</span></div><div class="line">  glutSwapBuffers();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 ]]></content>
     </entry>
     
