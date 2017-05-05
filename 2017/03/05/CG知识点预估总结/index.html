@@ -16,7 +16,8 @@
     
     
 
-    <meta name="description" content="c11 shadingphong模型包含(内容)
+    <meta name="description" content="[TOC]
+c11 shadingphong模型包含(内容)
 环境光, 漫反射, 镜面反射  
 公式 四个向量
 小细节   单独求r(反射向量)  以及  算法改进  引入H向量 向量之间计算
@@ -26,12 +27,13 @@
 最主要: 可定向求法向, 用于光亮度计算; 
 可得到边的准确位置, 用于做扫描转换填充
 
-phong及Gouraud">
+phong及G">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CG | Yao's station">
 <meta property="og:url" content="http://yoursite.com/2017/03/05/CG知识点预估总结/index.html">
 <meta property="og:site_name" content="Yao's station">
-<meta property="og:description" content="c11 shadingphong模型包含(内容)
+<meta property="og:description" content="[TOC]
+c11 shadingphong模型包含(内容)
 环境光, 漫反射, 镜面反射  
 公式 四个向量
 小细节   单独求r(反射向量)  以及  算法改进  引入H向量 向量之间计算
@@ -41,12 +43,13 @@ phong及Gouraud">
 最主要: 可定向求法向, 用于光亮度计算; 
 可得到边的准确位置, 用于做扫描转换填充
 
-phong及Gouraud">
-<meta property="og:image" content="http://yoursite.com/Users/yaoyirong/Desktop/屏幕快照 2017-05-03 上午11.03.11.png">
-<meta property="og:updated_time" content="2017-05-05T03:00:53.000Z">
+phong及G">
+<meta property="og:image" content="http://yoursite.com/images/CG/Bresenham.png">
+<meta property="og:updated_time" content="2017-05-05T12:40:37.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CG | Yao's station">
-<meta name="twitter:description" content="c11 shadingphong模型包含(内容)
+<meta name="twitter:description" content="[TOC]
+c11 shadingphong模型包含(内容)
 环境光, 漫反射, 镜面反射  
 公式 四个向量
 小细节   单独求r(反射向量)  以及  算法改进  引入H向量 向量之间计算
@@ -56,8 +59,8 @@ phong及Gouraud">
 最主要: 可定向求法向, 用于光亮度计算; 
 可得到边的准确位置, 用于做扫描转换填充
 
-phong及Gouraud">
-<meta name="twitter:image" content="http://yoursite.com/Users/yaoyirong/Desktop/屏幕快照 2017-05-03 上午11.03.11.png">
+phong及G">
+<meta name="twitter:image" content="http://yoursite.com/images/CG/Bresenham.png">
     
     
     
@@ -212,7 +215,8 @@ classes that you can use:
   </header>
 
   <section id="post-content" class="article-content post">
-    <h3 id="c11-shading"><a href="#c11-shading" class="headerlink" title="c11 shading"></a><strong>c11 shading</strong></h3><h4 id="phong模型包含-内容"><a href="#phong模型包含-内容" class="headerlink" title="phong模型包含(内容)"></a><strong>phong模型包含(内容)</strong></h4><ul>
+    <p>[TOC]</p>
+<h3 id="c11-shading"><a href="#c11-shading" class="headerlink" title="c11 shading"></a><strong>c11 shading</strong></h3><h4 id="phong模型包含-内容"><a href="#phong模型包含-内容" class="headerlink" title="phong模型包含(内容)"></a><strong>phong模型包含(内容)</strong></h4><ul>
 <li>环境光, 漫反射, 镜面反射  </li>
 <li>公式 四个向量</li>
 <li>小细节   <strong>单独求r(反射向量)</strong>  以及  算法改进  <strong>引入H向量</strong> 向量之间计算</li>
@@ -279,7 +283,7 @@ classes that you can use:
 </li>
 </ul>
 <h5 id="Bresenham’s-很重要-画图考"><a href="#Bresenham’s-很重要-画图考" class="headerlink" title="Bresenham’s (很重要, 画图考)"></a><strong>Bresenham’s (</strong>很重要, 画图考<strong>)</strong></h5><ul>
-<li><p>基本思想: 假定线段的起点(x1,y1)和终点(x2，y2)的坐标值都是整数, 假定通过计算已经得到了一个位于(i+1/2,j+1/2)位置的像素，该线段所在直线的方程为<br>y=mx+h, 下一个点的候选像素是 (Xi+1, Yi,r +1) 和 (Xi+1 , Yi,r) 引入判定变量 变为一种增量算法  d=△x(a-b), 直接判断B-A就行  Yi+1-Yi,r-0.5<img src="/Users/yaoyirong/Desktop/屏幕快照 2017-05-03 上午11.03.11.png" alt="屏幕快照 2017-05-03 上午11.03.11"></p>
+<li><p>基本思想: 假定线段的起点(x1,y1)和终点(x2，y2)的坐标值都是整数, 假定通过计算已经得到了一个位于(i+1/2,j+1/2)位置的像素，该线段所在直线的方程为<br>y=mx+h, 下一个点的候选像素是 (Xi+1, Yi,r +1) 和 (Xi+1 , Yi,r) 引入判定变量 变为一种增量算法  d=△x(a-b), 直接判断B-A就行  Yi+1-Yi,r-0.5<img src="/images/CG/Bresenham.png" alt="1"></p>
 </li>
 <li><p><strong>改进(很重要😂, 会画图)</strong></p>
 <ul>
@@ -371,7 +375,12 @@ classes that you can use:
 <li>关闭(快): glDisable(LINESMOOTH);  glDisable(POLYGON_SMOOTH);</li>
 </ul>
 <p><strong>时间控制的反走样</strong>  从一个pixel 添加光线追踪线  <strong>移动的物体, 采用随机采样, blue noise</strong></p>
-<h3 id="c3-Models-and-Architectures"><a href="#c3-Models-and-Architectures" class="headerlink" title="c3 Models and Architectures"></a><strong>c3 Models and Architectures</strong></h3><h4 id="openGL-流水线以及各个模块功能"><a href="#openGL-流水线以及各个模块功能" class="headerlink" title="openGL 流水线以及各个模块功能"></a><strong>openGL 流水线以及各个模块功能</strong></h4>
+<h3 id="c3-Models-and-Architectures"><a href="#c3-Models-and-Architectures" class="headerlink" title="c3 Models and Architectures"></a><strong>c3 Models and Architectures</strong></h3><h4 id="openGL-流水线以及各个模块功能"><a href="#openGL-流水线以及各个模块功能" class="headerlink" title="openGL 流水线以及各个模块功能"></a><strong>openGL 流水线以及各个模块功能</strong></h4><ul>
+<li><p>pipline 整个架构  </p>
+<p>​</p>
+</li>
+</ul>
+
   </section>
 
   
