@@ -47,7 +47,9 @@ phong及G">
 <meta property="og:image" content="http://yoursite.com/images/CG/Bresenham.png">
 <meta property="og:image" content="http://yoursite.com/images/CG/几何绘制流水线.png">
 <meta property="og:image" content="http://yoursite.com/Users/yaoyirong/blog/source/images/CG/照相机标架.png">
-<meta property="og:updated_time" content="2017-05-05T13:34:37.000Z">
+<meta property="og:image" content="http://yoursite.com/Users/yaoyirong/blog/source/images/CG/窗口坐标系1.jpeg">
+<meta property="og:image" content="http://yoursite.com/Users/yaoyirong/blog/source/images/CG/窗口坐标系2.JPG">
+<meta property="og:updated_time" content="2017-05-05T13:57:06.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CG | Yao's station">
 <meta name="twitter:description" content="[TOC]
@@ -435,6 +437,16 @@ classes that you can use:
 <li><p><strong>窗口坐标系</strong>  根据视口提供的信息, 将规范化的设备坐标系下的表示变换为窗口坐标系下的三维表示</p>
 </li>
 </ul>
+<h4 id="openGL窗口坐标系之间的变换"><a href="#openGL窗口坐标系之间的变换" class="headerlink" title="openGL窗口坐标系之间的变换"></a>openGL窗口坐标系之间的变换</h4><p>  图形窗口实现的先后顺序:</p>
+<ul>
+<li>视图坐标系 —&gt; 视口坐标系 —&gt; 窗口坐标系 —&gt; 屏幕坐标系</li>
+<li>除了视图坐标系单位<strong>不</strong>为 pixel 其余均为 pixel</li>
+<li><p>视图坐标系原点在 <strong>视图中心</strong>, 屏幕坐标系(<strong>鼠标坐标系</strong>)原点在<strong>左上</strong>, 其余两个原点在<strong>左下</strong></p>
+<p>懒得打字, 直接上图</p>
+</li>
+</ul>
+<p><img src="/Users/yaoyirong/blog/source/images/CG/窗口坐标系1.jpeg" alt="窗口坐标系1"></p>
+<p><img src="/Users/yaoyirong/blog/source/images/CG/窗口坐标系2.JPG" alt="窗口坐标系2"></p>
 
   </section>
 
