@@ -38,6 +38,171 @@
     </entry>
     
     <entry>
+      <title><![CDATA[CG]]></title>
+      <url>http://yoursite.com/2017/03/05/CG%E7%9F%A5%E8%AF%86%E7%82%B9%E9%A2%84%E4%BC%B0%E6%80%BB%E7%BB%93/</url>
+      <content type="html"><![CDATA[<h3 id="c11-shading"><a href="#c11-shading" class="headerlink" title="c11 shading"></a><strong>c11 shading</strong></h3><h4 id="phong模型包含-内容"><a href="#phong模型包含-内容" class="headerlink" title="phong模型包含(内容)"></a><strong>phong模型包含(内容)</strong></h4><ul>
+<li>环境光, 漫反射, 镜面反射  </li>
+<li>公式 四个向量</li>
+<li>小细节   <strong>单独求r(反射向量)</strong>  以及  算法改进  <strong>引入H向量</strong> 向量之间计算</li>
+<li>增加<strong>衰减因子</strong>(常数项和一次项作用—-当距离变远时, 减缓衰减速度)</li>
+</ul>
+<h4 id="使用多边形-mash-表示原因"><a href="#使用多边形-mash-表示原因" class="headerlink" title="使用多边形 mash 表示原因"></a><strong>使用多边形 mash 表示原因</strong></h4><ul>
+<li>最主要: 可定向求法向, 用于光亮度计算; </li>
+<li>可得到边的准确位置, 用于做扫描转换填充</li>
+</ul>
+<h4 id="phong及Gouraud特点及为什么"><a href="#phong及Gouraud特点及为什么" class="headerlink" title="phong及Gouraud特点及为什么"></a><strong>phong及Gouraud特点及为什么</strong></h4><ul>
+<li>两个都是插值着色, G是双插颜色 P是双插法向 (一条边上插值点的法向; 多边形图元之间插边的法向 分离了每一个四角形,中间点可能会出现非垂直的法向)</li>
+<li>gouraund 易实现,但未给高亮  (原因 多边形中间很可能存在高光区域, 但是边缘未出现高光)</li>
+<li>phong 实现代价比较高, 但有比较好的高亮</li>
+<li>使用: 如果表面曲率比较高, phong处理更光滑,但是代价比较高; 均需要数据结构来存储面片, 可以获得点的法向量</li>
+</ul>
+<h3 id="c12-vertices-to-Fragment-一"><a href="#c12-vertices-to-Fragment-一" class="headerlink" title="c12  vertices to Fragment 一"></a><strong>c12  vertices to Fragment 一</strong></h3><h4 id="关于-pipeline-的过程的具体实施"><a href="#关于-pipeline-的过程的具体实施" class="headerlink" title="关于 pipeline 的过程的具体实施"></a><strong>关于 pipeline 的过程的具体实施</strong></h4><ul>
+<li>model —&gt;  Geometric processing (<strong>投影, 图元装配, 剪裁, 着色</strong>) —&gt; Rasterization  —&gt; Fragment processing (<strong>隐藏面消除, 纹理映射, 透明度</strong>)  —&gt; Frame buffer</li>
+</ul>
+<h4 id="Clipping-算法-内容简述"><a href="#Clipping-算法-内容简述" class="headerlink" title="Clipping 算法 (内容简述)"></a><strong>Clipping 算法 (内容简述)</strong></h4><h5 id="Cohen-Sutherland"><a href="#Cohen-Sutherland" class="headerlink" title="Cohen-Sutherland"></a><strong>Cohen-Sutherland</strong></h5><ul>
+<li><p>4种case  重在排除两种 0 内 1 外  y 左 x 右 </p>
+</li>
+<li><p>理解 </p>
+<blockquote>
+<p>通过一个矩形的裁剪区域将整个屏幕分成9个部分，并为每一个部分赋予相应的区域码，然后根据端点的位置确定这个端点的区域码。</p>
+<p>先判断能否完全接受或者完全排除一条线段，若以上2个判断无法直接得出，则逐步裁剪，选取一个位于裁剪区外的端点，把端点的区域码和裁剪边界的区域码进行逻辑与运算，若结果为真，则端点在该裁剪边界外部，这时将端点移向线段和该边界的交点处，如此循环，直到裁剪结束.</p>
+</blockquote>
+</li>
+<li><p>优 (可排除多数情况; 易扩展至3d 3*9 6bit) 缺 (对于在多个步骤中要裁剪的线段需要多次重复编码,降低效率) 点</p>
+</li>
+<li><p>normalized form 归一化形式</p>
+<ul>
+<li>归一化, 中心在原点处,边长为2, 无论定义什么视界体, 对我们来说都是标准化的视界体, 从而不会影响结果.</li>
+</ul>
+</li>
+</ul>
+<h5 id="Cyrus-Beck-认为很重要-需要画图考"><a href="#Cyrus-Beck-认为很重要-需要画图考" class="headerlink" title="Cyrus-Beck (认为很重要, 需要画图考)"></a><strong>Cyrus-Beck (</strong>认为很重要, 需要画图考<strong>)</strong></h5><ul>
+<li><p>算法简述 参数直线方程 求t= NL(P0-A)/-NL(P1-P0)    <strong>NL(P1-P0)</strong> 作为判断依据  &gt;0 进入点Pe &lt;0 出去点 PL  =0 判断 <strong>NL(P0-A)</strong>正负 (特殊情况)</p>
+</li>
+<li><p>伪码 了解</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>（k edges of clipping polygon）</div><div class="line">&#123;</div><div class="line">    solve Ni·(p1-p0);</div><div class="line">    solve Ni·(p0-Ai);</div><div class="line">    <span class="keyword">if</span> ( Ni·(p1-p0) = = <span class="number">0</span> ) <span class="comment">//parallel with the edge</span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">if</span> ( Ni·(p0-Ai) &lt; <span class="number">0</span> )</div><div class="line">             <span class="keyword">break</span>; <span class="comment">//invisible</span></div><div class="line">        <span class="keyword">else</span></div><div class="line">             go to next edge;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">else</span>  <span class="comment">// Ni·(p1-p0) != 0</span></div><div class="line">    &#123;</div><div class="line">        solve ti;</div><div class="line">        <span class="keyword">if</span> ( Ni·(p1-p0) &lt; <span class="number">0</span> )</div><div class="line">          te = min&#123;<span class="number">1</span>, min&#123;ti| Ni*(P1-P0)&lt;<span class="number">0</span>&#125;&#125;</div><div class="line">        <span class="keyword">else</span></div><div class="line">		  tl = max&#123;<span class="number">0</span>, max&#123;ti| Ni*(P1-P0)&gt;<span class="number">0</span>&#125;&#125;</div><div class="line">     &#125;    </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="Liang-Barsky-梁友栋"><a href="#Liang-Barsky-梁友栋" class="headerlink" title="Liang-Barsky (梁友栋)"></a><strong>Liang-Barsky (梁友栋)</strong></h5><ul>
+<li>tL tR tB tT 求解(四个交点) 规律都有一个负号,其余样子一样</li>
+<li>画图 裁剪窗口为规则矩形  Rk 和 Sk 的判断</li>
+</ul>
+<h5 id="三者比较"><a href="#三者比较" class="headerlink" title="三者比较"></a><strong>三者比较</strong></h5><ul>
+<li>Cohen-Sutherland: 反复需要裁剪时代价比较高(每次均判断是否需裁); 当大多数线可排除, 只接受一小部分线时最适用</li>
+<li>Cyrus-Beck: 计算 t 交点时代价比较低, (x, y) 裁剪点只计算一次; 但是算法不会考虑大部分都不显示的情况,最好是多条线段均需剪裁</li>
+<li>Liang-Barsky: Cyrus­Beck的优化版</li>
+</ul>
+<h5 id="Sutherland-Hodgman-裁剪多边形"><a href="#Sutherland-Hodgman-裁剪多边形" class="headerlink" title="Sutherland-Hodgman (裁剪多边形)"></a><strong>Sutherland-Hodgman (裁剪多边形)</strong></h5><ul>
+<li>独立考虑视口的每一条边; 使用边裁剪多边形; 做完所有平面多边形裁剪好   路线: 一次围绕polygon 一个顶点, 以前的s,现在的p 4种case <strong>画图</strong></li>
+<li><strong>注意: 凸边形可以但凹变形不可, 可以扩展至3D</strong> </li>
+</ul>
+<h4 id="Rasterization-—-光栅化-扫描转换"><a href="#Rasterization-—-光栅化-扫描转换" class="headerlink" title="Rasterization — 光栅化, 扫描转换"></a><strong>Rasterization — 光栅化, 扫描转换</strong></h4><p>决定由顶点形成的基本图元包含的pixel; 片元是潜在的像素, 属性包括—位置信息, 颜色, 深度, 纹理坐标等; 片元的位置属性对应于颜色缓存中某个像素的位置。</p>
+<h5 id="DDA-线段扫描转换算法"><a href="#DDA-线段扫描转换算法" class="headerlink" title="DDA (线段扫描转换算法)"></a><strong>DDA (线段扫描转换算法)</strong></h5><ul>
+<li><p>根据直线斜率确定下一个 pixel 位置, m=△y, 假定0&lt;m&lt;1,  m大于1时,交换x, y</p>
+</li>
+<li><p>优 (实现容易) 缺 (每一步均涉及浮点运算和四舍五入, 代价比较高)</p>
+</li>
+<li><p>伪码</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>(<span class="keyword">int</span> x=x1; x&lt;=x2; x++)&#123;</div><div class="line">  y+=m; <span class="comment">//m是浮点数</span></div><div class="line">  write_pixel(x, round(y), line_color); <span class="comment">//round()四舍五入</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="Bresenham’s-很重要-画图考"><a href="#Bresenham’s-很重要-画图考" class="headerlink" title="Bresenham’s (很重要, 画图考)"></a><strong>Bresenham’s (</strong>很重要, 画图考<strong>)</strong></h5><ul>
+<li><p>基本思想: 假定线段的起点(x1,y1)和终点(x2，y2)的坐标值都是整数, 假定通过计算已经得到了一个位于(i+1/2,j+1/2)位置的像素，该线段所在直线的方程为<br>y=mx+h, 下一个点的候选像素是 (Xi+1, Yi,r +1) 和 (Xi+1 , Yi,r) 引入判定变量 变为一种增量算法  d=△x(a-b), 直接判断B-A就行  Yi+1-Yi,r-0.5<img src="/Users/yaoyirong/Desktop/屏幕快照 2017-05-03 上午11.03.11.png" alt="屏幕快照 2017-05-03 上午11.03.11"></p>
+</li>
+<li><p><strong>改进(很重要😂, 会画图)</strong></p>
+<ul>
+<li><p><code>0&lt;m&gt;1</code> 时, 分两种情况: 第二次在第一次的右边;  此时Anew = Alast - m; Bnew =  Blast + m</p>
+<p>第二次在第一次右上 Anew = Alast - (m-1);  Bnew =  Blast + (m-1)</p>
+</li>
+<li><p>伪码, 老师上课要做(重要😁)</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">Bresenham</span><span class="params">(x0, y0, x1, y1)</span></span>&#123;</div><div class="line">  <span class="keyword">int</span> dx,dy,x,y,d;</div><div class="line">  dx = x1-x0;</div><div class="line">  dy = y1-y0;</div><div class="line">  d = dx<span class="number">-2</span>*(dy);<span class="comment">//d = △x(a-b)</span></div><div class="line">  x=x0; y=y0;</div><div class="line">  drawpixel(x, y, color);</div><div class="line">  <span class="keyword">while</span>(x&lt;=x1)</div><div class="line">  &#123;</div><div class="line">    <span class="keyword">if</span>(d&gt;<span class="number">0</span>)</div><div class="line">    &#123;</div><div class="line">      x = x + <span class="number">1</span>;</div><div class="line">      y = y;</div><div class="line">      d = d - <span class="number">2</span>*(dy);<span class="comment">//增量  △x(2*m)= 2*△y</span></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">else</span>&#123;</div><div class="line">      x = x + <span class="number">1</span>;</div><div class="line">      y = y + <span class="number">1</span>;</div><div class="line">      d = d - <span class="number">2</span>*(dy - dx);<span class="comment">//增量  △x(2*(m-1)= 2*(△y - △x)</span></div><div class="line">    &#125; </div><div class="line">    drawpixel(x, y, color);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="polygon-扫描转换-填充-Fill-奇异点问题注意"><a href="#polygon-扫描转换-填充-Fill-奇异点问题注意" class="headerlink" title="polygon 扫描转换(填充 Fill  奇异点问题注意)"></a><strong>polygon 扫描转换(填充 Fill  </strong>奇异点问题注意<strong>)</strong></h5><p>凸边形 检测点是否在多边形内—奇偶性检测 (奇内偶外), 非凸可能会用winding number (顺时针 交点-1 逆时针 交点+1 不为0 ,则在内)</p>
+<ul>
+<li>Flood Fill 泛洪单个pixel <ul>
+<li>前提: 知道其中的一个种子点, 可以进行递归填充 4/8方向</li>
+</ul>
+</li>
+<li>Flood Fill with scan line 一行<ul>
+<li>最主要的 — 找准边界pixel, 可以通过上下行入栈但比较麻烦, 可以通过维护多边形与扫描线的所有交点的数据结构来填充12, 34, 56, 78, 910…</li>
+<li><strong>奇异点排除问题</strong>  比较重要 多边形顶点恰在扫描线上.. 解决方式可以是将其中一种裁开,使得交点数量降低; (了解即好—openGL使用了两倍于帧缓存的虚拟缓存,像素中心在整数半值处, 不可能出现奇异点情况)</li>
+</ul>
+</li>
+<li>coherence of scanline   一致性 改进算法, 增量计算<ul>
+<li>之前步骤: 找到扫描线和每一条边的交点; 交点排序; 交点之间填充pixel; 缺点: 计算交点很慢</li>
+<li>步骤: 利用奇偶性填充, 之前的奇异点必须处理好, 顶点计算两遍的排除.      <strong>难点</strong>: 在于如何快速找到第二条线, 两行扫描线的交点在polygon的同一条边上, 利用扫描线的连续性, <code>Xer = Xdr + 1/mr</code>   <code>△x= 1/m</code>  Xs+1 =  Xs + 1/m</li>
+</ul>
+</li>
+</ul>
+<h3 id="c13-Hidden-surface-removal"><a href="#c13-Hidden-surface-removal" class="headerlink" title="c13  Hidden surface removal"></a><strong>c13  Hidden surface removal</strong></h3><p>vertices to Fragment 二</p>
+<h4 id="Object-Space方法"><a href="#Object-Space方法" class="headerlink" title="Object Space方法"></a><strong>Object Space方法</strong></h4><p>在polygon对象空间范围使用成对测试, n个多边形最差复杂度O(n^2)</p>
+<h5 id="painter’s-算法-Depth-Sort"><a href="#painter’s-算法-Depth-Sort" class="headerlink" title="painter’s 算法 (Depth Sort)"></a><strong>painter’s 算法 (Depth Sort)</strong></h5><ul>
+<li>基于对象空间, 先画后面的, 再画前面的 </li>
+<li>深度排序 O(nlogn) 如果某个多边形的最小深度值z值大于它后面某个多边形的最大深度值, 先画; 当z值重叠时, 检测x或y的取值范围, 若x, y 不重叠, 则互不遮挡;如果均有重叠, 困难的情况: <ul>
+<li>一个polygon的所有顶点均在另一个polygon所在平面的同一侧</li>
+<li>3个或更多的polygon循环重叠  <strong>解决办法: 裁开 至少把其中一个多边形分割成两个多边形从而得到一个新多边形集</strong></li>
+<li>polygon相互穿透</li>
+</ul>
+</li>
+</ul>
+<h4 id="Image-Space方法"><a href="#Image-Space方法" class="headerlink" title="Image Space方法"></a><strong>Image Space方法</strong></h4><p>n*m frame buffer 寻找最近的k个polygons  复杂度O(nmk)</p>
+<h5 id="Back-Face-Removal-背向面剔除"><a href="#Back-Face-Removal-背向面剔除" class="headerlink" title="Back-Face Removal 背向面剔除"></a><strong>Back-Face Removal 背向面剔除</strong></h5><ul>
+<li>减轻隐藏面清除的计算量, 前向角画背向角不画, 只适用凸边形 glCullFace()</li>
+<li>v · n &gt;= 0   [-90, 90]</li>
+<li>进一步简化, 归一化之后, 所有的投影为正交投影, v=(0, 0, 1) 平面方程 ax+by+cz+d=0 法向量(a, b, c) 只需考虑c即可</li>
+</ul>
+<h5 id="Z-Buffer-or-depth-Buffer-算法-增量计算-比较重要"><a href="#Z-Buffer-or-depth-Buffer-算法-增量计算-比较重要" class="headerlink" title="Z-Buffer  or  depth-Buffer 算法   增量计算 比较重要"></a><strong>Z-Buffer  or  depth-Buffer 算法   增量计算 比较重要</strong></h5><p>在图像空间, 初始化全部为∞, 先对多个polygon<strong>光栅化处理</strong>, 对于某个polygon上的每个片元, 它对应于通过某个pixel位置的射线与改多边形的交点, 计算片元到投影中心的距离(即<strong>片元的深度值</strong>), 将片元的深度值同z-buffer相应位置的深度值作比较.</p>
+<p>  若前者大, 之前处理的片元离视点更近, 则不可见; 前者小, 则找到离视点更近的一个片元, 使用片元上的深度值更新z-buffer的值, 并把颜色缓存中的相应位置的颜色更新为该片元的颜色.</p>
+<ul>
+<li><p>注: 从透视投影的角度, 所求得深度值是经过了<strong>归一化变换后的距离</strong>. (虽然是非线性变换, 但相对距离不变)   视界体归一化, 透视投影变成正交投影, 可以利用z值进行深度计算</p>
+</li>
+<li><p>伪码</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//initScreen 初始化</span></div><div class="line"><span class="keyword">for</span> i=<span class="number">0</span> to N <span class="keyword">do</span></div><div class="line">  <span class="keyword">for</span> j=<span class="number">0</span> to N <span class="keyword">do</span></div><div class="line">    screen[i][j] = BackGROUND_COLOR; zbuffer[i][j] = ∞</div><div class="line"><span class="comment">//DrawZpixel(x,y,z,color) 里的xyz经过正交投影归一化</span></div><div class="line"><span class="keyword">if</span>(z &lt; zbuffer[x][y]) then</div><div class="line">  screen[x][y] = color; zbuffer[x][y] = z;</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>增量计算</strong> </p>
+</li>
+</ul>
+<p>平面ax+by+cz+d=0 使用扫描线转化光栅化, 深度改变满足 a△x + b△y + c△z = 0 (窗口坐标系) 沿着扫描线 △y=0 △z = -a/c *△x  (△x = 1)  只需计算一次</p>
+<p>尽管基于图像空间的算法在最坏情况下的性能与图元数量成正比; 但z-buffer的性能与光栅化过程生成的片元数量成正比</p>
+<ul>
+<li><p>扫描线算法结合 shading 和 hsr 隐藏面消除</p>
+<ul>
+<li><p>扫描线分类: 无遮挡x, y 不需要depth信息;  有遮挡x, y 需要depth信息</p>
+</li>
+<li><p>伪码 <strong>基于z-buffer的scan-line 算法,  Zx+1,y = -A/C </strong></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">for each polygon do</div><div class="line">  for each pixel(x, y) in the Polygon's prjection do</div><div class="line">    z = -(D + Ax + By)/c</div><div class="line">    DrawZpixel(x, y, z, polygon's color)</div><div class="line">for each scanline y do</div><div class="line">  for each "in range" polygon projection do</div><div class="line">     for x=x1 to x2 do</div><div class="line">        z =-(D + Ax + By)/c</div><div class="line">        DrawZpixel(x, y, z, polygon's color)</div><div class="line">//如果我们知道在(x,y)处的Zx,y   则Zx+1,y = -A/C</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>openGL实现</p>
+<ul>
+<li><p>在int main() 设置深度缓冲区测试 <strong>glutInitDisplayMode(GLUT_DEPTH);</strong></p>
+</li>
+<li><p>打开深度缓冲区测试(在绘图前) <strong>glEnable(GL_DEPTH_TEST)</strong></p>
+</li>
+<li><p>清除深度缓冲区(在display()开头) <strong>glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);</strong></p>
+</li>
+<li><p>为了提效, 在后台开启背向面剔除</p>
+<p><strong>glEnable(GL_Cull_Face);      glCullFace(GL_BACK);</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="Aliasing-反走样"><a href="#Aliasing-反走样" class="headerlink" title="Aliasing 反走样"></a><strong>Aliasing 反走样</strong></h4><p>代价比较高, 质量变好      理想的光栅化线是1px宽</p>
+<p><strong>问题的严重性</strong>: 边缘的锯齿状, 小多边形被忽略, 需要合成一个多边形的颜色不能完全确定pixel的颜色.</p>
+<p><strong>反走样解决措施</strong>: 每个x的颜色为多个pixel的混合颜色, 取决于理想线条的覆盖范围, 锯齿状边界变模糊, 颜色混合.</p>
+<ul>
+<li>开启(慢): glEnable(LINE_SMOOTH);  glEnable(POLYGON_SMOOTH);</li>
+<li>关闭(快): glDisable(LINESMOOTH);  glDisable(POLYGON_SMOOTH);</li>
+</ul>
+<p><strong>时间控制的反走样</strong>  从一个pixel 添加光线追踪线  <strong>移动的物体, 采用随机采样, blue noise</strong></p>
+<h3 id="c3-Models-and-Architectures"><a href="#c3-Models-and-Architectures" class="headerlink" title="c3 Models and Architectures"></a><strong>c3 Models and Architectures</strong></h3><h4 id="openGL-流水线以及各个模块功能"><a href="#openGL-流水线以及各个模块功能" class="headerlink" title="openGL 流水线以及各个模块功能"></a><strong>openGL 流水线以及各个模块功能</strong></h4>]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[范数]]></title>
       <url>http://yoursite.com/2017/03/01/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E5%91%A8%E4%B9%8B%E8%8C%83%E6%95%B0/</url>
       <content type="html"><![CDATA[<p>机器学习?(ノへ￣、)</p>
