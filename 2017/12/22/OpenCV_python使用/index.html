@@ -32,7 +32,7 @@
 <meta property="og:image" content="http://yoursite.com/images/OpenCV_python使用/output_14_0.png">
 <meta property="og:image" content="http://yoursite.com/images/OpenCV_python使用/img_pyplot截图.png">
 <meta property="og:image" content="http://yoursite.com/images/OpenCV_python使用/img_cv2截图.png">
-<meta property="og:updated_time" content="2017-12-23T08:59:21.000Z">
+<meta property="og:updated_time" content="2017-12-23T09:00:58.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="OpenCV_python 使用 | Yao's station">
 <meta name="twitter:description" content="python-OpenCV">
@@ -282,10 +282,8 @@ classes that you can use:
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> cv2</div><div class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</div><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line"></div><div class="line">img = np.array([</div><div class="line">    [[<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>], [<span class="number">0</span>, <span class="number">255</span>, <span class="number">0</span>], [<span class="number">0</span>, <span class="number">0</span>, <span class="number">255</span>]],</div><div class="line">    [[<span class="number">255</span>, <span class="number">255</span>, <span class="number">0</span>], [<span class="number">255</span>, <span class="number">0</span>, <span class="number">255</span>], [<span class="number">0</span>, <span class="number">255</span>, <span class="number">255</span>]],</div><div class="line">    [[<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>], [<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>], [<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>]],</div><div class="line">], dtype=np.uint8)</div><div class="line"></div><div class="line">plt.figure(<span class="string">'matplotlib &amp; OpenCV'</span>, figsize=(<span class="number">8</span>, <span class="number">4</span>))</div><div class="line"><span class="comment"># 用matplotlib存储</span></div><div class="line">plt.imsave(<span class="string">'img_pyplot.jpg'</span>, img)</div><div class="line"></div><div class="line"><span class="comment"># 用OpenCV存储</span></div><div class="line">cv2.imwrite(<span class="string">'img_cv2.jpg'</span>, img)</div></pre></td></tr></table></figure>
 <p><strong>不管是RGB还是BGR，都是高度×宽度×通道数，H×W×C的表达方式，而在深度学习中，因为要对不同通道应用卷积，所以用的是另一种方式：C×H×W，就是把每个通道都单独表达成一个二维矩阵.</strong><br>np.reshape() 😂 好像就是 CHW (不知道能否这么表述)</p>
 <p><strong>像素点太小了, 截图展示</strong></p>
-<p><strong>用matplotlib存储:</strong></p>
-<p><img src="/images/OpenCV_python使用/img_pyplot截图.png" alt="img_pyplot截图"></p>
-<p><strong>用OpenCV存储:</strong></p>
-<p><img src="/images/OpenCV_python使用/img_cv2截图.png" alt="img_cv2截图"></p>
+<p><strong>用matplotlib存储:</strong>                                             <strong>用OpenCV存储:</strong></p>
+<p><img src="/images/OpenCV_python使用/img_pyplot截图.png" alt="img_pyplot截图"> <img src="/images/OpenCV_python使用/img_cv2截图.png" alt="img_cv2截图"></p>
 
   </section>
 
