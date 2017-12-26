@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      Image processing - Feature extraction | Yao&#39;s station 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="John Doe">
+    
+    
+
+    <meta name="description" content="纯文字描述">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Image processing - Feature extraction | Yao's station">
+<meta property="og:url" content="http://yoursite.com/2017/12/26/图像特征识别文字性描述/index.html">
+<meta property="og:site_name" content="Yao's station">
+<meta property="og:description" content="纯文字描述">
+<meta property="og:image" content="http://yoursite.com/images/图像特征识别文字描述/直方图常用统计特征.png">
+<meta property="og:image" content="http://yoursite.com/images/图像特征识别文字描述/直方图常用统计特征接上.png">
+<meta property="og:image" content="http://yoursite.com/images/图像特征识别文字描述/维度灾难.png">
+<meta property="og:updated_time" content="2017-12-26T07:48:17.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Image processing - Feature extraction | Yao's station">
+<meta name="twitter:description" content="纯文字描述">
+<meta name="twitter:image" content="http://yoursite.com/images/图像特征识别文字描述/直方图常用统计特征.png">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">Yao&#39;s station</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">Image processing - Feature extraction</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2017-12-26" class="post-meta__date date">2017-12-26</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+            <font class="categories">
+            &#8226; 分类:
+            <a class="categories-link" href="/categories/Feature-extraction/">Feature extraction</a>
+            </font>
+          
+
+          
+             &#8226; 标签:
+            <font class="tags">
+              <a class="tags-link" href="/tags/Image-processing/">Image processing</a>
+            </font>
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <p>纯文字描述</p>
+<a id="more"></a>
+<p>[TOC]</p>
+<h1 id="图像特征识别"><a href="#图像特征识别" class="headerlink" title="图像特征识别"></a>图像特征识别</h1><blockquote>
+<p>调研 针对图像, 视频, 音频特征提取的工具和算法(方法)</p>
+</blockquote>
+<h2 id="图像特征概述"><a href="#图像特征概述" class="headerlink" title="图像特征概述"></a>图像特征概述</h2><p>属于图像分析的范畴, 也是图像识别的开始。如何从图像中提取有用的数据或信息，得到图像的“非图像” 的表示或描述，如数值、向量和符号等(特征提取).<br> “非图像”的表示或描述就是特征(数值或向量形式)。</p>
+<p><strong>图像特征</strong><br>对于图像而言， 每一幅图像都具有能够区别于其他类图像的自身特征，有些是可以直观地感受到的自然特征，如亮度、边缘、纹理和色彩等；有些则是需要通过变换或处理才能得到的， 如矩、直方图以及主成份等.</p>
+<p><strong>特征向量</strong><br>将某一类对象的多个或多种特性组合在一起, 形成一个特征向量来代表该类对象，如果只有单个数值特征，则特征向量为一个一维向量，如果是n个特性的组合，则为一个n维特征向量。该类特征向量常常作为识别系统的输入。</p>
+<p>一个n维特征就是位于n维空间中的点，而识别分类的任务就是找到对这个n维空间的一种划分。 </p>
+<p><strong>特征提取的一般原则</strong><br>图像识别实际上是一个<strong>分类</strong>的过程，要求选取的特征不仅要能够很好地描述图像，更重要的是还要能够很好地区分不同类别的图像。</p>
+<p>在同类图像之间差异较小（较小的类内距），在不同类别的图像之间差异较大（较大的类间距）的图像特征 —- 最具有区分能力(most discriminative)的特征。在特征提取中先验知识扮演着重要的角色， 如何依靠先验知识来帮助我们选择特征也是后面将持续关注的问题。</p>
+<p><strong>特征的评价标准</strong><br>特征提取应具体问题具体分析, 还是有一些可供遵循的普遍原则:</p>
+<ul>
+<li>特征应当容易提取</li>
+<li>选取的特征应对噪声和不相关转换不敏感．<ul>
+<li>比如: 需要得到对几何失真变形等转换不敏感的描绘子， 从而得到旋转不变， 或是投影失真不变的特征</li>
+</ul>
+</li>
+<li>应试图寻找最具区分能力的特征．</li>
+</ul>
+<h2 id="基本统计特征"><a href="#基本统计特征" class="headerlink" title="基本统计特征"></a>基本统计特征</h2><blockquote>
+<p>常用的基本统计特征，包括一些简单的<strong>区域描绘子</strong>, <strong>直方图</strong>及其<strong>统计特征</strong>以及<strong>灰度共现矩阵</strong>等</p>
+</blockquote>
+<h3 id="简单的区域描绘子及其Matlab实现"><a href="#简单的区域描绘子及其Matlab实现" class="headerlink" title="简单的区域描绘子及其Matlab实现"></a>简单的区域描绘子及其Matlab实现</h3><p>在经过图像分割得到各种我们感兴趣的区域之后<code>patch_tree = img[7:150, 300:450]</code>, 利用一些简单区域描绘子作为代表该区域的特征。通常将这些<strong>区域特征</strong>组合成<strong>特征向量</strong>以供分类使用。</p>
+<p>常用的简单区域描绘子如下:</p>
+<ul>
+<li>周长: 区域边界的长度， 即位于区域边界上的像素数目</li>
+<li>面积: 区域中的像素总数．</li>
+<li>致密性: (周长） 2/面积．</li>
+<li>区域的质心</li>
+<li>灰度均值: 区域中所有像素的平均值．</li>
+<li>灰度中值: 区域中所有像素的排序中值．</li>
+<li>包含区域的最小矩形．</li>
+<li>最小或最大灰度级</li>
+<li>大于或小于均值的像素数</li>
+<li>欧拉数: 区域中的对象数减去这些对象的孔洞数</li>
+</ul>
+<p>MATLAB 使用 <code>regionprops</code> 计算区域描绘子, 其原型 <code>D = regionprops(L,properties)</code> L是一个标记矩阵, properties可以是一个用逗号分割的字符串列表，常用取值如下:</p>
+<ul>
+<li>‘Area’ : 区域中的像素总数．</li>
+<li>‘BoundingBox’: 包含区域的最小矩形. 1x4向量(矩形左上角x坐标, 矩形左上角y坐标, x方向长度, y方向长度)</li>
+<li>Centroid: 区域的质心. 1x2向量: [质心x坐标, 质心y坐标]</li>
+<li>ConvexHull: 含区域的最小凸多边形. Px2矩阵: 每一行包含多边形p个顶点之一的x和y坐标</li>
+<li>EquivDiameter: 和区域有着相同面积的圆的直径</li>
+<li>EulerNumber: 欧拉数, 区域中的对象数减去这些对象的孔洞数</li>
+</ul>
+<h3 id="直方图及其统计特征-一维"><a href="#直方图及其统计特征-一维" class="headerlink" title="直方图及其统计特征 (一维)"></a>直方图及其统计特征 (一维)</h3><p>纹理是图像固有的特征之一，是灰度（对彩色图像而言是颜色）<strong>在空间以一定的形式变换</strong>而产生的图案（模式），有时具有一定的周期性。直方图正是<strong>描述图像中像素灰度级分布</strong>的有力工具，可以用<strong>直方图或其统计特征</strong>作为图像纹理特征。</p>
+<p>直方图本身就是一个向量，向量的维数是直方图统计的灰度级数，因此可以直接以此向量作为代表图像纹理的样本特征向量，从而交给分类器处理，对于LBP直方图就常常这样处理）；另一种思路是进一步从直方图中提取出能够很好地描述<strong>直方图的统计特征</strong>，将直方图的这些统计特征组合成为样本特征向量， 这样做可以<strong>大大降低特征向量的维数</strong>。</p>
+<p><strong>直方图的常用统计特征</strong>:<br>均值, 标准方差, 平滑度, 三阶矩, 一致性, 熵<br>一个由均值、标准差、平滑度和熵组合而成的特征向量如：v = (m,a, R, e)。 </p>
+<p><strong>依靠直方图及其统计特征来作为分类特征时需要特别注意</strong><br>应认识到直方图及其统计特征是一种区分能力相对较弱的特征，这主要因为直方图属于一阶统计特征，而它们的一阶统计特征是无法反映纹理结构的变化的。直方图与纹理的对应关系并不是一对一的：首先，不同的纹理可能具有相同或相似的直方图; 其次，即便是两个不同的直方m.也可能具有相同的统计特 征如均值、标准差等。</p>
+<p><img src="/images/图像特征识别文字描述/直方图常用统计特征.png" alt="直方图常用统计特征"></p>
+<p><img src="/images/图像特征识别文字描述/直方图常用统计特征接上.png" alt="直方图常用统计特征接上"></p>
+<h3 id="灰度共现矩阵-二维"><a href="#灰度共现矩阵-二维" class="headerlink" title="灰度共现矩阵 (二维)"></a>灰度共现矩阵 (二维)</h3><p>灰度直方图是一种描述单个像素灰度分布的一阶统计量；而灰度共现矩阵描述的则是<strong>具有某种空间位置关系的两个像素的联合分布</strong>, 可以看成是两个像素灰度对的联合直方图，是种二阶统计量。</p>
+<p>纹理是由灰度分布在空间位置上反复交替变化得来的, 因此在图像中具有某种空间位置关系的两个像素之间会存在一定的灰度关系, 这种关系被称为图像灰度的空间相关特性.<br>灰度共现矩阵可以比较好的表现灰度的空间相关性</p>
+<p>x y 单位  灰度级是L 则为L x L 方阵, 其中每个元素 Pd(i, j)<br>Pd(i, j)  为具有空间位置关系 d = (Dx, Dy), 并且灰度分别为 i 和 j 的两个像素出现的次数或者是概率(归一化)</p>
+<p>常用的空间位置关系: 水平(±Dx,0), 竖直(0, ±Dy) 正45°(Dx,-Dy), (-Dx, Dy)负45°(Dx, Dy), (-Dx, -Dy)</p>
+<p>当灰度级L比较大时它将是一个庞大的方阵。如对于一般的256灰度图，凡就是一个256X256的矩阵，共2^16个元素。如此庞大的矩阵将使后续的计算量剧增。因此普通灰度图像通常要经过<strong>处理以减少灰度级数</strong>，而后再计算灰度共现矩阵。可以通过分析纹理图像的直方图，在尽量不影响纹理质量的情况下．通过适当的灰度变换来达到灰度级压缩的目的。</p>
+<h3 id="特征降维"><a href="#特征降维" class="headerlink" title="特征降维"></a>特征降维</h3><h4 id="维度灾难"><a href="#维度灾难" class="headerlink" title="维度灾难"></a>维度灾难</h4><p><img src="/images/图像特征识别文字描述/维度灾难.png" alt="维度灾难"><br>最大值时，分类器的性能不是得到改善，而是退化。<br>在低维空间中计算和分类都将变 得简单很多，训练（教授分类器如何区分不同类样本的过程，详见第11章）所需的样本数目也会大大降低。通过选择好的特征，摒弃坏的特征(10.3.2特征选择），将有助于分类器性能的提升；在通过组合特征降维时，在绝大多数情况下，丢弃某些特征所损失的信息通过在低 维空间中更加精确的映射(10.3.3特征抽取）可以得到补偿。</p>
+<p><strong>降维的两个方法</strong>:</p>
+<ul>
+<li>特征选择<ul>
+<li>选择全部特征的一个子集作为特征向量</li>
+</ul>
+</li>
+<li>特征抽取<ul>
+<li>通过已有特征的组合建立一个新的特征子集</li>
+<li>如主成份分析方法(principa1component analysis, PCA) 原特征的线性组合</li>
+</ul>
+</li>
+</ul>
+<h4 id="主成分分析-Princjpal-Component-Analysis-PCA"><a href="#主成分分析-Princjpal-Component-Analysis-PCA" class="headerlink" title="主成分分析(Princjpal Component Analysis, PCA)"></a>主成分分析(Princjpal Component Analysis, PCA)</h4><p>特征抽取是指通过已有特征的组合（变换）建立一个新的特征子集。在众多的组合方法当中，线性组合（变换）因其计算简单且便于解析分析的特点而显得颇具吸引力。<br>PCA的实质就是在尽可能好地代表原始数据的前提下，通过线性变换将高维空间中的样本数据投影到低维空间中.</p>
+<h2 id="图片特征提取"><a href="#图片特征提取" class="headerlink" title="图片特征提取"></a>图片特征提取</h2><p>图像处理的基础就是要进行特征点的提取，feature(interest points) detect 的方法也在不断的进步，边检测，角点检测，直线检测，圆检测，SIFT特征点检测，同时描述符也在发展，为了匹配的高效，逐渐从高维特征向量到二进制向量…</p>
+<h3 id="通过像素值提取特征"><a href="#通过像素值提取特征" class="headerlink" title="通过像素值提取特征"></a>通过像素值提取特征</h3><p>比如识别光学字符, 0-9; scikit-learn的digits数字集包括至少1700种0-9的手写数字图像。每个图像都有8x8像像素构成。每个像素的值是0-16，白色是0，黑色是16。<br>将8x8矩阵转换成64维向量来创建一个特征向量：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</div><div class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> datasets</div><div class="line"></div><div class="line">digits = datasets.load_digits()</div><div class="line"><span class="comment"># reshape的返回值都是 narray, 如果参数只有-1, 就是一维, 后面还加了64, 就是二维(1, 64)</span></div><div class="line">print(digits.image[<span class="number">0</span>].reshape(<span class="number">-1</span>, <span class="number">64</span>)</div></pre></td></tr></table></figure>
+<p>可以有效的处理一些基本任务，比如识别手写字母等。但是，记录每个像素的数值在大图像处理时不太好用。<br>特征向量的维度灾难; 放缩，旋转或变换之后可能不对,缺乏稳定性; 对图像的亮度也十分敏感.<br><strong>现代计算机视觉应用通常手工实现特征提取，或者用深度学习自动化解决无监督问题。</strong></p>
+<h3 id="对感兴趣的点进行特征提取"><a href="#对感兴趣的点进行特征提取" class="headerlink" title="对感兴趣的点进行特征提取"></a>对感兴趣的点进行特征提取</h3><p>有信息量的属性，称为兴趣点（points of interest); 由丰富的纹理包围，基本可以重建图像。<br><strong>边缘（edges）</strong>和<strong>角点（corners）</strong>是两种常用的兴趣点类型。边是像素快速变化的分界线（boundary),<br>这种提取方式更紧凑，而且当图片的亮度发生统一变化时，这些兴趣点依然存在。</p>
+<p>Harris角点检测<br>scikit-image(skimage)库抽取图片的兴趣点<br><code>corners = corner_peak(corner_harris(image), min_distance=2)</code><br><code>corner_x, corner_y = zip(*corners)</code></p>
+<h3 id="SIFT-特征提取"><a href="#SIFT-特征提取" class="headerlink" title="SIFT 特征提取"></a>SIFT 特征提取</h3><p>主要的思想是每个检测到的特征点都伴随对应的尺度因子, 具有尺度，旋转，仿射，视角，光照不变性。<br>引入兴趣点提取方法，通过SIFT和SURF进行优化。</p>
+<p>尺度不变特征转换（Scale-Invariant Feature Transform，SIFT), 相比前面使用的方法，SIFT对图像的尺寸，旋转，亮度变化更不敏感。<strong>每个SIFT特征都是一个描述图片上某个区域边缘和角点的向量</strong>. 和兴趣点不同，SIFT还可以获取每个兴趣点和它周围点的综合信息</p>
+<h3 id="SURF-特征抽取"><a href="#SURF-特征抽取" class="headerlink" title="SURF 特征抽取"></a>SURF 特征抽取</h3><p>加速稳健特征（Speeded-Up Robust Features，SURF), 是另一个抽取图像兴趣点的方法,其特征向量对图像的尺寸，旋转，亮度变化是不变的。其特征向量对图像的尺寸，旋转，亮度变化是不变的。<br>和兴趣点抽取类似，抽取SURF只是机器学习中创建特征向量的第一步。训练集的每个实例都会抽取不同的SURF。第六章的，K-Means聚类，我们会介绍聚类方法抽取SURF来学习特征，可以作为一种图像分类方法.<br><code>mahotas</code>(计算机视觉和图像处理 Python 库)<br><strong>包含算法</strong>:</p>
+<ul>
+<li>分水岭。</li>
+<li>凸点计算。</li>
+<li>击中/击不中，细化算法。</li>
+<li>泽尼克＆Haralick，枸杞多糖，和TAS的功能。</li>
+<li>基于freeimage的numpy图像加载（需要安装freeimage库）。</li>
+<li>加速的鲁棒特征（SURF）等。</li>
+<li>阈值。</li>
+<li>卷积。</li>
+<li>Sobel边缘检测。</li>
+<li>多边形绘制</li>
+<li>距离变换</li>
+<li>特征计算</li>
+<li>样条插值</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> mahotas <span class="keyword">as</span> mh</div><div class="line"><span class="keyword">from</span> mahotas.features <span class="keyword">import</span> surf</div><div class="line"></div><div class="line">image = mh.imread(<span class="string">'mandrill.jpeg'</span>, as_grey=<span class="keyword">True</span>)</div><div class="line">print(<span class="string">'第一个SURF描述符: \n&#123;&#125;\n'</span>.format(surf.surf(image)[<span class="number">0</span>]))</div><div class="line">print(<span class="string">'抽取了%s个SURF描述符'</span> % len(surf.surf(image)))</div></pre></td></tr></table></figure>
+<h3 id="数据标准化"><a href="#数据标准化" class="headerlink" title="数据标准化"></a>数据标准化</h3><p>确保解释变量的数据都是同一量级，均值为0的标准化数据。<br>许多评估方法在处理标准化数据集时可以获得更好的效果。<strong>标准化数据均值为0，单位方差</strong>(Unit Variance)。均值为0的解释变量是关于原点对称的，特征向量的单位方差表示其特征值全身统一单位，统一量级的数据。</p>
+<blockquote>
+<p>例如，假设特征向量由两个解释变量构成，第一个变量值范围[0,1]，第二个变量值范围[0,1000000]，这时就要把第二个变量的值调整为[0,1]，这样才能保证数据是单位方差。<br>如果变量特征值的量级比其他特征值的方差还大，这个特征值就会主导学习算法的方向，导致其他变量的影响被忽略。<br>有些机器学习算法会在数据不标准时引入很小的优化参数值。</p>
+</blockquote>
+<p>解释变量的值可以通过正态分布进行标准化，减去均值后除以标准差。<br>scikit-learn的scale函数可以实现：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> preprocessing</div><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line">X = np.array([</div><div class="line">    [<span class="number">0.</span>, <span class="number">0.</span>, <span class="number">5.</span>, <span class="number">13.</span>, <span class="number">9.</span>, <span class="number">1.</span>],</div><div class="line">    [<span class="number">0.</span>, <span class="number">0.</span>, <span class="number">13.</span>, <span class="number">15.</span>, <span class="number">10.</span>, <span class="number">15.</span>],</div><div class="line">    [<span class="number">0.</span>, <span class="number">3.</span>, <span class="number">15.</span>, <span class="number">2.</span>, <span class="number">0.</span>, <span class="number">11.</span>]</div><div class="line">])</div><div class="line">print(preprocessing.scale(X))</div></pre></td></tr></table></figure>
+
+  </section>
+
+  
+  
+
+<section class="post-comments">
+
+    <div class="ds-thread" data-thread-key="2017/12/26/图像特征识别文字性描述/"></div>
+
+    <script type="text/javascript">
+      var duoshuoQuery = {short_name:"Sixdes"};
+      (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+        || document.getElementsByTagName('body')[0]).appendChild(ds);
+      })();
+    </script> 
+
+</section>
+
+
+  
+<section class="post-comments">
+    <div class="ds-thread" data-thread-key="2017/12/26/图像特征识别文字性描述/"></div>
+        <div id="uyan_frame"></div>
+			<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2130959"></script>
+</section>
+
+
+
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>
