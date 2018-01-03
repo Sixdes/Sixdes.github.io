@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      caffe Feature extraction | Yao&#39;s station 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="John Doe">
+    
+    
+
+    <meta name="description" content="caffe 官方示例">
+<meta property="og:type" content="article">
+<meta property="og:title" content="caffe Feature extraction | Yao's station">
+<meta property="og:url" content="http://yoursite.com/2018/01/03/Feature_extraction_caffe/index.html">
+<meta property="og:site_name" content="Yao's station">
+<meta property="og:description" content="caffe 官方示例">
+<meta property="og:image" content="http://yoursite.com/images/Feature_extraction_caffe/output_10_2.png">
+<meta property="og:image" content="http://yoursite.com/images/Feature_extraction_caffe/output_28_0.png">
+<meta property="og:image" content="http://yoursite.com/images/Feature_extraction_caffe/output_30_0.png">
+<meta property="og:image" content="http://yoursite.com/images/Feature_extraction_caffe/output_32_0.png">
+<meta property="og:image" content="http://yoursite.com/images/Feature_extraction_caffe/output_34_0.png">
+<meta property="og:image" content="http://yoursite.com/images/Feature_extraction_caffe/output_36_1.png">
+<meta property="og:image" content="http://yoursite.com/images/Feature_extraction_caffe/output_38_1.png">
+<meta property="og:updated_time" content="2018-01-03T05:47:18.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="caffe Feature extraction | Yao's station">
+<meta name="twitter:description" content="caffe 官方示例">
+<meta name="twitter:image" content="http://yoursite.com/images/Feature_extraction_caffe/output_10_2.png">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">Yao&#39;s station</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">caffe Feature extraction</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2018-01-03" class="post-meta__date date">2018-01-03</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+            <font class="categories">
+            &#8226; 分类:
+            <a class="categories-link" href="/categories/feature-extraction/">feature_extraction</a>
+            </font>
+          
+
+          
+             &#8226; 标签:
+            <font class="tags">
+              <a class="tags-link" href="/tags/Image-processing/">Image processing</a>
+            </font>
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <p>caffe 官方示例</p>
+<a id="more"></a>
+<h1 id="Feature-extraction-caffe示例1"><a href="#Feature-extraction-caffe示例1" class="headerlink" title="Feature_extraction(caffe示例1)"></a>Feature_extraction(caffe示例1)</h1><p>尝试使用caffe, TensorFlow等框架来实现图像特征提取</p>
+<p>使用Caffe官方提供的深度模型——CaffeNet来演示图像识别与分类。</p>
+<h2 id="下载CaffeNet模型"><a href="#下载CaffeNet模型" class="headerlink" title="下载CaffeNet模型"></a>下载CaffeNet模型</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</div><div class="line">%matplotlib inline</div><div class="line"></div><div class="line"><span class="comment">#设置默认显示参数</span></div><div class="line">plt.rcParams[<span class="string">'figure.figsize'</span>] = (<span class="number">10</span>, <span class="number">10</span>) <span class="comment"># 图像显示大小</span></div><div class="line">plt.rcParams[<span class="string">'image.interpolation'</span>] = <span class="string">'nearest'</span> <span class="comment"># 最近邻差值: 像素为正方形</span></div><div class="line">plt.rcParams[<span class="string">'image.cmap'</span>] = <span class="string">'gray'</span> <span class="comment"># 使用灰度输出而不是彩色输出</span></div><div class="line"></div><div class="line"><span class="comment"># 这里我们将把caffe 模块添加到Python路径下.</span></div><div class="line"><span class="keyword">import</span> sys</div><div class="line"></div><div class="line">caffe_root = <span class="string">'/usr/local/Cellar/caffe/'</span>   <span class="comment"># caffe根目录，此处为相对路径，如果失灵，可换成绝对路径</span></div><div class="line"></div><div class="line"><span class="comment"># sys.path是一个列表，insert()函数插入一行，也可以使用sys.path.append('模块地址')</span></div><div class="line"><span class="comment"># sys.path.insert(0, caffe_root + 'python')  # 加载caffe的python模块</span></div><div class="line"><span class="keyword">import</span> caffe</div><div class="line"><span class="keyword">import</span> os</div><div class="line"></div><div class="line"><span class="keyword">if</span> os.path.isfile(caffe_root + <span class="string">'models/bvlc_reference_caffenet/bvlc_reference_caffenet.caffemodel'</span>):</div><div class="line">    print(<span class="string">'caffenet fount'</span>)</div><div class="line"><span class="keyword">else</span>:</div><div class="line">    print(<span class="string">'Downloading pre-trained CaffeNet model...'</span>)</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">caffenet fount</div></pre></td></tr></table></figure>
+<h2 id="加载-net-以及输入图像预处理"><a href="#加载-net-以及输入图像预处理" class="headerlink" title="加载 net 以及输入图像预处理"></a>加载 net 以及输入图像预处理</h2><ul>
+<li>Set Caffe to CPU mode and load the net from disk.</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">caffe.set_mode_cpu()</div><div class="line"></div><div class="line">model_def = caffe_root + <span class="string">'models/bvlc_reference_caffenet/deploy.prototxt'</span></div><div class="line">model_weights = caffe_root + <span class="string">'models/bvlc_reference_caffenet/bvlc_reference_caffenet.caffemodel'</span></div><div class="line"></div><div class="line">net = caffe.Net(model_def, <span class="comment"># 定义模型结构</span></div><div class="line">               model_weights,  <span class="comment"># 包含了模型的训练权值</span></div><div class="line">               caffe.TEST)   <span class="comment"># 使用测试模式(不执行dropout)</span></div></pre></td></tr></table></figure>
+<ul>
+<li>设置输入预处理(我们将使用 <code>caffe.io.Transformer</code> 来进行预处理.由于该步骤与caffe的其它模块相互独立，所以任何预处理代码应该都是可行的)</li>
+</ul>
+<p>CaffeNet模型默认的输入图像格式是BGR格式, 其像素值位于[0,255]之间, 同时每个像素值都减去了ImageNet图像的平均值. 此外, 通道的维数等于第一维(outermost最外面的)大小</p>
+<p>由于matplotlib加载的图像的值位于[0,1]之间，并且格式是RGB格式，通道的维数等于innermost(最里面的)维数，所以需要做相应变换:</p>
+<h3 id="图像变换"><a href="#图像变换" class="headerlink" title="图像变换"></a>图像变换</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 加载ImageNet训练集(同caffe一起发布)的图像均值，预处理需要减去均值</span></div><div class="line"><span class="comment"># 加载均值文件</span></div><div class="line">mu = np.load(caffe_root + <span class="string">'python/caffe/imagenet/ilsvrc_2012_mean.npy'</span>) </div><div class="line"><span class="comment"># mu.shape  (3, 256, 256)</span></div><div class="line"><span class="comment"># 对所有像素值取平均以此获取BGR的均值像素值</span></div><div class="line">mu = mu.mean(<span class="number">1</span>).mean(<span class="number">1</span>)</div><div class="line">print(<span class="string">'mean-subtracted values: '</span>, list(zip(<span class="string">'BGR'</span>, mu)))</div><div class="line"></div><div class="line"><span class="comment"># 对输入数据进行变换</span></div><div class="line"><span class="comment"># caffe.io.transformer是一个类，实体化的时候构造函数__init__(self, inputs)给一个初值</span></div><div class="line"><span class="comment"># 其中net.blobs本身是一个字典，每一个key对应每一层的名字</span></div><div class="line"><span class="comment"># net.blobs['data'].data.shape计算结果为(10, 3, 227, 227)</span></div><div class="line"><span class="comment"># print(net.blobs['data'].data.shape)</span></div><div class="line">transformer = caffe.io.Transformer(&#123;<span class="string">'data'</span>: net.blobs[<span class="string">'data'</span>].data.shape&#125;)</div><div class="line"></div><div class="line"><span class="comment"># 以下都是caffe.io.transformer类的函数方法</span></div><div class="line"><span class="comment"># caffe.io.transformer的类定义放在io.py文件中，也可用help函数查看说明</span></div><div class="line"></div><div class="line"><span class="comment"># 将图像通道数设置为outermost的维数</span></div><div class="line">transformer.set_transpose(<span class="string">'data'</span>, (<span class="number">2</span>, <span class="number">0</span>, <span class="number">1</span>)) </div><div class="line"><span class="comment"># 每个通道都减去BGR的均值像素值</span></div><div class="line">transformer.set_mean(<span class="string">'data'</span>, mu)</div><div class="line"><span class="comment"># 像素值从[0,1]变换为[0,255]</span></div><div class="line">transformer.set_raw_scale(<span class="string">'data'</span>, <span class="number">255</span>)</div><div class="line"><span class="comment"># 交换通道，RGB-&gt;BGR</span></div><div class="line">transformer.set_channel_swap(<span class="string">'data'</span>, (<span class="number">2</span>, <span class="number">1</span>, <span class="number">0</span>))</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mean-subtracted values:  [(&apos;B&apos;, 104.0069879317889), (&apos;G&apos;, 116.66876761696767), (&apos;R&apos;, 122.6789143406786)]</div></pre></td></tr></table></figure>
+<h3 id="CPU-分类"><a href="#CPU-分类" class="headerlink" title="CPU 分类"></a>CPU 分类</h3><h4 id="设置输入图像大小-可跳"><a href="#设置输入图像大小-可跳" class="headerlink" title="设置输入图像大小(可跳)"></a>设置输入图像大小(可跳)</h4><p>现在我们开始进行分类. 尽管我们只对一张图像进行分类, 不过我们将batch的大小设置为50以此来演示batching(一批).</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 设置输入图像大小(可跳, 以后也可以改)</span></div><div class="line">net.blobs[<span class="string">'data'</span>].reshape(<span class="number">50</span>,  <span class="comment"># batch size</span></div><div class="line">                          <span class="number">3</span>,   <span class="comment"># 3-channel (BGR) images</span></div><div class="line">                          <span class="number">227</span>, <span class="number">227</span>) <span class="comment"># # image size is 227x227</span></div></pre></td></tr></table></figure>
+<h4 id="加载图像-caffe自带的-并进行预处理"><a href="#加载图像-caffe自带的-并进行预处理" class="headerlink" title="加载图像(caffe自带的)并进行预处理"></a>加载图像(caffe自带的)并进行预处理</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># image RGB 0-1 innermost</span></div><div class="line"></div><div class="line">image = caffe.io.load_image(caffe_root + <span class="string">'examples/images/cat.jpg'</span>)</div><div class="line">print(image.shape)</div><div class="line"><span class="comment"># transformed_image BGR 0-255 outermost</span></div><div class="line">transformed_image = transformer.preprocess(<span class="string">'data'</span>, image)</div><div class="line">print(transformed_image.shape)</div><div class="line">plt.imshow(image)</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">(360, 480, 3)</div><div class="line">(3, 227, 227)</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;matplotlib.image.AxesImage at 0x147e865f8&gt;</div></pre></td></tr></table></figure>
+<p><img src="/images/Feature_extraction_caffe/output_10_2.png" alt="output_10_2"></p>
+<h4 id="开始分类"><a href="#开始分类" class="headerlink" title="开始分类"></a>开始分类</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 将图像数据拷贝到为net分配的内存中</span></div><div class="line"><span class="comment"># type(net.blobs['data'] -- &lt;class 'caffe._caffe.Blob'&gt;</span></div><div class="line">net.blobs[<span class="string">'data'</span>].data[...] = transformed_image</div><div class="line"></div><div class="line"><span class="comment"># 执行分类</span></div><div class="line"><span class="comment"># 前向传播，进行分类, 跑一遍网络，默认结果为最后一层的blob（也可以指定某一中间层），赋给output</span></div><div class="line">output = net.forward()</div><div class="line"></div><div class="line"><span class="comment"># output['prob']矩阵的维度是(50, 1000)</span></div><div class="line"><span class="comment"># 取batch中第一张图像的概率值 (1000,)</span></div><div class="line">output_prob = output[<span class="string">'prob'</span>][<span class="number">0</span>]</div><div class="line"><span class="comment"># 打印概率最大的类别代号，argmax()函数是求取矩阵中最大元素的索引</span></div><div class="line">print(<span class="string">'predicted class is:'</span>, output_prob.argmax())</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">predicted class is: 281</div></pre></td></tr></table></figure>
+<h4 id="验证结果是否正确"><a href="#验证结果是否正确" class="headerlink" title="验证结果是否正确"></a>验证结果是否正确</h4><p>net 输出是一个概率向量，最可能的类别是第281个类别. 但是结果是否正确呢，需要查看一下ImageNet的标签…</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 加载ImageNet标签，如果不存在，则会自动下载</span></div><div class="line">labels_file = caffe_root + <span class="string">'data/ilsvrc12/synset_words.txt'</span></div><div class="line"><span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(labels_file):</div><div class="line">    <span class="comment"># !../data/ilsvrc12/get_ilsvrc_aux.sh</span></div><div class="line">    print(<span class="string">'not found'</span>)</div><div class="line"></div><div class="line"><span class="comment"># 读取纯文本数据，三个参数分别是文件地址、数据类型和数据分隔符，保存为字典格式    </span></div><div class="line">labels = np.loadtxt(labels_file, str, delimiter=<span class="string">'\t'</span>)</div><div class="line"></div><div class="line">print(<span class="string">'output label:'</span>, labels[output_prob.argmax()])</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">output label: n02123045 tabby, tabby cat</div></pre></td></tr></table></figure>
+<p>“Tabby cat”是正确的，我们再来看下其它几个置信的较高的结果。</p>
+<h4 id="其他结果"><a href="#其他结果" class="headerlink" title="其他结果"></a>其他结果</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 从softmax output可查看置信度最高的五个结果</span></div><div class="line"><span class="comment"># reverse逆序排列，取前五个最大值</span></div><div class="line">top_inds = output_prob.argsort()[::<span class="number">-1</span>][:<span class="number">5</span>]</div><div class="line"></div><div class="line">print(<span class="string">'probabilites and labels: '</span>)</div><div class="line"><span class="keyword">for</span> prob, label <span class="keyword">in</span> zip(output_prob[top_inds], labels[top_inds]):</div><div class="line">    print(prob, label)</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">probabilites and labels: </div><div class="line">0.312447 n02123045 tabby, tabby cat</div><div class="line">0.23797 n02123159 tiger cat</div><div class="line">0.123878 n02124075 Egyptian cat</div><div class="line">0.100752 n02119022 red fox, Vulpes vulpes</div><div class="line">0.0709571 n02127052 lynx, catamount</div></pre></td></tr></table></figure>
+<p>我们可以看出，较低置信度的结构也是合理的</p>
+<h4 id="GPU-模式加速-Mac无"><a href="#GPU-模式加速-Mac无" class="headerlink" title="GPU 模式加速(Mac无)"></a>GPU 模式加速(Mac无)</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">%timeit net.forward()</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">1.39 s ± 63.3 ms per loop (mean ± std. dev. of 7 runs, 1 loop each)</div></pre></td></tr></table></figure>
+<p>Mac 没有NVIDA的GPU, 故而不进行GPU加速, 加速的的确快</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="string">'''</span></div><div class="line"># gpu模式下跑一次</div><div class="line"># 使用第一块显卡</div><div class="line">caffe.set_device(0)</div><div class="line"># 设为gpu模式</div><div class="line">caffe.set_mode_gpu()</div><div class="line">net.forward()</div><div class="line">&amp;timeit net.forward()</div><div class="line">'''</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&apos;\n# gpu模式下跑一次\n# 使用第一块显卡\ncaffe.set_device(0)\n# 设为gpu模式\ncaffe.set_mode_gpu()\nnet.forward()\n&amp;timeit net.forward()\n&apos;</div></pre></td></tr></table></figure>
+<h3 id="测试中间输出结果"><a href="#测试中间输出结果" class="headerlink" title="测试中间输出结果"></a>测试中间输出结果</h3><ul>
+<li>网络net不单单是一个黑盒子。我们接下来看看该模型的一些参数和一些中间输出。</li>
+</ul>
+<h3 id="中间层的可视化"><a href="#中间层的可视化" class="headerlink" title="中间层的可视化"></a>中间层的可视化</h3><p>首先，我们来看下如何读取网络的结构(每层的名字以及相应层的参数)</p>
+<p>每一层的结构四部分(batch_size, channel_dim, height, width)</p>
+<p>net.blobs 类型是 OrderedDict</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 对于每一层，显示输出维度</span></div><div class="line"><span class="comment"># type(net.blobs)  &lt;class 'collections.OrderedDict'&gt;</span></div><div class="line"><span class="keyword">for</span> layer_name, blob <span class="keyword">in</span> net.blobs.items():</div><div class="line">    print(layer_name, <span class="string">'\t'</span>, str(blob.data.shape))</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">data 	 (50, 3, 227, 227)</div><div class="line">conv1 	 (50, 96, 55, 55)</div><div class="line">pool1 	 (50, 96, 27, 27)</div><div class="line">norm1 	 (50, 96, 27, 27)</div><div class="line">conv2 	 (50, 256, 27, 27)</div><div class="line">pool2 	 (50, 256, 13, 13)</div><div class="line">norm2 	 (50, 256, 13, 13)</div><div class="line">conv3 	 (50, 384, 13, 13)</div><div class="line">conv4 	 (50, 384, 13, 13)</div><div class="line">conv5 	 (50, 256, 13, 13)</div><div class="line">pool5 	 (50, 256, 6, 6)</div><div class="line">fc6 	 (50, 4096)</div><div class="line">fc7 	 (50, 4096)</div><div class="line">fc8 	 (50, 1000)</div><div class="line">prob 	 (50, 1000)</div></pre></td></tr></table></figure>
+<h3 id="参数的维数"><a href="#参数的维数" class="headerlink" title="参数的维数"></a>参数的维数</h3><p>我们来看下参数的维数. 参数是OrderdDict类型，我们根据索引来访问参数, net.params[0]:权值表示weights,net.params[1]:表示偏移量biases</p>
+<p>权值参数的维度表示是(output_channels, input_channels, filter_height, filter_width)<br>偏移量参数的维度表示(output_channels,) 一维</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 循环打印参数名称，权值参数和偏移量参数的维度</span></div><div class="line"><span class="keyword">for</span> layer_name, param <span class="keyword">in</span> net.params.items():</div><div class="line">    print(layer_name, <span class="string">'\t'</span>, str(param[<span class="number">0</span>].data.shape), str(param[<span class="number">1</span>].data.shape))</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">conv1 	 (96, 3, 11, 11) (96,)</div><div class="line">conv2 	 (256, 48, 5, 5) (256,)</div><div class="line">conv3 	 (384, 256, 3, 3) (384,)</div><div class="line">conv4 	 (384, 192, 3, 3) (384,)</div><div class="line">conv5 	 (256, 192, 3, 3) (256,)</div><div class="line">fc6 	 (4096, 9216) (4096,)</div><div class="line">fc7 	 (4096, 4096) (4096,)</div><div class="line">fc8 	 (1000, 4096) (1000,)</div></pre></td></tr></table></figure>
+<h4 id="辅助函数-helper"><a href="#辅助函数-helper" class="headerlink" title="辅助函数 helper"></a>辅助函数 helper</h4><p>这里要将四维数据进行特征可视化，需要一个定义辅助函数：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">vis_square</span><span class="params">(data)</span>:</span></div><div class="line">    <span class="string">'''</span></div><div class="line">    输入一个形如：(n, height, width) or (n, height, width, 3)的数组，</div><div class="line">    并对每一个形如(height,width)的特征进行可视化到一个大小近似的网格中sqrt(n) by sqrt(n)</div><div class="line">    '''</div><div class="line">    <span class="comment"># 数据正则化</span></div><div class="line">    data = (data - data.min()) / (data.max() - data.min())</div><div class="line">    </div><div class="line">    <span class="string">'''</span></div><div class="line">    将滤波器的核转变为正方形</div><div class="line">    此处目的是将一个个滤波器按照正方形的样子排列,</div><div class="line">    先对shape[0]也就是滤波器数量取平方根，然后取大于等于该结果的正整数</div><div class="line">    ceil 向上取整</div><div class="line">    比如40个卷积核，则需要7*7的正方形格子（虽然填不满）</div><div class="line">    '''</div><div class="line">    n = int(np.ceil(np.sqrt(data.shape[<span class="number">0</span>])))</div><div class="line">    padding = (</div><div class="line">        ((<span class="number">0</span>, n**<span class="number">2</span> - data.shape[<span class="number">0</span>]), (<span class="number">0</span>, <span class="number">1</span>), (<span class="number">0</span>, <span class="number">1</span>))  <span class="comment"># 在相邻的卷积核之间加入空白</span></div><div class="line">        + ((<span class="number">0</span>, <span class="number">0</span>),) *(data.ndim - <span class="number">3</span>)                 <span class="comment"># 不填充最后一维</span></div><div class="line">              )</div><div class="line">    <span class="comment"># 每张小图片向周围扩展一个白色像素</span></div><div class="line">    data = np.pad(data, padding, mode=<span class="string">'constant'</span>, constant_values=<span class="number">1</span>) </div><div class="line">    <span class="string">'''</span></div><div class="line">    pad函数声明：pad(array, pad_width, mode, **kwargs)，作用是把list在原维度上进行扩展;</div><div class="line">    pad_width是扩充参数，例如参数((3,2),(2,3));</div><div class="line">    其中(3，2)为水平方向上，上面加3行，下面加2行；</div><div class="line">    (2，3)为垂直方向上，上面加2行，下面加3行;</div><div class="line">    (1, 1)相当于常数, 各个方向都填充</div><div class="line">    constant是常数填充的意思。</div><div class="line">    '''</div><div class="line">    </div><div class="line">    <span class="comment"># 将卷积核平铺成图片</span></div><div class="line">    data = data.reshape((n, n) + data.shape[<span class="number">1</span>:]).transpose((<span class="number">0</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">3</span>) + tuple(range(<span class="number">4</span>, data.ndim+<span class="number">1</span>)))</div><div class="line">    data = data.reshape((n * data.shape[<span class="number">1</span>], n * data.shape[<span class="number">3</span>]) + data.shape[<span class="number">4</span>:])</div><div class="line">    </div><div class="line">    plt.imshow(data)</div><div class="line">    plt.axis(<span class="string">'off'</span>)</div></pre></td></tr></table></figure>
+<h4 id="卷积层-conv1-的输出特征"><a href="#卷积层-conv1-的输出特征" class="headerlink" title="卷积层(conv1)的输出特征"></a>卷积层(conv1)的输出特征</h4><p> 首先，我们来看下第一个卷积层(conv1)的输出特征</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 参数为一个[weights, biases]的列表</span></div><div class="line">filters = net.params[<span class="string">'conv1'</span>][<span class="number">0</span>].data</div><div class="line">vis_square(np.transpose(filters, (<span class="number">0</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">1</span>)))</div></pre></td></tr></table></figure>
+<p><img src="/images/Feature_extraction_caffe/output_28_0.png" alt="output_28_0"></p>
+<p>The first layer output, conv1 (rectified responses of the filters above, first 36 only)</p>
+<h4 id="conv1-的blob数据"><a href="#conv1-的blob数据" class="headerlink" title="conv1 的blob数据"></a>conv1 的blob数据</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 选取‘conv1’的blob数据，只选择前面36张图片</span></div><div class="line">feat = net.blobs[<span class="string">'conv1'</span>].data[<span class="number">0</span>, :<span class="number">36</span>]</div><div class="line">vis_square(feat)</div></pre></td></tr></table></figure>
+<p><img src="/images/Feature_extraction_caffe/output_30_0.png" alt="output_30_0"></p>
+<h4 id="pool5"><a href="#pool5" class="headerlink" title="pool5"></a>pool5</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">feat = net.blobs[<span class="string">'pool5'</span>].data[<span class="number">0</span>]</div><div class="line">vis_square(feat)</div></pre></td></tr></table></figure>
+<p><img src="/images/Feature_extraction_caffe/output_32_0.png" alt="output_32_0"></p>
+<h4 id="fc6"><a href="#fc6" class="headerlink" title="fc6"></a>fc6</h4><p>第一个完全连接层，fc6;<br>接下来，我们将显示输出结果(&gt;0的值)及直方图.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 选取fc6的输出数据，这是一个4096维的向量</span></div><div class="line">feat = net.blobs[<span class="string">'fc6'</span>].data[<span class="number">0</span>] </div><div class="line"><span class="comment"># 创建2行1列的子图，现在是第1个子图</span></div><div class="line">plt.subplot(<span class="number">2</span>, <span class="number">1</span>, <span class="number">1</span>)</div><div class="line"><span class="comment"># 平铺向量，图像显示其每一个值</span></div><div class="line">plt.plot(feat.flat)</div><div class="line">plt.subplot(<span class="number">2</span>, <span class="number">1</span>, <span class="number">2</span>)</div><div class="line"><span class="comment"># 做直方图，总共100根条形</span></div><div class="line">_ = plt.hist(feat.flat[feat.flat &gt; <span class="number">0</span>], bins=<span class="number">100</span>)</div></pre></td></tr></table></figure>
+<p><img src="/images/Feature_extraction_caffe/output_34_0.png" alt="output_34_0"></p>
+<h4 id="最终的概率输出-prob"><a href="#最终的概率输出-prob" class="headerlink" title="最终的概率输出 prob"></a>最终的概率输出 prob</h4><p>注意强大的预测集群; 标签按照语义排序。 如上所示，顶部峰值对应于顶部预测标签。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">feat = net.blobs[<span class="string">'prob'</span>].data[<span class="number">0</span>]</div><div class="line">plt.figure(figsize=(<span class="number">15</span>, <span class="number">3</span>))</div><div class="line">plt.plot(feat.flat)</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[&lt;matplotlib.lines.Line2D at 0x148b944e0&gt;]</div></pre></td></tr></table></figure>
+<p><img src="/images/Feature_extraction_caffe/output_36_1.png" alt="output_36_1"></p>
+<h3 id="测试自己的图片"><a href="#测试自己的图片" class="headerlink" title="测试自己的图片"></a>测试自己的图片</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="string">'''</span></div><div class="line"># 下载图像</div><div class="line"># 图像URL地址</div><div class="line">my_image_url = ""</div><div class="line"># 在线下载图片</div><div class="line">!wget -O image.jpg $my_image_url </div><div class="line">'''</div><div class="line"><span class="comment"># 变换图像并将其拷贝到网络</span></div><div class="line">image = caffe.io.load_image(<span class="string">'../images.jpeg'</span>)</div><div class="line">net.blobs[<span class="string">'data'</span>].data[...] = transformer.preprocess(<span class="string">'data'</span>, image) </div><div class="line"></div><div class="line"><span class="comment"># 预测分类结果</span></div><div class="line">net.forward()</div><div class="line"></div><div class="line"><span class="comment"># 获取输出概率值</span></div><div class="line">output_prob = net.blobs[<span class="string">'prob'</span>].data[<span class="number">0</span>]</div><div class="line"></div><div class="line"><span class="comment"># 将softmax的输出结果按照从大到小排序，并取前5名</span></div><div class="line">top_inds = output_prob.argsort()[::<span class="number">-1</span>][:<span class="number">5</span>]</div><div class="line"></div><div class="line">plt.imshow(image)</div><div class="line">print(<span class="string">'probabilities and labels:'</span>)</div><div class="line"><span class="keyword">for</span> prob, label <span class="keyword">in</span> zip(output_prob[top_inds], labels[top_inds]):</div><div class="line">    print(prob, <span class="string">'\t'</span>, label)</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">probabilities and labels:</div><div class="line">0.936924 	 n02099712 Labrador retriever</div><div class="line">0.0573292 	 n02099601 golden retriever</div><div class="line">0.00213249 	 n02088364 beagle</div><div class="line">0.00084234 	 n02104029 kuvasz</div><div class="line">0.000632635 	 n02111500 Great Pyrenees</div></pre></td></tr></table></figure>
+<p><img src="/images/Feature_extraction_caffe/output_38_1.png" alt="output_38_1"></p>
+
+  </section>
+
+  
+  
+
+<section class="post-comments">
+
+    <div class="ds-thread" data-thread-key="2018/01/03/Feature_extraction_caffe/"></div>
+
+    <script type="text/javascript">
+      var duoshuoQuery = {short_name:"Sixdes"};
+      (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+        || document.getElementsByTagName('body')[0]).appendChild(ds);
+      })();
+    </script> 
+
+</section>
+
+
+  
+<section class="post-comments">
+    <div class="ds-thread" data-thread-key="2018/01/03/Feature_extraction_caffe/"></div>
+        <div id="uyan_frame"></div>
+			<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2130959"></script>
+</section>
+
+
+
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>
