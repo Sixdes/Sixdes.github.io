@@ -2,15 +2,15 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Yao&#39;s station</title>
   
-  
+  <subtitle>subtitle</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="http://yaoyirong.cn/"/>
   <updated>2018-01-06T08:44:46.000Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://yaoyirong.cn/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>Sixdes</name>
     
   </author>
   
@@ -18,8 +18,8 @@
   
   <entry>
     <title>caffe Feature extraction</title>
-    <link href="http://yoursite.com/2018/01/03/Feature_extraction_caffe/"/>
-    <id>http://yoursite.com/2018/01/03/Feature_extraction_caffe/</id>
+    <link href="http://yaoyirong.cn/2018/01/03/Feature_extraction_caffe/"/>
+    <id>http://yaoyirong.cn/2018/01/03/Feature_extraction_caffe/</id>
     <published>2018-01-03T05:42:00.000Z</published>
     <updated>2018-01-06T08:44:46.000Z</updated>
     
@@ -31,17 +31,17 @@
     
     </summary>
     
-      <category term="feature_extraction" scheme="http://yoursite.com/categories/feature-extraction/"/>
+      <category term="feature_extraction" scheme="http://yaoyirong.cn/categories/feature-extraction/"/>
     
     
-      <category term="Image processing" scheme="http://yoursite.com/tags/Image-processing/"/>
+      <category term="Image processing" scheme="http://yaoyirong.cn/tags/Image-processing/"/>
     
   </entry>
   
   <entry>
     <title>Image processing - Feature extraction</title>
-    <link href="http://yoursite.com/2017/12/26/%E5%9B%BE%E5%83%8F%E7%89%B9%E5%BE%81%E8%AF%86%E5%88%AB%E6%96%87%E5%AD%97%E6%80%A7%E6%8F%8F%E8%BF%B0/"/>
-    <id>http://yoursite.com/2017/12/26/图像特征识别文字性描述/</id>
+    <link href="http://yaoyirong.cn/2017/12/26/%E5%9B%BE%E5%83%8F%E7%89%B9%E5%BE%81%E8%AF%86%E5%88%AB%E6%96%87%E5%AD%97%E6%80%A7%E6%8F%8F%E8%BF%B0/"/>
+    <id>http://yaoyirong.cn/2017/12/26/图像特征识别文字性描述/</id>
     <published>2017-12-26T07:47:00.000Z</published>
     <updated>2017-12-26T07:48:17.000Z</updated>
     
@@ -53,17 +53,17 @@
     
     </summary>
     
-      <category term="Feature extraction" scheme="http://yoursite.com/categories/Feature-extraction/"/>
+      <category term="Feature extraction" scheme="http://yaoyirong.cn/categories/Feature-extraction/"/>
     
     
-      <category term="Image processing" scheme="http://yoursite.com/tags/Image-processing/"/>
+      <category term="Image processing" scheme="http://yaoyirong.cn/tags/Image-processing/"/>
     
   </entry>
   
   <entry>
     <title>Image Feature extraction example</title>
-    <link href="http://yoursite.com/2017/12/26/%E5%9B%BE%E5%83%8F%E7%89%B9%E5%BE%81%E6%8F%90%E5%8F%96%E5%AE%9E%E4%BE%8B/"/>
-    <id>http://yoursite.com/2017/12/26/图像特征提取实例/</id>
+    <link href="http://yaoyirong.cn/2017/12/26/%E5%9B%BE%E5%83%8F%E7%89%B9%E5%BE%81%E6%8F%90%E5%8F%96%E5%AE%9E%E4%BE%8B/"/>
+    <id>http://yaoyirong.cn/2017/12/26/图像特征提取实例/</id>
     <published>2017-12-26T07:24:00.000Z</published>
     <updated>2017-12-26T07:49:02.000Z</updated>
     
@@ -75,17 +75,17 @@
     
     </summary>
     
-      <category term="Feature extraction" scheme="http://yoursite.com/categories/Feature-extraction/"/>
+      <category term="Feature extraction" scheme="http://yaoyirong.cn/categories/Feature-extraction/"/>
     
     
-      <category term="Image processing" scheme="http://yoursite.com/tags/Image-processing/"/>
+      <category term="Image processing" scheme="http://yaoyirong.cn/tags/Image-processing/"/>
     
   </entry>
   
   <entry>
     <title>OpenCV_python 使用</title>
-    <link href="http://yoursite.com/2017/12/22/OpenCV_python%E4%BD%BF%E7%94%A8/"/>
-    <id>http://yoursite.com/2017/12/22/OpenCV_python使用/</id>
+    <link href="http://yaoyirong.cn/2017/12/22/OpenCV_python%E4%BD%BF%E7%94%A8/"/>
+    <id>http://yaoyirong.cn/2017/12/22/OpenCV_python使用/</id>
     <published>2017-12-22T04:30:13.000Z</published>
     <updated>2017-12-23T09:01:56.000Z</updated>
     
@@ -97,17 +97,17 @@
     
     </summary>
     
-      <category term="OpenCV" scheme="http://yoursite.com/categories/OpenCV/"/>
+      <category term="OpenCV" scheme="http://yaoyirong.cn/categories/OpenCV/"/>
     
     
-      <category term="The image processing" scheme="http://yoursite.com/tags/The-image-processing/"/>
+      <category term="The image processing" scheme="http://yaoyirong.cn/tags/The-image-processing/"/>
     
   </entry>
   
   <entry>
     <title>matplotlib 使用</title>
-    <link href="http://yoursite.com/2017/12/22/matplotlib%E4%BD%BF%E7%94%A8/"/>
-    <id>http://yoursite.com/2017/12/22/matplotlib使用/</id>
+    <link href="http://yaoyirong.cn/2017/12/22/matplotlib%E4%BD%BF%E7%94%A8/"/>
+    <id>http://yaoyirong.cn/2017/12/22/matplotlib使用/</id>
     <published>2017-12-22T03:30:13.000Z</published>
     <updated>2017-12-23T08:57:38.000Z</updated>
     
@@ -119,17 +119,17 @@
     
     </summary>
     
-      <category term="matplotlib" scheme="http://yoursite.com/categories/matplotlib/"/>
+      <category term="matplotlib" scheme="http://yaoyirong.cn/categories/matplotlib/"/>
     
     
-      <category term="Data mining python" scheme="http://yoursite.com/tags/Data-mining-python/"/>
+      <category term="Data mining python" scheme="http://yaoyirong.cn/tags/Data-mining-python/"/>
     
   </entry>
   
   <entry>
     <title>numpy 使用</title>
-    <link href="http://yoursite.com/2017/12/22/numpy%E4%BD%BF%E7%94%A8/"/>
-    <id>http://yoursite.com/2017/12/22/numpy使用/</id>
+    <link href="http://yaoyirong.cn/2017/12/22/numpy%E4%BD%BF%E7%94%A8/"/>
+    <id>http://yaoyirong.cn/2017/12/22/numpy使用/</id>
     <published>2017-12-22T02:30:13.000Z</published>
     <updated>2017-12-23T07:10:17.000Z</updated>
     
@@ -141,17 +141,17 @@
     
     </summary>
     
-      <category term="numpy" scheme="http://yoursite.com/categories/numpy/"/>
+      <category term="numpy" scheme="http://yaoyirong.cn/categories/numpy/"/>
     
     
-      <category term="Data mining" scheme="http://yoursite.com/tags/Data-mining/"/>
+      <category term="Data mining" scheme="http://yaoyirong.cn/tags/Data-mining/"/>
     
   </entry>
   
   <entry>
     <title>LeetCode1541</title>
-    <link href="http://yoursite.com/2017/03/15/LeetCode%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E8%BF%87%E7%A8%8B/"/>
-    <id>http://yoursite.com/2017/03/15/LeetCode算法刷题过程/</id>
+    <link href="http://yaoyirong.cn/2017/03/15/LeetCode%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E8%BF%87%E7%A8%8B/"/>
+    <id>http://yaoyirong.cn/2017/03/15/LeetCode算法刷题过程/</id>
     <published>2017-03-15T07:03:02.000Z</published>
     <updated>2017-12-22T12:54:14.000Z</updated>
     
@@ -167,21 +167,21 @@
     
     </summary>
     
-      <category term="LeetCode" scheme="http://yoursite.com/categories/LeetCode/"/>
+      <category term="LeetCode" scheme="http://yaoyirong.cn/categories/LeetCode/"/>
     
     
-      <category term="LeetCode" scheme="http://yoursite.com/tags/LeetCode/"/>
+      <category term="LeetCode" scheme="http://yaoyirong.cn/tags/LeetCode/"/>
     
-      <category term="arrays" scheme="http://yoursite.com/tags/arrays/"/>
+      <category term="arrays" scheme="http://yaoyirong.cn/tags/arrays/"/>
     
-      <category term="hash" scheme="http://yoursite.com/tags/hash/"/>
+      <category term="hash" scheme="http://yaoyirong.cn/tags/hash/"/>
     
   </entry>
   
   <entry>
     <title>范数</title>
-    <link href="http://yoursite.com/2017/03/01/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E5%91%A8%E4%B9%8B%E8%8C%83%E6%95%B0/"/>
-    <id>http://yoursite.com/2017/03/01/机器学习第一周之范数/</id>
+    <link href="http://yaoyirong.cn/2017/03/01/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E5%91%A8%E4%B9%8B%E8%8C%83%E6%95%B0/"/>
+    <id>http://yaoyirong.cn/2017/03/01/机器学习第一周之范数/</id>
     <published>2017-03-01T02:20:13.000Z</published>
     <updated>2017-04-17T13:05:03.000Z</updated>
     
@@ -193,17 +193,17 @@
     
     </summary>
     
-      <category term="norm" scheme="http://yoursite.com/categories/norm/"/>
+      <category term="norm" scheme="http://yaoyirong.cn/categories/norm/"/>
     
     
-      <category term="Machine learning" scheme="http://yoursite.com/tags/Machine-learning/"/>
+      <category term="Machine learning" scheme="http://yaoyirong.cn/tags/Machine-learning/"/>
     
   </entry>
   
   <entry>
     <title>Mac Linux文件系统</title>
-    <link href="http://yoursite.com/2016/07/15/mac%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/"/>
-    <id>http://yoursite.com/2016/07/15/mac文件系统/</id>
+    <link href="http://yaoyirong.cn/2016/07/15/mac%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/"/>
+    <id>http://yaoyirong.cn/2016/07/15/mac文件系统/</id>
     <published>2016-07-15T01:18:35.000Z</published>
     <updated>2017-04-17T13:30:29.000Z</updated>
     
@@ -219,10 +219,10 @@
     
     </summary>
     
-      <category term="杂" scheme="http://yoursite.com/categories/%E6%9D%82/"/>
+      <category term="杂" scheme="http://yaoyirong.cn/categories/%E6%9D%82/"/>
     
     
-      <category term="os" scheme="http://yoursite.com/tags/os/"/>
+      <category term="os" scheme="http://yaoyirong.cn/tags/os/"/>
     
   </entry>
   
