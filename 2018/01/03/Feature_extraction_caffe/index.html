@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
+    
+
+    
+
+    
+
+
+
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-
-    
-
-    <title>
-      caffe Feature extraction | Yao&#39;s station 
-    </title>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    
-      <meta name="author" content="John Doe">
     
     
-
+    
+    <title>caffe Feature extraction | Yao&#39;s station</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="Image processing">
     <meta name="description" content="caffe 官方示例">
 <meta property="og:type" content="article">
-<meta property="og:title" content="caffe Feature extraction | Yao's station">
+<meta property="og:title" content="caffe Feature extraction">
 <meta property="og:url" content="http://yoursite.com/2018/01/03/Feature_extraction_caffe/index.html">
 <meta property="og:site_name" content="Yao's station">
 <meta property="og:description" content="caffe 官方示例">
@@ -29,169 +33,176 @@
 <meta property="og:image" content="http://yoursite.com/images/Feature_extraction_caffe/output_34_0.png">
 <meta property="og:image" content="http://yoursite.com/images/Feature_extraction_caffe/output_36_1.png">
 <meta property="og:image" content="http://yoursite.com/images/Feature_extraction_caffe/output_38_1.png">
-<meta property="og:updated_time" content="2018-01-03T05:47:18.000Z">
+<meta property="og:updated_time" content="2018-01-06T08:44:46.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="caffe Feature extraction | Yao's station">
+<meta name="twitter:title" content="caffe Feature extraction">
 <meta name="twitter:description" content="caffe 官方示例">
 <meta name="twitter:image" content="http://yoursite.com/images/Feature_extraction_caffe/output_10_2.png">
     
+        <link rel="alternate" type="application/atom+xml" title="Yao&#39;s station" href="/atom.xml">
     
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
     
-      <link rel="icon" type="image/x-icon" href="/favicon.png">
-    
-    <link rel="stylesheet" href="/css/uno.css">
-    <link rel="stylesheet" href="/css/highlight.css">
-    <link rel="stylesheet" href="/css/archive.css">
-    <link rel="stylesheet" href="/css/china-social-icon.css">
 
 </head>
-<body>
 
-    <span class="mobile btn-mobile-menu">
-        <i class="icon icon-list btn-mobile-menu__icon"></i>
-        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
-    </span>
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/background.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/logo.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">John Doe</h5>
+          <a href="mailto:2521049349@qq.com" title="2521049349@qq.com" class="mail">2521049349@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/Sixdes" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/404"  >
+                <i class="icon icon-lg icon-link"></i>
+                测试
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">caffe Feature extraction</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">caffe Feature extraction</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-01-03T05:42:00.000Z" itemprop="datePublished" class="page-time">
+  2018-01-03
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/feature-extraction/">feature_extraction</a></li></ul>
+
+            
+        </h5>
+    </div>
 
     
 
-<header class="panel-cover panel-cover--collapsed">
+
+</header>
 
 
-  <div class="panel-main">
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Feature-extraction-caffe示例1"><span class="post-toc-number">1.</span> <span class="post-toc-text">Feature_extraction(caffe示例1)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#下载CaffeNet模型"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">下载CaffeNet模型</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#加载-net-以及输入图像预处理"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">加载 net 以及输入图像预处理</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#图像变换"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">图像变换</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#CPU-分类"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">CPU 分类</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#设置输入图像大小-可跳"><span class="post-toc-number">1.2.2.1.</span> <span class="post-toc-text">设置输入图像大小(可跳)</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#加载图像-caffe自带的-并进行预处理"><span class="post-toc-number">1.2.2.2.</span> <span class="post-toc-text">加载图像(caffe自带的)并进行预处理</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#开始分类"><span class="post-toc-number">1.2.2.3.</span> <span class="post-toc-text">开始分类</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#验证结果是否正确"><span class="post-toc-number">1.2.2.4.</span> <span class="post-toc-text">验证结果是否正确</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#其他结果"><span class="post-toc-number">1.2.2.5.</span> <span class="post-toc-text">其他结果</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#GPU-模式加速-Mac无"><span class="post-toc-number">1.2.2.6.</span> <span class="post-toc-text">GPU 模式加速(Mac无)</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#测试中间输出结果"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">测试中间输出结果</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#中间层的可视化"><span class="post-toc-number">1.2.4.</span> <span class="post-toc-text">中间层的可视化</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#参数的维数"><span class="post-toc-number">1.2.5.</span> <span class="post-toc-text">参数的维数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#辅助函数-helper"><span class="post-toc-number">1.2.5.1.</span> <span class="post-toc-text">辅助函数 helper</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#卷积层-conv1-的输出特征"><span class="post-toc-number">1.2.5.2.</span> <span class="post-toc-text">卷积层(conv1)的输出特征</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#conv1-的blob数据"><span class="post-toc-number">1.2.5.3.</span> <span class="post-toc-text">conv1 的blob数据</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#pool5"><span class="post-toc-number">1.2.5.4.</span> <span class="post-toc-text">pool5</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#fc6"><span class="post-toc-number">1.2.5.5.</span> <span class="post-toc-text">fc6</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#最终的概率输出-prob"><span class="post-toc-number">1.2.5.6.</span> <span class="post-toc-text">最终的概率输出 prob</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#测试自己的图片"><span class="post-toc-number">1.2.6.</span> <span class="post-toc-text">测试自己的图片</span></a></li></ol></li></ol></li></ol>
+        </nav>
+    </aside>
 
-  
-    <div class="panel-main__inner panel-inverted">
-    <div class="panel-main__content">
 
-        
+<article id="post-Feature_extraction_caffe"
+  class="post-article article-type-post fade" itemprop="blogPost">
 
-        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">Yao&#39;s station</a></h1>
-        <hr class="panel-cover__divider" />
+    <div class="post-card">
+        <h1 class="post-card-title">caffe Feature extraction</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-01-03 13:42:00" datetime="2018-01-03T05:42:00.000Z"  itemprop="datePublished">2018-01-03</time>
 
-        
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/feature-extraction/">feature_extraction</a></li></ul>
 
-        <div class="navigation-wrapper">
 
-          <nav class="cover-navigation cover-navigation--primary">
-            <ul class="navigation">
 
-              
-                
-                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
-              
-                
-                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
-              
-                
-                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
-              
-
-            </ul>
-          </nav>
-
-          <!-- ----------------------------
-To add a new social icon simply duplicate one of the list items from below
-and change the class in the <i> tag to match the desired social network
-and then add your link to the <a>. Here is a full list of social network
-classes that you can use:
-
-    icon-social-500px
-    icon-social-behance
-    icon-social-delicious
-    icon-social-designer-news
-    icon-social-deviant-art
-    icon-social-digg
-    icon-social-dribbble
-    icon-social-facebook
-    icon-social-flickr
-    icon-social-forrst
-    icon-social-foursquare
-    icon-social-github
-    icon-social-google-plus
-    icon-social-hi5
-    icon-social-instagram
-    icon-social-lastfm
-    icon-social-linkedin
-    icon-social-medium
-    icon-social-myspace
-    icon-social-path
-    icon-social-pinterest
-    icon-social-rdio
-    icon-social-reddit
-    icon-social-skype
-    icon-social-spotify
-    icon-social-stack-overflow
-    icon-social-steam
-    icon-social-stumbleupon
-    icon-social-treehouse
-    icon-social-tumblr
-    icon-social-twitter
-    icon-social-vimeo
-    icon-social-xbox
-    icon-social-yelp
-    icon-social-youtube
-    icon-social-zerply
-    icon-mail
-
--------------------------------->
-
-<!-- add social info here -->
-
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
 
 
         </div>
-
-      </div>
-
-    </div>
-
-    <div class="panel-cover--overlay"></div>
-  </div>
-</header>
-
-    <div class="content-wrapper">
-        <div class="content-wrapper__inner entry">
-            
-
-<article class="post-container post-container--single">
-
-  <header class="post-header">
-    
-    <h1 class="post-title">caffe Feature extraction</h1>
-
-    
-
-    <div class="post-meta">
-      <time datetime="2018-01-03" class="post-meta__date date">2018-01-03</time> 
-
-      <span class="post-meta__tags tags">
-
-          
-            <font class="categories">
-            &#8226; 分类:
-            <a class="categories-link" href="/categories/feature-extraction/">feature_extraction</a>
-            </font>
-          
-
-          
-             &#8226; 标签:
-            <font class="tags">
-              <a class="tags-link" href="/tags/Image-processing/">Image processing</a>
-            </font>
-          
-
-      </span>
-    </div>
-    
-    
-
-  </header>
-
-  <section id="post-content" class="article-content post">
-    <p>caffe 官方示例</p>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>caffe 官方示例</p>
 <a id="more"></a>
 <h1 id="Feature-extraction-caffe示例1"><a href="#Feature-extraction-caffe示例1" class="headerlink" title="Feature_extraction(caffe示例1)"></a>Feature_extraction(caffe示例1)</h1><p>尝试使用caffe, TensorFlow等框架来实现图像特征提取</p>
 <p>使用Caffe官方提供的深度模型——CaffeNet来演示图像识别与分类。</p>
+<p>使用预先训练的模型进行即时识别，并通过网络界面逐层浏览特征和参数。</p>
 <h2 id="下载CaffeNet模型"><a href="#下载CaffeNet模型" class="headerlink" title="下载CaffeNet模型"></a>下载CaffeNet模型</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</div><div class="line">%matplotlib inline</div><div class="line"></div><div class="line"><span class="comment">#设置默认显示参数</span></div><div class="line">plt.rcParams[<span class="string">'figure.figsize'</span>] = (<span class="number">10</span>, <span class="number">10</span>) <span class="comment"># 图像显示大小</span></div><div class="line">plt.rcParams[<span class="string">'image.interpolation'</span>] = <span class="string">'nearest'</span> <span class="comment"># 最近邻差值: 像素为正方形</span></div><div class="line">plt.rcParams[<span class="string">'image.cmap'</span>] = <span class="string">'gray'</span> <span class="comment"># 使用灰度输出而不是彩色输出</span></div><div class="line"></div><div class="line"><span class="comment"># 这里我们将把caffe 模块添加到Python路径下.</span></div><div class="line"><span class="keyword">import</span> sys</div><div class="line"></div><div class="line">caffe_root = <span class="string">'/usr/local/Cellar/caffe/'</span>   <span class="comment"># caffe根目录，此处为相对路径，如果失灵，可换成绝对路径</span></div><div class="line"></div><div class="line"><span class="comment"># sys.path是一个列表，insert()函数插入一行，也可以使用sys.path.append('模块地址')</span></div><div class="line"><span class="comment"># sys.path.insert(0, caffe_root + 'python')  # 加载caffe的python模块</span></div><div class="line"><span class="keyword">import</span> caffe</div><div class="line"><span class="keyword">import</span> os</div><div class="line"></div><div class="line"><span class="keyword">if</span> os.path.isfile(caffe_root + <span class="string">'models/bvlc_reference_caffenet/bvlc_reference_caffenet.caffemodel'</span>):</div><div class="line">    print(<span class="string">'caffenet fount'</span>)</div><div class="line"><span class="keyword">else</span>:</div><div class="line">    print(<span class="string">'Downloading pre-trained CaffeNet model...'</span>)</div></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">caffenet fount</div></pre></td></tr></table></figure>
 <h2 id="加载-net-以及输入图像预处理"><a href="#加载-net-以及输入图像预处理" class="headerlink" title="加载 net 以及输入图像预处理"></a>加载 net 以及输入图像预处理</h2><ul>
@@ -210,7 +221,13 @@ classes that you can use:
 <h4 id="加载图像-caffe自带的-并进行预处理"><a href="#加载图像-caffe自带的-并进行预处理" class="headerlink" title="加载图像(caffe自带的)并进行预处理"></a>加载图像(caffe自带的)并进行预处理</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># image RGB 0-1 innermost</span></div><div class="line"></div><div class="line">image = caffe.io.load_image(caffe_root + <span class="string">'examples/images/cat.jpg'</span>)</div><div class="line">print(image.shape)</div><div class="line"><span class="comment"># transformed_image BGR 0-255 outermost</span></div><div class="line">transformed_image = transformer.preprocess(<span class="string">'data'</span>, image)</div><div class="line">print(transformed_image.shape)</div><div class="line">plt.imshow(image)</div></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">(360, 480, 3)</div><div class="line">(3, 227, 227)</div></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;matplotlib.image.AxesImage at 0x147e865f8&gt;</div></pre></td></tr></table></figure>
-<p><img src="/images/Feature_extraction_caffe/output_10_2.png" alt="output_10_2"></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/Feature_extraction_caffe/output_10_2.png" alt="output_10_2" title="">
+                </div>
+                <div class="image-caption">output_10_2</div>
+            </figure>
 <h4 id="开始分类"><a href="#开始分类" class="headerlink" title="开始分类"></a>开始分类</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 将图像数据拷贝到为net分配的内存中</span></div><div class="line"><span class="comment"># type(net.blobs['data'] -- &lt;class 'caffe._caffe.Blob'&gt;</span></div><div class="line">net.blobs[<span class="string">'data'</span>].data[...] = transformed_image</div><div class="line"></div><div class="line"><span class="comment"># 执行分类</span></div><div class="line"><span class="comment"># 前向传播，进行分类, 跑一遍网络，默认结果为最后一层的blob（也可以指定某一中间层），赋给output</span></div><div class="line">output = net.forward()</div><div class="line"></div><div class="line"><span class="comment"># output['prob']矩阵的维度是(50, 1000)</span></div><div class="line"><span class="comment"># 取batch中第一张图像的概率值 (1000,)</span></div><div class="line">output_prob = output[<span class="string">'prob'</span>][<span class="number">0</span>]</div><div class="line"><span class="comment"># 打印概率最大的类别代号，argmax()函数是求取矩阵中最大元素的索引</span></div><div class="line">print(<span class="string">'predicted class is:'</span>, output_prob.argmax())</div></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">predicted class is: 281</div></pre></td></tr></table></figure>
 <h4 id="验证结果是否正确"><a href="#验证结果是否正确" class="headerlink" title="验证结果是否正确"></a>验证结果是否正确</h4><p>net 输出是一个概率向量，最可能的类别是第281个类别. 但是结果是否正确呢，需要查看一下ImageNet的标签…</p>
@@ -241,104 +258,346 @@ classes that you can use:
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">vis_square</span><span class="params">(data)</span>:</span></div><div class="line">    <span class="string">'''</span></div><div class="line">    输入一个形如：(n, height, width) or (n, height, width, 3)的数组，</div><div class="line">    并对每一个形如(height,width)的特征进行可视化到一个大小近似的网格中sqrt(n) by sqrt(n)</div><div class="line">    '''</div><div class="line">    <span class="comment"># 数据正则化</span></div><div class="line">    data = (data - data.min()) / (data.max() - data.min())</div><div class="line">    </div><div class="line">    <span class="string">'''</span></div><div class="line">    将滤波器的核转变为正方形</div><div class="line">    此处目的是将一个个滤波器按照正方形的样子排列,</div><div class="line">    先对shape[0]也就是滤波器数量取平方根，然后取大于等于该结果的正整数</div><div class="line">    ceil 向上取整</div><div class="line">    比如40个卷积核，则需要7*7的正方形格子（虽然填不满）</div><div class="line">    '''</div><div class="line">    n = int(np.ceil(np.sqrt(data.shape[<span class="number">0</span>])))</div><div class="line">    padding = (</div><div class="line">        ((<span class="number">0</span>, n**<span class="number">2</span> - data.shape[<span class="number">0</span>]), (<span class="number">0</span>, <span class="number">1</span>), (<span class="number">0</span>, <span class="number">1</span>))  <span class="comment"># 在相邻的卷积核之间加入空白</span></div><div class="line">        + ((<span class="number">0</span>, <span class="number">0</span>),) *(data.ndim - <span class="number">3</span>)                 <span class="comment"># 不填充最后一维</span></div><div class="line">              )</div><div class="line">    <span class="comment"># 每张小图片向周围扩展一个白色像素</span></div><div class="line">    data = np.pad(data, padding, mode=<span class="string">'constant'</span>, constant_values=<span class="number">1</span>) </div><div class="line">    <span class="string">'''</span></div><div class="line">    pad函数声明：pad(array, pad_width, mode, **kwargs)，作用是把list在原维度上进行扩展;</div><div class="line">    pad_width是扩充参数，例如参数((3,2),(2,3));</div><div class="line">    其中(3，2)为水平方向上，上面加3行，下面加2行；</div><div class="line">    (2，3)为垂直方向上，上面加2行，下面加3行;</div><div class="line">    (1, 1)相当于常数, 各个方向都填充</div><div class="line">    constant是常数填充的意思。</div><div class="line">    '''</div><div class="line">    </div><div class="line">    <span class="comment"># 将卷积核平铺成图片</span></div><div class="line">    data = data.reshape((n, n) + data.shape[<span class="number">1</span>:]).transpose((<span class="number">0</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">3</span>) + tuple(range(<span class="number">4</span>, data.ndim+<span class="number">1</span>)))</div><div class="line">    data = data.reshape((n * data.shape[<span class="number">1</span>], n * data.shape[<span class="number">3</span>]) + data.shape[<span class="number">4</span>:])</div><div class="line">    </div><div class="line">    plt.imshow(data)</div><div class="line">    plt.axis(<span class="string">'off'</span>)</div></pre></td></tr></table></figure>
 <h4 id="卷积层-conv1-的输出特征"><a href="#卷积层-conv1-的输出特征" class="headerlink" title="卷积层(conv1)的输出特征"></a>卷积层(conv1)的输出特征</h4><p> 首先，我们来看下第一个卷积层(conv1)的输出特征</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 参数为一个[weights, biases]的列表</span></div><div class="line">filters = net.params[<span class="string">'conv1'</span>][<span class="number">0</span>].data</div><div class="line">vis_square(np.transpose(filters, (<span class="number">0</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">1</span>)))</div></pre></td></tr></table></figure>
-<p><img src="/images/Feature_extraction_caffe/output_28_0.png" alt="output_28_0"></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/Feature_extraction_caffe/output_28_0.png" alt="output_28_0" title="">
+                </div>
+                <div class="image-caption">output_28_0</div>
+            </figure>
 <p>The first layer output, conv1 (rectified responses of the filters above, first 36 only)</p>
 <h4 id="conv1-的blob数据"><a href="#conv1-的blob数据" class="headerlink" title="conv1 的blob数据"></a>conv1 的blob数据</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 选取‘conv1’的blob数据，只选择前面36张图片</span></div><div class="line">feat = net.blobs[<span class="string">'conv1'</span>].data[<span class="number">0</span>, :<span class="number">36</span>]</div><div class="line">vis_square(feat)</div></pre></td></tr></table></figure>
-<p><img src="/images/Feature_extraction_caffe/output_30_0.png" alt="output_30_0"></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/Feature_extraction_caffe/output_30_0.png" alt="output_30_0" title="">
+                </div>
+                <div class="image-caption">output_30_0</div>
+            </figure>
 <h4 id="pool5"><a href="#pool5" class="headerlink" title="pool5"></a>pool5</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">feat = net.blobs[<span class="string">'pool5'</span>].data[<span class="number">0</span>]</div><div class="line">vis_square(feat)</div></pre></td></tr></table></figure>
-<p><img src="/images/Feature_extraction_caffe/output_32_0.png" alt="output_32_0"></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/Feature_extraction_caffe/output_32_0.png" alt="output_32_0" title="">
+                </div>
+                <div class="image-caption">output_32_0</div>
+            </figure>
 <h4 id="fc6"><a href="#fc6" class="headerlink" title="fc6"></a>fc6</h4><p>第一个完全连接层，fc6;<br>接下来，我们将显示输出结果(&gt;0的值)及直方图.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 选取fc6的输出数据，这是一个4096维的向量</span></div><div class="line">feat = net.blobs[<span class="string">'fc6'</span>].data[<span class="number">0</span>] </div><div class="line"><span class="comment"># 创建2行1列的子图，现在是第1个子图</span></div><div class="line">plt.subplot(<span class="number">2</span>, <span class="number">1</span>, <span class="number">1</span>)</div><div class="line"><span class="comment"># 平铺向量，图像显示其每一个值</span></div><div class="line">plt.plot(feat.flat)</div><div class="line">plt.subplot(<span class="number">2</span>, <span class="number">1</span>, <span class="number">2</span>)</div><div class="line"><span class="comment"># 做直方图，总共100根条形</span></div><div class="line">_ = plt.hist(feat.flat[feat.flat &gt; <span class="number">0</span>], bins=<span class="number">100</span>)</div></pre></td></tr></table></figure>
-<p><img src="/images/Feature_extraction_caffe/output_34_0.png" alt="output_34_0"></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/Feature_extraction_caffe/output_34_0.png" alt="output_34_0" title="">
+                </div>
+                <div class="image-caption">output_34_0</div>
+            </figure>
 <h4 id="最终的概率输出-prob"><a href="#最终的概率输出-prob" class="headerlink" title="最终的概率输出 prob"></a>最终的概率输出 prob</h4><p>注意强大的预测集群; 标签按照语义排序。 如上所示，顶部峰值对应于顶部预测标签。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">feat = net.blobs[<span class="string">'prob'</span>].data[<span class="number">0</span>]</div><div class="line">plt.figure(figsize=(<span class="number">15</span>, <span class="number">3</span>))</div><div class="line">plt.plot(feat.flat)</div></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[&lt;matplotlib.lines.Line2D at 0x148b944e0&gt;]</div></pre></td></tr></table></figure>
-<p><img src="/images/Feature_extraction_caffe/output_36_1.png" alt="output_36_1"></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/Feature_extraction_caffe/output_36_1.png" alt="output_36_1" title="">
+                </div>
+                <div class="image-caption">output_36_1</div>
+            </figure>
 <h3 id="测试自己的图片"><a href="#测试自己的图片" class="headerlink" title="测试自己的图片"></a>测试自己的图片</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="string">'''</span></div><div class="line"># 下载图像</div><div class="line"># 图像URL地址</div><div class="line">my_image_url = ""</div><div class="line"># 在线下载图片</div><div class="line">!wget -O image.jpg $my_image_url </div><div class="line">'''</div><div class="line"><span class="comment"># 变换图像并将其拷贝到网络</span></div><div class="line">image = caffe.io.load_image(<span class="string">'../images.jpeg'</span>)</div><div class="line">net.blobs[<span class="string">'data'</span>].data[...] = transformer.preprocess(<span class="string">'data'</span>, image) </div><div class="line"></div><div class="line"><span class="comment"># 预测分类结果</span></div><div class="line">net.forward()</div><div class="line"></div><div class="line"><span class="comment"># 获取输出概率值</span></div><div class="line">output_prob = net.blobs[<span class="string">'prob'</span>].data[<span class="number">0</span>]</div><div class="line"></div><div class="line"><span class="comment"># 将softmax的输出结果按照从大到小排序，并取前5名</span></div><div class="line">top_inds = output_prob.argsort()[::<span class="number">-1</span>][:<span class="number">5</span>]</div><div class="line"></div><div class="line">plt.imshow(image)</div><div class="line">print(<span class="string">'probabilities and labels:'</span>)</div><div class="line"><span class="keyword">for</span> prob, label <span class="keyword">in</span> zip(output_prob[top_inds], labels[top_inds]):</div><div class="line">    print(prob, <span class="string">'\t'</span>, label)</div></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">probabilities and labels:</div><div class="line">0.936924 	 n02099712 Labrador retriever</div><div class="line">0.0573292 	 n02099601 golden retriever</div><div class="line">0.00213249 	 n02088364 beagle</div><div class="line">0.00084234 	 n02104029 kuvasz</div><div class="line">0.000632635 	 n02111500 Great Pyrenees</div></pre></td></tr></table></figure>
-<p><img src="/images/Feature_extraction_caffe/output_38_1.png" alt="output_38_1"></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/Feature_extraction_caffe/output_38_1.png" alt="output_38_1" title="">
+                </div>
+                <div class="image-caption">output_38_1</div>
+            </figure>
 
-  </section>
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2018-01-06T08:44:46.000Z" itemprop="dateUpdated">2018-01-06 16:44:46</time>
+</span><br>
+
+
+        
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2018/01/03/Feature_extraction_caffe/" target="_blank" rel="external">http://yoursite.com/2018/01/03/Feature_extraction_caffe/</a>
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/logo.jpg" alt="John Doe">
+            John Doe
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Image-processing/">Image processing</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/01/03/Feature_extraction_caffe/&title=《caffe Feature extraction》 — Yao's station&pic=http://yoursite.com/img/logo.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/01/03/Feature_extraction_caffe/&title=《caffe Feature extraction》 — Yao's station&source=caffe 官方示例" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/01/03/Feature_extraction_caffe/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《caffe Feature extraction》 — Yao's station&url=http://yoursite.com/2018/01/03/Feature_extraction_caffe/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/01/03/Feature_extraction_caffe/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
 
   
+    <div class="waves-block waves-effect next">
+      <a href="/2017/12/26/图像特征识别文字性描述/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Image processing - Feature extraction</h4>
+      </a>
+    </div>
   
-
-<section class="post-comments">
-
-    <div class="ds-thread" data-thread-key="2018/01/03/Feature_extraction_caffe/"></div>
-
-    <script type="text/javascript">
-      var duoshuoQuery = {short_name:"Sixdes"};
-      (function() {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript';ds.async = true;
-        ds.src = '//static.duoshuo.com/embed.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0] 
-        || document.getElementsByTagName('body')[0]).appendChild(ds);
-      })();
-    </script> 
-
-</section>
+</nav>
 
 
-  
-<section class="post-comments">
-    <div class="ds-thread" data-thread-key="2018/01/03/Feature_extraction_caffe/"></div>
-        <div id="uyan_frame"></div>
-			<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2130959"></script>
-</section>
+
+    
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 </article>
 
-
-            <footer class="footer">
-
-    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
-    
-</footer>
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
         </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.png">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
     </div>
-
-    <!-- js files -->
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/main.js"></script>
-    <script src="/js/scale.fix.js"></script>
-    
-
-    
-
-    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript"> 
-        $(document).ready(function(){
-            MathJax.Hub.Config({ 
-                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
-            });
-        });
-    </script>
+</div>
 
 
-    
 
-    <script src="/js/awesome-toc.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $.awesome_toc({
-                overlay: true,
-                contentId: "post-content",
-            });
-        });
-    </script>
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
 
 
-    
-    
-    <!--kill ie6 -->
-<!--[if IE 6]>
-  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
-<![endif]-->
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>John Doe &copy; 2015 - 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/01/03/Feature_extraction_caffe/&title=《caffe Feature extraction》 — Yao's station&pic=http://yoursite.com/img/logo.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/01/03/Feature_extraction_caffe/&title=《caffe Feature extraction》 — Yao's station&source=caffe 官方示例" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/01/03/Feature_extraction_caffe/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《caffe Feature extraction》 — Yao's station&url=http://yoursite.com/2018/01/03/Feature_extraction_caffe/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/01/03/Feature_extraction_caffe/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2018/01/03/Feature_extraction_caffe/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
 
 </body>
 </html>

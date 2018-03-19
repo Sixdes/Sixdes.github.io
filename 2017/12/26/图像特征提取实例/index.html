@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
+    
+
+    
+
+    
+
+
+
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-
-    
-
-    <title>
-      Image Feature extraction example | Yao&#39;s station 
-    </title>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    
-      <meta name="author" content="John Doe">
     
     
-
+    
+    <title>Image Feature extraction example | Yao&#39;s station</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="Image processing">
     <meta name="description" content="关于图像特征提取的几个小栗子:">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Image Feature extraction example | Yao's station">
+<meta property="og:title" content="Image Feature extraction example">
 <meta property="og:url" content="http://yoursite.com/2017/12/26/图像特征提取实例/index.html">
 <meta property="og:site_name" content="Yao's station">
 <meta property="og:description" content="关于图像特征提取的几个小栗子:">
@@ -29,172 +33,190 @@
 <meta property="og:image" content="http://yoursite.com/images/Feature_extraction_ex/SURF_features.jpg">
 <meta property="og:updated_time" content="2017-12-26T07:49:02.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Image Feature extraction example | Yao's station">
+<meta name="twitter:title" content="Image Feature extraction example">
 <meta name="twitter:description" content="关于图像特征提取的几个小栗子:">
 <meta name="twitter:image" content="http://yoursite.com/images/Feature_extraction_ex/output_3_1.png">
     
+        <link rel="alternate" type="application/atom+xml" title="Yao&#39;s station" href="/atom.xml">
     
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
     
-      <link rel="icon" type="image/x-icon" href="/favicon.png">
-    
-    <link rel="stylesheet" href="/css/uno.css">
-    <link rel="stylesheet" href="/css/highlight.css">
-    <link rel="stylesheet" href="/css/archive.css">
-    <link rel="stylesheet" href="/css/china-social-icon.css">
 
 </head>
-<body>
 
-    <span class="mobile btn-mobile-menu">
-        <i class="icon icon-list btn-mobile-menu__icon"></i>
-        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
-    </span>
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/background.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/logo.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">John Doe</h5>
+          <a href="mailto:2521049349@qq.com" title="2521049349@qq.com" class="mail">2521049349@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/Sixdes" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/404"  >
+                <i class="icon icon-lg icon-link"></i>
+                测试
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Image Feature extraction example</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Image Feature extraction example</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-12-26T07:24:00.000Z" itemprop="datePublished" class="page-time">
+  2017-12-26
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Feature-extraction/">Feature extraction</a></li></ul>
+
+            
+        </h5>
+    </div>
 
     
 
-<header class="panel-cover panel-cover--collapsed">
+
+</header>
 
 
-  <div class="panel-main">
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Feature-extraction-ex1"><span class="post-toc-number">1.</span> <span class="post-toc-text">Feature_extraction_ex1</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#识别手写数字"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">识别手写数字</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#scikit-image库抽取下图的兴趣点："><span class="post-toc-number">1.2.</span> <span class="post-toc-text">scikit-image库抽取下图的兴趣点：</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#用mahotas库来应用SURF方法处理下面的图片"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">用mahotas库来应用SURF方法处理下面的图片</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#数据标准化"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">数据标准化</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#OpenCV-SURF-特征提取"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">OpenCV SURF() 特征提取</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
 
-  
-    <div class="panel-main__inner panel-inverted">
-    <div class="panel-main__content">
 
-        
+<article id="post-图像特征提取实例"
+  class="post-article article-type-post fade" itemprop="blogPost">
 
-        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">Yao&#39;s station</a></h1>
-        <hr class="panel-cover__divider" />
+    <div class="post-card">
+        <h1 class="post-card-title">Image Feature extraction example</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-12-26 15:24:00" datetime="2017-12-26T07:24:00.000Z"  itemprop="datePublished">2017-12-26</time>
 
-        
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Feature-extraction/">Feature extraction</a></li></ul>
 
-        <div class="navigation-wrapper">
 
-          <nav class="cover-navigation cover-navigation--primary">
-            <ul class="navigation">
 
-              
-                
-                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
-              
-                
-                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
-              
-                
-                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
-              
-
-            </ul>
-          </nav>
-
-          <!-- ----------------------------
-To add a new social icon simply duplicate one of the list items from below
-and change the class in the <i> tag to match the desired social network
-and then add your link to the <a>. Here is a full list of social network
-classes that you can use:
-
-    icon-social-500px
-    icon-social-behance
-    icon-social-delicious
-    icon-social-designer-news
-    icon-social-deviant-art
-    icon-social-digg
-    icon-social-dribbble
-    icon-social-facebook
-    icon-social-flickr
-    icon-social-forrst
-    icon-social-foursquare
-    icon-social-github
-    icon-social-google-plus
-    icon-social-hi5
-    icon-social-instagram
-    icon-social-lastfm
-    icon-social-linkedin
-    icon-social-medium
-    icon-social-myspace
-    icon-social-path
-    icon-social-pinterest
-    icon-social-rdio
-    icon-social-reddit
-    icon-social-skype
-    icon-social-spotify
-    icon-social-stack-overflow
-    icon-social-steam
-    icon-social-stumbleupon
-    icon-social-treehouse
-    icon-social-tumblr
-    icon-social-twitter
-    icon-social-vimeo
-    icon-social-xbox
-    icon-social-yelp
-    icon-social-youtube
-    icon-social-zerply
-    icon-mail
-
--------------------------------->
-
-<!-- add social info here -->
-
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
 
 
         </div>
-
-      </div>
-
-    </div>
-
-    <div class="panel-cover--overlay"></div>
-  </div>
-</header>
-
-    <div class="content-wrapper">
-        <div class="content-wrapper__inner entry">
-            
-
-<article class="post-container post-container--single">
-
-  <header class="post-header">
-    
-    <h1 class="post-title">Image Feature extraction example</h1>
-
-    
-
-    <div class="post-meta">
-      <time datetime="2017-12-26" class="post-meta__date date">2017-12-26</time> 
-
-      <span class="post-meta__tags tags">
-
-          
-            <font class="categories">
-            &#8226; 分类:
-            <a class="categories-link" href="/categories/Feature-extraction/">Feature extraction</a>
-            </font>
-          
-
-          
-             &#8226; 标签:
-            <font class="tags">
-              <a class="tags-link" href="/tags/Image-processing/">Image processing</a>
-            </font>
-          
-
-      </span>
-    </div>
-    
-    
-
-  </header>
-
-  <section id="post-content" class="article-content post">
-    <p>关于图像特征提取的几个小栗子: </p>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>关于图像特征提取的几个小栗子: </p>
 <a id="more"></a>
 <h1 id="Feature-extraction-ex1"><a href="#Feature-extraction-ex1" class="headerlink" title="Feature_extraction_ex1"></a>Feature_extraction_ex1</h1><p>以下是几个关于图像特征提取的小栗子:</p>
 <h2 id="识别手写数字"><a href="#识别手写数字" class="headerlink" title="识别手写数字"></a>识别手写数字</h2><p>关于的手写数字识别的OCR问题，通过图像的像素矩阵扁平化来学习手写数字特征。(非常耗费资源)<br>scikit-learn的digits数字集包括至少1700种0-9的手写数字图像。每个图像都有8x8像像素构成。每个像素的值是0-16，白色是0，黑色是16。如下图所示：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">%matplotlib inline</div><div class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</div><div class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</div><div class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> datasets</div><div class="line"></div><div class="line">digits = datasets.load_digits()</div><div class="line">print(<span class="string">'Digits: '</span>, digits.target[<span class="number">0</span>])</div><div class="line"><span class="comment"># 8x8像像素构成。每个像素的值是0-16</span></div><div class="line">print(digits.images[<span class="number">0</span>].reshape(<span class="number">-1</span>))</div><div class="line">plt.figure()</div><div class="line">plt.axis(<span class="string">'off'</span>)</div><div class="line">plt.imshow(digits.images[<span class="number">0</span>], cmap=plt.cm.gray_r, interpolation=<span class="string">'nearest'</span>)</div><div class="line">plt.show()</div></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">Digits:  0</div><div class="line">[  0.   0.   5.  13.   9.   1.   0.   0.   0.   0.  13.  15.  10.  15.   5.</div><div class="line">   0.   0.   3.  15.   2.   0.  11.   8.   0.   0.   4.  12.   0.   0.   8.</div><div class="line">   8.   0.   0.   5.   8.   0.   0.   9.   8.   0.   0.   4.  11.   0.   1.</div><div class="line">  12.   7.   0.   0.   2.  14.   5.  10.  12.   0.   0.   0.   0.   6.  13.</div><div class="line">  10.   0.   0.   0.]</div></pre></td></tr></table></figure>
-<p><img src="/images/Feature_extraction_ex/output_3_1.png" alt="output_3_1"></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/Feature_extraction_ex/output_3_1.png" alt="output_3_1" title="">
+                </div>
+                <div class="image-caption">output_3_1</div>
+            </figure>
 <h2 id="scikit-image库抽取下图的兴趣点："><a href="#scikit-image库抽取下图的兴趣点：" class="headerlink" title="scikit-image库抽取下图的兴趣点："></a>scikit-image库抽取下图的兴趣点：</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> skimage.feature <span class="keyword">import</span> corner_harris, corner_peaks</div><div class="line"><span class="keyword">from</span> skimage.color <span class="keyword">import</span> rgb2gray</div><div class="line"><span class="keyword">import</span> skimage.io <span class="keyword">as</span> io</div><div class="line"><span class="keyword">from</span> skimage.exposure <span class="keyword">import</span> equalize_hist</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">show_corners</span><span class="params">(corners, image)</span>:</span></div><div class="line">    fig = plt.figure()</div><div class="line">    plt.gray()</div><div class="line">    plt.imshow(image)</div><div class="line">    y_corner, x_corner = zip(*corners)</div><div class="line">    plt.plot(x_corner, y_corner, <span class="string">'or'</span>)</div><div class="line">    plt.xlim(<span class="number">0</span>, image.shape[<span class="number">1</span>])</div><div class="line">    plt.ylim(image.shape[<span class="number">0</span>], <span class="number">0</span>)</div><div class="line">    fig.set_size_inches(np.array(fig.get_size_inches()) * <span class="number">1.5</span>)</div><div class="line">    plt.show()</div><div class="line">    </div><div class="line">mandrill = io.imread(<span class="string">'mandrill.jpeg'</span>)</div><div class="line"><span class="comment"># 直方图均衡化</span></div><div class="line">mandrill = equalize_hist(rgb2gray(mandrill))</div><div class="line"><span class="comment"># harris 角点检测</span></div><div class="line">corners = corner_peaks(corner_harris(mandrill), min_distance=<span class="number">2</span>)</div><div class="line">show_corners(corners, mandrill)</div></pre></td></tr></table></figure>
-<p><img src="/images/Feature_extraction_ex/output_5_0.png" alt="output_5_0"></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/Feature_extraction_ex/output_5_0.png" alt="output_5_0" title="">
+                </div>
+                <div class="image-caption">output_5_0</div>
+            </figure>
 <h2 id="用mahotas库来应用SURF方法处理下面的图片"><a href="#用mahotas库来应用SURF方法处理下面的图片" class="headerlink" title="用mahotas库来应用SURF方法处理下面的图片"></a>用mahotas库来应用SURF方法处理下面的图片</h2><p>引入兴趣点提取方法，通过SIFT和SURF进行优化。<br>Mahotas 是计算机视觉和图像处理 Python 库。它包含大量图像处理算法，C++实现形式，提高了性能。完全基于 numpy 的数组作为它的数据类型，有一个非常干净的Python 算法接口。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> mahotas <span class="keyword">as</span> mh</div><div class="line"><span class="keyword">from</span> mahotas.features <span class="keyword">import</span> surf</div><div class="line"></div><div class="line">image = mh.imread(<span class="string">'mandrill.jpeg'</span>, as_grey=<span class="keyword">True</span>)</div><div class="line">print(<span class="string">'第一个SURF描述符: \n&#123;&#125;\n'</span>.format(surf.surf(image)[<span class="number">0</span>]) )</div><div class="line">print(<span class="string">'抽取了%s个SURF描述符'</span> % len(surf.surf(image)))</div></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">第一个SURF描述符: </div><div class="line">[  4.88720413e+01   1.24800860e+02   1.93404140e+00   4.69215836e+02</div><div class="line">   1.00000000e+00  -1.89817090e+00  -9.16485838e-04   4.15829239e-04</div><div class="line">   1.62917514e-03   4.50508786e-03   2.16965117e-03  -1.54517486e-02</div><div class="line">   1.19871085e-02   2.27849309e-02  -4.96764299e-03  -2.30153165e-03</div><div class="line">   1.24213881e-02   9.73558091e-03   1.01124633e-03   9.33727930e-05</div><div class="line">   1.50382252e-03   4.28077728e-04   4.12196201e-04   2.63136511e-03</div><div class="line">   1.47364160e-02   2.57975865e-02   2.13572331e-01   1.36266382e-03</div><div class="line">   3.25871891e-01   2.83610749e-01   3.01434634e-01  -8.35839666e-02</div><div class="line">   4.67635391e-01   1.61936283e-01   6.27416198e-03  -4.75608140e-03</div><div class="line">   6.38395923e-02   2.88552374e-02   4.36529968e-03   1.22763937e-02</div><div class="line">   4.28753085e-02   2.97861362e-02  -1.65692866e-01  -3.00393938e-02</div><div class="line">   3.07613402e-01   2.59695442e-01  -1.77392860e-01  -8.42926232e-02</div><div class="line">   3.22241967e-01   2.68252184e-01   1.22916451e-02  -2.17223444e-03</div><div class="line">   3.34867018e-02   7.92410354e-03  -3.77849533e-04  -3.75246341e-03</div><div class="line">   5.13159418e-03   4.26743799e-03   2.47661732e-02  -9.75867100e-03</div><div class="line">   3.38654071e-02   2.22350151e-02   1.25097158e-02  -5.13047076e-03</div><div class="line">   6.62972574e-02   3.98549144e-02   7.56108237e-03   4.19496163e-04</div><div class="line">   1.53695063e-02   5.35408794e-03]</div><div class="line"></div><div class="line">抽取了222个SURF描述符</div></pre></td></tr></table></figure>
@@ -213,93 +235,323 @@ classes that you can use:
 <p>注意一个问题：keypoint只是保存了opencv的sift库检测到的特征点的一些基本信息，也就上面所说的这些，但sift所提取出来的特征向量其实不是在这个里面，特征向量通过SiftDescriptorExtractor 提取，结果放在一个Mat的数据结构中。这个数据结构才真正保存了该特征点所对应的特征向量。具体见后文对SiftDescriptorExtractor 所生成的对象的详解。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> cv2</div><div class="line"></div><div class="line">image = cv2.imread(<span class="string">'surf_exm.jpg'</span>)</div><div class="line">image2 = image.copy()</div><div class="line"><span class="comment">#cv2.imshow('original', image)</span></div><div class="line"><span class="comment">#cv2.waitKey()</span></div><div class="line"></div><div class="line"><span class="comment"># 下采样</span></div><div class="line"><span class="comment"># 高斯图像金字塔</span></div><div class="line"><span class="comment">#im_lowers = cv2.pyrDown(image) </span></div><div class="line"><span class="comment">#cv2.imshow('imlowers', im_lowers)</span></div><div class="line"></div><div class="line"><span class="comment"># 检测特征点</span></div><div class="line"><span class="comment"># 调用SIFT</span></div><div class="line"><span class="comment"># opencv将SIFT等算法整合到xfeatures2d集合里面了。变更后写法如下：</span></div><div class="line">s = cv2.xfeatures2d.SIFT_create()</div><div class="line"></div><div class="line">keypoints = s.detect(image)</div><div class="line"><span class="comment"># type(keypoints)  &lt;class 'list'&gt;</span></div><div class="line"><span class="comment"># len(keypoints)   6212</span></div><div class="line"></div><div class="line"><span class="comment"># 显示特征点</span></div><div class="line"><span class="keyword">for</span> k <span class="keyword">in</span> keypoints:</div><div class="line">    cv2.circle(image, (int(k.pt[<span class="number">0</span>]), int(k.pt[<span class="number">1</span>])), <span class="number">1</span>, (<span class="number">0</span>, <span class="number">255</span>, <span class="number">0</span>), <span class="number">-1</span>)</div><div class="line">    </div><div class="line">s1 = cv2.xfeatures2d.SURF_create()</div><div class="line">keypoints2 = s1.detect(image)</div><div class="line"></div><div class="line"><span class="keyword">for</span> kk <span class="keyword">in</span> keypoints2:</div><div class="line">    <span class="comment"># circle 函数 (指针, 圆心坐标, 圆半径, 颜色, thickness正数表示组成圆的线条的粗细程度;否则，表示圆是否被填充</span></div><div class="line">    cv2.circle(image2, (int(kk.pt[<span class="number">0</span>]), int(kk.pt[<span class="number">1</span>])), <span class="number">1</span>, (<span class="number">0</span>, <span class="number">255</span>, <span class="number">0</span>), <span class="number">-1</span>)</div><div class="line">    <span class="comment">#cv2.circle(image2, (int(kk.pt[0]), int(kk.pt[1])), int(k.size), (0, 255, 0), -1)</span></div><div class="line"></div><div class="line">cv2.imwirte(<span class="string">'SIFT_features.jpg'</span>,image)</div><div class="line">cv2.imwrite(<span class="string">'SURF_features.jpg'</span>,image2)</div><div class="line">cv2.waitKey()</div></pre></td></tr></table></figure>
 <p><strong>原图:</strong></p>
-<p><img src="/images/Feature_extraction_ex/surf_exm.jpg" alt="surf_exm"></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/Feature_extraction_ex/surf_exm.jpg" alt="surf_exm" title="">
+                </div>
+                <div class="image-caption">surf_exm</div>
+            </figure>
 <p><strong>SIFT:</strong></p>
-<p><img src="/images/Feature_extraction_ex/SIFT_features.jpg" alt="SIFT_features"></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/Feature_extraction_ex/SIFT_features.jpg" alt="SIFT_features" title="">
+                </div>
+                <div class="image-caption">SIFT_features</div>
+            </figure>
 <p><strong>SURF:</strong></p>
-<p><img src="/images/Feature_extraction_ex/SURF_features.jpg" alt="SURF_features"></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/Feature_extraction_ex/SURF_features.jpg" alt="SURF_features" title="">
+                </div>
+                <div class="image-caption">SURF_features</div>
+            </figure>
+        </div>
 
-  </section>
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2017-12-26T07:49:02.000Z" itemprop="dateUpdated">2017-12-26 15:49:02</time>
+</span><br>
+
+
+        
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2017/12/26/图像特征提取实例/" target="_blank" rel="external">http://yoursite.com/2017/12/26/图像特征提取实例/</a>
+        
+    </div>
+    
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/logo.jpg" alt="John Doe">
+            John Doe
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Image-processing/">Image processing</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/12/26/图像特征提取实例/&title=《Image Feature extraction example》 — Yao's station&pic=http://yoursite.com/img/logo.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/12/26/图像特征提取实例/&title=《Image Feature extraction example》 — Yao's station&source=关于图像特征提取的几个小栗子: " data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/12/26/图像特征提取实例/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Image Feature extraction example》 — Yao's station&url=http://yoursite.com/2017/12/26/图像特征提取实例/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2017/12/26/图像特征提取实例/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/12/26/图像特征识别文字性描述/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Image processing - Feature extraction</h4>
+      </a>
+    </div>
+  
 
   
+    <div class="waves-block waves-effect next">
+      <a href="/2017/12/22/OpenCV_python使用/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">OpenCV_python 使用</h4>
+      </a>
+    </div>
   
-
-<section class="post-comments">
-
-    <div class="ds-thread" data-thread-key="2017/12/26/图像特征提取实例/"></div>
-
-    <script type="text/javascript">
-      var duoshuoQuery = {short_name:"Sixdes"};
-      (function() {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript';ds.async = true;
-        ds.src = '//static.duoshuo.com/embed.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0] 
-        || document.getElementsByTagName('body')[0]).appendChild(ds);
-      })();
-    </script> 
-
-</section>
+</nav>
 
 
-  
-<section class="post-comments">
-    <div class="ds-thread" data-thread-key="2017/12/26/图像特征提取实例/"></div>
-        <div id="uyan_frame"></div>
-			<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2130959"></script>
-</section>
+
+    
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 </article>
 
-
-            <footer class="footer">
-
-    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
-    
-</footer>
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
         </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.png">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
     </div>
-
-    <!-- js files -->
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/main.js"></script>
-    <script src="/js/scale.fix.js"></script>
-    
-
-    
-
-    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript"> 
-        $(document).ready(function(){
-            MathJax.Hub.Config({ 
-                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
-            });
-        });
-    </script>
+</div>
 
 
-    
 
-    <script src="/js/awesome-toc.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $.awesome_toc({
-                overlay: true,
-                contentId: "post-content",
-            });
-        });
-    </script>
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
 
 
-    
-    
-    <!--kill ie6 -->
-<!--[if IE 6]>
-  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
-<![endif]-->
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>John Doe &copy; 2015 - 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/12/26/图像特征提取实例/&title=《Image Feature extraction example》 — Yao's station&pic=http://yoursite.com/img/logo.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/12/26/图像特征提取实例/&title=《Image Feature extraction example》 — Yao's station&source=关于图像特征提取的几个小栗子: " data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/12/26/图像特征提取实例/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Image Feature extraction example》 — Yao's station&url=http://yoursite.com/2017/12/26/图像特征提取实例/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2017/12/26/图像特征提取实例/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2017/12/26/图像特征提取实例/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
 
 </body>
 </html>
